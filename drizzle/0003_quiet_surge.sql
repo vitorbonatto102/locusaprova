@@ -1,0 +1,1 @@
+ALTER TABLE `training_sessions` ADD `activity_states_json` text DEFAULT '{}' NOT NULL;

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tentativa-vs-desistencia-voluntaria",
+    "left": "Tentativa",
+    "right": "Desistência voluntária",
+    "decisive_fact": "Pergunte se o agente ainda podia prosseguir na execução e, podendo, decidiu parar por vontade própria.",
+    "left_requirements": ["início da execução", "não consumação por circunstâncias alheias à vontade"],
+    "right_requirements": ["início da execução", "possibilidade de prosseguir", "interrupção voluntária"],
+    "left_legal_basis": "CP, art. 14, II",
+    "right_legal_basis": "CP, art. 15",
+    "left_consequence": "Responde pelo crime tentado, com a redução legal.",
+    "right_consequence": "Responde apenas pelos atos já praticados."
+  },
+  {
+    "id": "crime-impossivel-vs-tentativa",
+    "left": "Crime impossível",
+    "right": "Tentativa",
+    "decisive_fact": "Verifique se a consumação era absolutamente impossível pelo meio ou pelo objeto, e não apenas difícil ou frustrada no caso concreto.",
+    "left_requirements": ["ineficácia absoluta do meio ou impropriedade absoluta do objeto"],
+    "right_requirements": ["meio e objeto idôneos", "frustração por circunstância alheia"],
+    "left_legal_basis": "CP, art. 17",
+    "right_legal_basis": "CP, art. 14, II",
+    "left_consequence": "A tentativa não é punida.",
+    "right_consequence": "Incide a pena do crime consumado com redução."
+  },
+  {
+    "id": "arrependimento-eficaz-vs-posterior",
+    "left": "Arrependimento eficaz",
+    "right": "Arrependimento posterior",
+    "decisive_fact": "Localize o momento da atuação: antes do resultado, impedindo-o, ou depois da consumação, reparando o dano.",
+    "left_requirements": ["execução esgotada", "impedimento voluntário do resultado"],
+    "right_requirements": ["crime sem violência ou grave ameaça", "reparação ou restituição antes do recebimento da denúncia"],
+    "left_legal_basis": "CP, art. 15",
+    "right_legal_basis": "CP, art. 16",
+    "left_consequence": "Responde apenas pelos atos já praticados.",
+    "right_consequence": "Causa de diminuição de pena."
+  },
+  {
+    "id": "rejeicao-denuncia-vs-absolvicao-sumaria",
+    "left": "Rejeição da denúncia",
+    "right": "Absolvição sumária",
+    "decisive_fact": "Separe o vício da acusação ou a falta de justa causa do juízo de mérito permitido após a resposta à acusação.",
+    "left_requirements": ["inépcia", "falta de pressuposto ou condição", "falta de justa causa"],
+    "right_requirements": ["excludente manifesta", "fato evidentemente atípico", "extinção da punibilidade"],
+    "left_legal_basis": "CPP, art. 395",
+    "right_legal_basis": "CPP, art. 397",
+    "left_consequence": "A denúncia não é admitida.",
+    "right_consequence": "O acusado é absolvido sumariamente."
+  }
+]

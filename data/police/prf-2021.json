@@ -1,0 +1,181 @@
+{
+  "id": "prf-policial-2021-edital-1",
+  "examTargetId": "prf-2021",
+  "year": 2021,
+  "title": "Edital nº 1 — PRF — Policial Rodoviário Federal, de 18 de janeiro de 2021",
+  "referenceLabel": "PRF — referência: último edital oficial disponível (2021)",
+  "institution": "Polícia Rodoviária Federal",
+  "position": "Policial Rodoviário Federal",
+  "board": "Cebraspe",
+  "publishedAt": "2021-01-18",
+  "retrievedAt": "2026-09-21",
+  "source": {
+    "sourceUrl": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/ED_1_PRF_2021_ABERTURA.PDF",
+    "sourceDocument": "Edital nº 1 — PRF — Policial Rodoviário Federal/2021",
+    "publisher": "PRF / Cebraspe",
+    "validationStatus": "verified"
+  },
+  "supportingSources": [
+    { "label": "Página oficial do concurso", "url": "https://www.gov.br/prf/pt-br/acesso-a-informacao/servidores/concursos-e-selecoes/concurso-2021/concurso-2021" },
+    { "label": "Edital verticalizado oficial", "url": "https://www.gov.br/prf/pt-br/concurso-2021/etapa1/provas/edital-verticalizado-1.pdf" },
+    { "label": "Prova discursiva oficial", "url": "https://cdn.cebraspe.org.br/concursos/PRF_21/arquivos/PRF_21_PROVA_DISCURSIVA.PDF" },
+    { "label": "Padrão definitivo da discursiva", "url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/PRF_21_PADRAO_DE_RESPOSTA_DEFINITIVO.PDF" }
+  ],
+  "stages": [
+    { "name": "Prova objetiva", "character": "eliminatório e classificatório" },
+    { "name": "Prova discursiva", "character": "eliminatório e classificatório" },
+    { "name": "Exame de aptidão física", "character": "eliminatório" },
+    { "name": "Avaliação psicológica", "character": "eliminatório" },
+    { "name": "Apresentação de documentos", "character": "eliminatório" },
+    { "name": "Avaliação de saúde", "character": "eliminatório" },
+    { "name": "Avaliação de títulos", "character": "classificatório" },
+    { "name": "Investigação social", "character": "eliminatório" },
+    { "name": "Curso de Formação Policial", "character": "segunda etapa, eliminatório e classificatório" }
+  ],
+  "objectiveExam": {
+    "durationMinutes": 270,
+    "totalItems": 120,
+    "questionType": "true_false",
+    "scoringStrategy": "cebraspe_true_false",
+    "scoring": { "correct": 1, "incorrect": -1, "blankOrDouble": 0 },
+    "blocks": [
+      { "id": "block-1", "label": "Bloco I", "items": 55, "minimumScore": 15 },
+      { "id": "block-2", "label": "Bloco II", "items": 30, "minimumScore": 10 },
+      { "id": "block-3", "label": "Bloco III", "items": 35, "minimumScore": 10 }
+    ],
+    "minimumTotalScore": 50
+  },
+  "discursiveExam": { "format": "texto dissertativo", "maximumLines": 30, "maximumScore": 20, "minimumScore": 10 },
+  "subjectsInNotice": [
+    { "name": "Língua Portuguesa", "block": "block-1", "contentStatus": "deep" },
+    { "name": "Raciocínio Lógico-Matemático", "block": "block-1", "contentStatus": "deep" },
+    { "name": "Informática", "block": "block-1", "contentStatus": "deep" },
+    { "name": "Física", "block": "block-1", "contentStatus": "deep" },
+    { "name": "Ética e Cidadania", "block": "block-1", "contentStatus": "deep" },
+    { "name": "Geopolítica", "block": "block-1", "contentStatus": "deep" },
+    { "name": "Língua Estrangeira", "block": "block-1", "contentStatus": "mapped" },
+    { "name": "Legislação de Trânsito", "block": "block-2", "contentStatus": "deep" },
+    { "name": "Direito Administrativo", "block": "block-3", "contentStatus": "deep" },
+    { "name": "Direito Constitucional", "block": "block-3", "contentStatus": "deep" },
+    { "name": "Direito Penal", "block": "block-3", "contentStatus": "deep" },
+    { "name": "Direito Processual Penal", "block": "block-3", "contentStatus": "deep" },
+    { "name": "Legislação Especial", "block": "block-3", "contentStatus": "deep" },
+    { "name": "Direitos Humanos", "block": "block-3", "contentStatus": "deep" }
+  ],
+  "knowledgeTree": [
+    { "id": "subject-portuguese", "name": "Língua Portuguesa", "type": "subject", "block": "block-1", "topics": [
+      { "id": "pt-interpretation", "name": "Compreensão e interpretação", "subtopics": ["Inferência", "Informação explícita", "Relações semânticas"] },
+      { "id": "pt-text-types", "name": "Tipos e gêneros textuais", "subtopics": ["Reconhecimento de gênero", "Finalidade comunicativa"] },
+      { "id": "pt-cohesion", "name": "Coesão textual", "subtopics": ["Referenciação", "Conectores", "Tempos e modos verbais"] },
+      { "id": "pt-morphosyntax", "name": "Morfossintaxe do período", "subtopics": ["Classes de palavras", "Coordenação e subordinação", "Pontuação", "Concordância", "Regência e crase"] },
+      { "id": "pt-rewriting", "name": "Reescrita", "subtopics": ["Significação", "Substituição", "Reorganização de períodos", "Níveis de formalidade"] },
+      { "id": "pt-official-writing", "name": "Correspondência oficial", "subtopics": ["Redação oficial", "Finalidade", "Adequação de linguagem e formato"] }
+    ]},
+    { "id": "subject-reasoning", "name": "Raciocínio Lógico-Matemático", "type": "subject", "block": "block-1", "topics": [
+      { "id": "rlm-equations-functions", "name": "Equações e funções", "subtopics": ["Equações do primeiro e segundo graus", "Funções e gráficos"] },
+      { "id": "rlm-ratio-percent", "name": "Razões, proporções e percentuais", "subtopics": ["Regra de três", "Variação percentual"] },
+      { "id": "rlm-sequences", "name": "Sequências", "subtopics": ["PA", "PG"] },
+      { "id": "rlm-counting-probability", "name": "Contagem e probabilidade", "subtopics": ["Princípios de contagem", "Probabilidade"] },
+      { "id": "rlm-statistics", "name": "Estatística básica", "subtopics": ["Tabelas e gráficos", "Média", "Desvio"] },
+      { "id": "rlm-sets", "name": "Conjuntos", "subtopics": ["Operações", "Diagramas"] },
+      { "id": "rlm-geometry", "name": "Geometria e medidas", "subtopics": ["Representação plana e espacial", "Áreas e volumes"] }
+    ]},
+    { "id": "subject-informatics", "name": "Informática", "type": "subject", "block": "block-1", "topics": [
+      { "id": "it-internet-intranet", "name": "Internet e intranet", "subtopics": ["Conceitos", "Ferramentas"] },
+      { "id": "it-operating-tools", "name": "Sistemas e aplicativos", "subtopics": ["Windows", "Acesso remoto", "Multimídia"] },
+      { "id": "it-digital-transformation", "name": "Transformação digital", "subtopics": ["IoT", "Big data", "Inteligência artificial"] },
+      { "id": "it-security", "name": "Segurança da informação", "subtopics": ["Ameaças", "Proteção", "Boas práticas"] },
+      { "id": "it-cloud", "name": "Computação em nuvem", "subtopics": ["Serviços", "Armazenamento"] }
+    ]},
+    { "id": "subject-physics", "name": "Física", "type": "subject", "block": "block-1", "topics": [
+      { "id": "physics-kinematics", "name": "Cinemática", "subtopics": ["Grandezas escalares e vetoriais", "Movimento uniforme", "Movimento variado"] },
+      { "id": "physics-circular", "name": "Movimento circular", "subtopics": ["Velocidade angular", "Aceleração centrípeta"] },
+      { "id": "physics-newton", "name": "Leis de Newton", "subtopics": ["Força resultante", "Inércia", "Ação e reação"] },
+      { "id": "physics-work-energy", "name": "Trabalho, potência e energia", "subtopics": ["Trabalho", "Potência", "Energias cinética e potencial"] },
+      { "id": "physics-friction", "name": "Atrito", "subtopics": ["Atrito estático", "Atrito cinético"] },
+      { "id": "physics-momentum", "name": "Impulso e quantidade de movimento", "subtopics": ["Impulso", "Conservação do momento"] },
+      { "id": "physics-collisions", "name": "Colisões", "subtopics": ["Colisão elástica", "Colisão inelástica"] }
+    ]},
+    { "id": "subject-ethics", "name": "Ética e Cidadania", "type": "subject", "block": "block-1", "topics": [
+      { "id": "ethics-values", "name": "Ética, moral e valores", "subtopics": ["Conceitos", "Ética aplicada"] },
+      { "id": "ethics-public-function", "name": "Ética na função pública", "subtopics": ["Integridade", "Interesse público"] },
+      { "id": "ethics-public-principles", "name": "Princípios da ética pública", "subtopics": ["Deveres", "Vedações"] },
+      { "id": "ethics-governance", "name": "Governança e códigos de ética", "subtopics": ["Decreto nº 9.203/2017", "Decretos nº 1.171/1994 e nº 6.029/2007"] },
+      { "id": "ethics-citizenship", "name": "Cidadania e transparência", "subtopics": ["Conflito de interesses", "Nepotismo", "Controle social"] }
+    ]},
+    { "id": "subject-geopolitics", "name": "Geopolítica", "type": "subject", "block": "block-1", "topics": [
+      { "id": "geo-nation-territory", "name": "Nação, Estado e território", "subtopics": ["Formação territorial", "Organização do Estado"] },
+      { "id": "geo-regional-production", "name": "Organização regional e produção", "subtopics": ["Divisão regional", "Trabalho e produção"] },
+      { "id": "geo-population-urbanization", "name": "População e urbanização", "subtopics": ["Migrações", "Metrópoles", "Rede urbana"] },
+      { "id": "geo-economic-integration", "name": "Integração econômica do território", "subtopics": ["Indústria", "Agricultura", "Cidades"] },
+      { "id": "geo-transport-network", "name": "Rede de transportes", "subtopics": ["Modais", "Fluxos", "Integração territorial"] },
+      { "id": "geo-environment", "name": "Ambiente brasileiro", "subtopics": ["Biomas", "Domínios", "Ecossistemas", "Gestão ambiental"] }
+    ]},
+    { "id": "subject-foreign-language", "name": "Língua Estrangeira", "type": "subject", "block": "block-1", "topics": [
+      { "id": "foreign-comprehension", "name": "Compreensão de texto", "subtopics": ["Inglês", "Espanhol"] },
+      { "id": "foreign-grammar", "name": "Estruturas gramaticais", "subtopics": ["Vocabulário em contexto", "Estruturas relevantes à compreensão"] }
+    ]},
+    { "id": "subject-traffic", "name": "Legislação de Trânsito", "type": "subject", "block": "block-2", "topics": [
+      { "id": "traffic-snt", "name": "Sistema Nacional de Trânsito", "subtopics": ["Composição", "Competências", "Coordenação"] },
+      { "id": "traffic-general-rules", "name": "Normas gerais de circulação e conduta", "subtopics": ["Preferência", "Velocidade", "Ultrapassagem"] },
+      { "id": "traffic-signage", "name": "Sinalização de trânsito", "subtopics": ["Ordem de prevalência", "Sinais", "Infraestrutura"] },
+      { "id": "traffic-vehicles", "name": "Veículos", "subtopics": ["Classificação", "Segurança", "Registro e licenciamento"] },
+      { "id": "traffic-drivers", "name": "Habilitação e condutores", "subtopics": ["Categorias", "Exames", "Deveres"] },
+      { "id": "traffic-infractions", "name": "Infrações e penalidades", "subtopics": ["Tipificação", "Medidas administrativas", "Pontuação"] },
+      { "id": "traffic-crimes", "name": "Crimes de trânsito", "subtopics": ["Disposições gerais", "Tipos penais"] },
+      { "id": "traffic-contran", "name": "Regulamentação CONTRAN", "subtopics": ["Resoluções indicadas no edital", "Fiscalização"] }
+    ]},
+    { "id": "subject-administrative", "name": "Direito Administrativo", "type": "subject", "block": "block-3", "topics": [
+      { "id": "adm-organization", "name": "Organização administrativa", "subtopics": ["Centralização e descentralização", "Administração direta e indireta"] },
+      { "id": "adm-acts", "name": "Ato administrativo", "subtopics": ["Conceito e requisitos", "Atributos", "Classificação e espécies"] },
+      { "id": "adm-public-agents", "name": "Agentes públicos", "subtopics": ["Lei nº 8.112/1990", "Cargo, emprego e função"] },
+      { "id": "adm-powers", "name": "Poderes administrativos", "subtopics": ["Hierárquico e disciplinar", "Regulamentar e de polícia", "Uso e abuso"] },
+      { "id": "adm-control", "name": "Controle da Administração", "subtopics": ["Controle administrativo", "Judicial", "Legislativo"] },
+      { "id": "adm-state-liability", "name": "Responsabilidade civil do Estado", "subtopics": ["Ação e omissão", "Requisitos", "Excludentes e atenuantes"] },
+      { "id": "adm-principles", "name": "Regime jurídico-administrativo", "subtopics": ["Princípios expressos", "Princípios implícitos"] },
+      { "id": "adm-prf-career", "name": "Carreira e competências da PRF", "subtopics": ["Regime funcional", "Competências institucionais"] },
+      { "id": "adm-procurement", "name": "Licitações e contratos", "subtopics": ["Princípios", "Contratação pública"] }
+    ]},
+    { "id": "subject-constitutional", "name": "Direito Constitucional", "type": "subject", "block": "block-3", "topics": [
+      { "id": "const-fundamental-rights", "name": "Direitos e garantias fundamentais", "subtopics": ["Direitos individuais e coletivos", "Direitos sociais", "Nacionalidade e direitos políticos", "Garantias constitucionais"] },
+      { "id": "const-executive", "name": "Poder Executivo", "subtopics": ["Forma e sistema de governo", "Chefia de Estado e de governo"] },
+      { "id": "const-public-security", "name": "Segurança pública", "subtopics": ["Defesa do Estado", "Órgãos de segurança", "Organização da segurança pública"] },
+      { "id": "const-social-order", "name": "Ordem social", "subtopics": ["Seguridade social", "Meio ambiente", "Família e grupos protegidos"] },
+      { "id": "const-constituent-power", "name": "Poder constituinte", "subtopics": ["Originário", "Derivado"] },
+      { "id": "const-union", "name": "União", "subtopics": ["Bens", "Competências"] }
+    ]},
+    { "id": "subject-penal", "name": "Direito Penal", "type": "subject", "block": "block-3", "topics": [
+      { "id": "penal-principles", "name": "Princípios básicos", "subtopics": ["Legalidade", "Anterioridade"] },
+      { "id": "penal-law-application", "name": "Aplicação da lei penal", "subtopics": ["Lei no tempo e no espaço", "Tempo e lugar do crime", "Territorialidade e extraterritorialidade"] },
+      { "id": "penal-typical-fact", "name": "Fato típico", "subtopics": ["Consumação e tentativa", "Ilicitude e exclusão", "Excesso punível"] },
+      { "id": "penal-special-part", "name": "Crimes em espécie", "subtopics": ["Pessoa", "Patrimônio", "Fé pública", "Administração Pública"] },
+      { "id": "penal-culpability", "name": "Culpabilidade e erro", "subtopics": ["Imputabilidade", "Erro de tipo", "Erro de proibição"] }
+    ]},
+    { "id": "subject-criminal-procedure", "name": "Direito Processual Penal", "type": "subject", "block": "block-3", "topics": [
+      { "id": "proc-evidence", "name": "Prova", "subtopics": ["Local de crime", "Ônus e nulidade", "Reconhecimento", "Busca e apreensão"] },
+      { "id": "proc-liberty", "name": "Restrição de liberdade", "subtopics": ["Prisão em flagrante"] },
+      { "id": "proc-criminal-action", "name": "Ação penal", "subtopics": ["Espécies", "Condições"] },
+      { "id": "proc-tco", "name": "Termo circunstanciado", "subtopics": ["Cabimento", "Atos processuais"] },
+      { "id": "proc-identification-diligences", "name": "Identificação e diligências", "subtopics": ["Identificação criminal", "Diligências investigativas"] }
+    ]},
+    { "id": "subject-special-law", "name": "Legislação Especial", "type": "subject", "block": "block-3", "topics": [
+      { "id": "special-identification", "name": "Identificação civil", "subtopics": ["CPF e carteira de identidade", "Serviço de identificação"] },
+      { "id": "special-eca", "name": "ECA", "subtopics": ["Aspectos penais e processuais"] },
+      { "id": "special-drugs", "name": "Drogas", "subtopics": ["Lei nº 11.343/2006"] },
+      { "id": "special-torture", "name": "Tortura", "subtopics": ["Lei nº 9.455/1997"] },
+      { "id": "special-firearms", "name": "Armas", "subtopics": ["Lei nº 10.826/2003"] },
+      { "id": "special-environment", "name": "Infrações ambientais", "subtopics": ["Lei nº 9.605/1998"] },
+      { "id": "special-heinous", "name": "Crimes hediondos", "subtopics": ["Lei nº 8.072/1990"] },
+      { "id": "special-prf-competence", "name": "Competências da PRF", "subtopics": ["Decretos regulamentares"] },
+      { "id": "special-jecrim", "name": "Juizados Especiais Criminais", "subtopics": ["Lei nº 9.099/1995"] },
+      { "id": "special-organized-crime", "name": "Organização criminosa", "subtopics": ["Lei nº 12.850/2013"] },
+      { "id": "special-susp", "name": "Sistema Único de Segurança Pública", "subtopics": ["Lei nº 13.675/2018"] },
+      { "id": "special-abuse-authority", "name": "Abuso de autoridade", "subtopics": ["Lei nº 13.869/2019"] }
+    ]},
+    { "id": "subject-human-rights", "name": "Direitos Humanos", "type": "subject", "block": "block-3", "topics": [
+      { "id": "human-rights-constitution", "name": "Direitos humanos na Constituição", "subtopics": ["Fundamentos", "Aplicabilidade"] },
+      { "id": "human-rights-universal", "name": "Declaração Universal", "subtopics": ["Direitos e garantias"] },
+      { "id": "human-rights-american", "name": "Convenção Americana", "subtopics": ["Direitos protegidos", "Garantias judiciais"] }
+    ]}
+  ]
+}

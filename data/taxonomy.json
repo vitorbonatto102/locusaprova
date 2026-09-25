@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "definitions": {
+    "domain": "Macroárea jurídica estável usada para navegação e cobertura curricular.",
+    "topic": "Assunto doutrinário ou processual dentro de um domínio.",
+    "thesis": "Proposição jurídica aplicável a um conjunto de fatos, com consequência jurídica verificável.",
+    "skill": "Operação cognitiva ou profissional que o candidato executa para produzir a resposta.",
+    "legal_rule": "Base normativa ou jurisprudencial citável; não é sinônimo de tese.",
+    "rubric_item": "Critério oficial de correção, preservado com sua pontuação e proveniência."
+  },
+  "domains": [
+    { "id": "penal-material", "label": "Direito Penal" },
+    { "id": "processo-penal", "label": "Processo Penal" },
+    { "id": "execucao-penal", "label": "Execução Penal" },
+    { "id": "constitucional-penal", "label": "Constitucional aplicado ao Penal" }
+  ],
+  "topics": [
+    { "id": "tipicidade", "domain_id": "penal-material", "label": "Tipicidade e iter criminis" },
+    { "id": "ilicitude-culpabilidade", "domain_id": "penal-material", "label": "Ilicitude e culpabilidade" },
+    { "id": "concurso-crimes", "domain_id": "penal-material", "label": "Concurso de crimes e de pessoas" },
+    { "id": "pena", "domain_id": "penal-material", "label": "Dosimetria, regime e substituição" },
+    { "id": "punibilidade", "domain_id": "penal-material", "label": "Punibilidade e prescrição" },
+    { "id": "acao-penal", "domain_id": "processo-penal", "label": "Ação penal e condições de procedibilidade" },
+    { "id": "provas", "domain_id": "processo-penal", "label": "Provas, licitude e valoração" },
+    { "id": "nulidades", "domain_id": "processo-penal", "label": "Nulidades e garantias processuais" },
+    { "id": "procedimentos", "domain_id": "processo-penal", "label": "Procedimentos e peças profissionais" },
+    { "id": "recursos", "domain_id": "processo-penal", "label": "Recursos e impugnações" },
+    { "id": "beneficios-negociais", "domain_id": "processo-penal", "label": "Justiça consensual e benefícios" },
+    { "id": "cumprimento-pena", "domain_id": "execucao-penal", "label": "Cumprimento e incidentes da pena" },
+    { "id": "garantias-fundamentais", "domain_id": "constitucional-penal", "label": "Garantias fundamentais" }
+  ],
+  "skills": [
+    { "id": "identify_piece", "label": "Identificar a peça" },
+    { "id": "identify_procedural_stage", "label": "Identificar a fase processual" },
+    { "id": "identify_thesis", "label": "Identificar a tese" },
+    { "id": "recall_legal_basis", "label": "Recuperar o fundamento legal" },
+    { "id": "apply_rule_to_facts", "label": "Aplicar a regra aos fatos" },
+    { "id": "derive_legal_consequence", "label": "Derivar a consequência jurídica" },
+    { "id": "formulate_request", "label": "Formular o pedido" },
+    { "id": "calculate_deadline", "label": "Calcular prazo" },
+    { "id": "identify_competence", "label": "Identificar competência e endereçamento" },
+    { "id": "recognize_nullity", "label": "Reconhecer nulidade" },
+    { "id": "perform_sentencing_analysis", "label": "Analisar dosimetria e execução" },
+    { "id": "structure_argument", "label": "Estruturar tese, base, aplicação e consequência" },
+    { "id": "write_concisely", "label": "Redigir com precisão e concisão" }
+  ]
+}

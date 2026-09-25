@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-09-19",
+  "exam_count": 20,
+  "piece_count": 20,
+  "question_count": 80,
+  "unit_count": 100,
+  "rubric_item_count": 398,
+  "machine_checked_units": 75,
+  "manual_verified_units": 10,
+  "machine_checked_without_fractional_table": 15,
+  "needs_review_units": 0,
+  "issues": []
+}

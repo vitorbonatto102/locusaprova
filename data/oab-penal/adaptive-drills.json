@@ -1,0 +1,710 @@
+[
+  {
+    "id": "adaptive-piece-resposta-acusacao",
+    "kind": "piece_identification",
+    "title": "Identifique a peça",
+    "prompt": "Caio foi citado hoje em ação penal de rito ordinário. A denúncia já foi recebida, ainda não houve audiência e o mandado informa prazo de dez dias para a defesa escrita.",
+    "question": "Qual é a peça cabível neste momento?",
+    "answer": "Resposta à acusação, com fundamento nos arts. 396 e 396-A do CPP.",
+    "options": ["Resposta à acusação — arts. 396 e 396-A do CPP", "Alegações finais por memoriais — art. 403, § 3º, do CPP", "Apelação — art. 593, I, do CPP", "Recurso em sentido estrito — art. 581, I, do CPP"],
+    "hints": ["Observe o momento: a denúncia foi recebida e o acusado acabou de ser citado.", "O prazo indicado é de dez dias."],
+    "rubric": [
+      { "criterion": "Identifica a resposta à acusação", "points": 0.7, "required_terms": ["resposta à acusação"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Relaciona a peça ao art. 396-A do CPP", "points": 0.3, "required_terms": ["396-A"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_procedural_document", "identify_procedural_timing"],
+    "thesis_ids": [],
+    "estimated_minutes": 3
+  },
+  {
+    "id": "adaptive-piece-memoriais",
+    "kind": "piece_identification",
+    "title": "Identifique a peça",
+    "prompt": "Encerrada a instrução, o juiz converteu os debates orais em memoriais. O Ministério Público já apresentou suas razões finais e a defesa foi intimada para se manifestar.",
+    "question": "Qual é a manifestação defensiva cabível?",
+    "answer": "Alegações finais por memoriais, na forma do art. 403, § 3º, do CPP.",
+    "options": ["Alegações finais por memoriais — art. 403, § 3º, do CPP", "Resposta à acusação — art. 396-A do CPP", "Contrarrazões de apelação — art. 600 do CPP", "Revisão criminal — art. 621 do CPP"],
+    "hints": ["A instrução já terminou.", "O juiz substituiu os debates orais por manifestação escrita."],
+    "rubric": [
+      { "criterion": "Identifica as alegações finais por memoriais", "points": 0.7, "required_terms": ["alegações finais", "memoriais"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Relaciona a peça ao art. 403, § 3º, do CPP", "points": 0.3, "required_terms": ["403", "§ 3º"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_procedural_document", "identify_procedural_timing"],
+    "thesis_ids": [],
+    "estimated_minutes": 3
+  },
+  {
+    "id": "adaptive-piece-apelacao",
+    "kind": "piece_identification",
+    "title": "Identifique a peça",
+    "prompt": "Após a instrução, o juiz proferiu sentença condenatória. A defesa foi intimada ontem e pretende levar ao tribunal teses de absolvição e, subsidiariamente, de redução da pena.",
+    "question": "Qual é o recurso cabível?",
+    "answer": "Apelação, com fundamento no art. 593, I, do CPP.",
+    "options": ["Apelação — art. 593, I, do CPP", "Recurso em sentido estrito — art. 581 do CPP", "Embargos de declaração — art. 382 do CPP", "Agravo em execução — art. 197 da LEP"],
+    "hints": ["Há uma sentença condenatória recorrível.", "O recurso devolve ao tribunal o mérito e a dosimetria."],
+    "rubric": [
+      { "criterion": "Identifica a apelação", "points": 0.7, "required_terms": ["apelação"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 593, I, do CPP", "points": 0.3, "required_terms": ["593", "I"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_procedural_document", "identify_appeal"],
+    "thesis_ids": [],
+    "estimated_minutes": 3
+  },
+  {
+    "id": "adaptive-piece-rese-rejeicao",
+    "kind": "piece_identification",
+    "title": "Identifique a peça",
+    "prompt": "Em ação penal privada, o juiz rejeitou a queixa-crime antes da citação do querelado. O advogado do querelante foi intimado e pretende impugnar essa decisão.",
+    "question": "Qual é o recurso cabível?",
+    "answer": "Recurso em sentido estrito, com fundamento no art. 581, I, do CPP.",
+    "options": ["Recurso em sentido estrito — art. 581, I, do CPP", "Apelação — art. 593 do CPP", "Agravo em execução — art. 197 da LEP", "Carta testemunhável — art. 639 do CPP"],
+    "hints": ["A decisão rejeitou a peça acusatória.", "Consulte as hipóteses do art. 581 do CPP."],
+    "rubric": [
+      { "criterion": "Identifica o recurso em sentido estrito", "points": 0.7, "required_terms": ["recurso em sentido estrito"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 581, I, do CPP", "points": 0.3, "required_terms": ["581", "I"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_procedural_document", "identify_appeal"],
+    "thesis_ids": [],
+    "estimated_minutes": 3
+  },
+  {
+    "id": "adaptive-thesis-crime-impossivel",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Lia abriu a bolsa de uma passageira no ônibus e introduziu a mão no compartimento onde acreditava haver um celular. A passageira tinha retirado todos os objetos antes de embarcar, e as imagens mostram que a bolsa permaneceu vazia durante todo o trajeto. Lia foi contida antes de perceber o equívoco. A denúncia imputa tentativa de furto; não se discute aqui a existência de outro objeto que pudesse ser subtraído.",
+    "question": "Qual tese de direito material deve ser sustentada e qual é a consequência?",
+    "answer": "Deve ser sustentado crime impossível por impropriedade absoluta do objeto, nos termos do art. 17 do CP, com o reconhecimento da atipicidade e absolvição.",
+    "hints": ["Pergunte se o objeto material existia naquele momento.", "Diferencie impossibilidade absoluta de mera dificuldade de consumação."],
+    "rubric": [
+      { "criterion": "Identifica o crime impossível", "points": 0.4, "required_terms": ["crime impossível"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aponta a impropriedade absoluta do objeto e o art. 17 do CP", "points": 0.35, "required_terms": ["impropriedade absoluta", "art. 17"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Formula a consequência absolutória", "points": 0.25, "required_terms": ["absolvição"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["crime-impossivel"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-thesis-desistencia-voluntaria",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Nilo rompeu o cadeado de um depósito para subtrair caixas de ferramentas que sabia estarem lá dentro. Já havia alcançado as caixas e podia levá-las sem oposição, mas, por decisão própria, largou tudo e saiu. Nenhuma pessoa o surpreendeu, e o alarme estava desligado. A denúncia descreve tentativa de furto; o cadeado danificado foi documentado pela perícia.",
+    "question": "Qual instituto incide e por quais atos Nilo poderá responder?",
+    "answer": "Incide a desistência voluntária do art. 15 do CP, pois Nilo podia prosseguir e decidiu parar. Ele responde apenas pelos atos já praticados.",
+    "hints": ["Ele ainda conseguia prosseguir.", "A interrupção decorreu da própria vontade do agente."],
+    "rubric": [
+      { "criterion": "Identifica a desistência voluntária", "points": 0.4, "required_terms": ["desistência voluntária"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica o fato decisivo e o art. 15 do CP", "points": 0.35, "required_terms": ["podia prosseguir", "art. 15"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Limita a responsabilização aos atos praticados", "points": 0.25, "required_terms": ["atos já praticados"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["desistencia-voluntaria"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-thesis-prova-ilicita",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Após receber uma denúncia anônima não verificada, policiais entraram à noite na casa de Davi sem mandado. O morador recusou a entrada; não havia perseguição, pedido de socorro ou elementos concretos de flagrante anteriores ao ingresso. Os agentes encontraram documentos que sustentaram toda a denúncia. Nenhuma fonte independente levou aos mesmos documentos.",
+    "question": "Construa a tese processual e indique o efeito sobre a prova.",
+    "answer": "A defesa deve sustentar a ilicitude da prova obtida mediante violação do domicílio e requerer seu desentranhamento, conforme o art. 157 do CPP, com extensão às provas derivadas quando presente o nexo causal.",
+    "hints": ["Não havia mandado, consentimento nem flagrante.", "Pense na consequência prevista pelo CPP para a prova ilícita."],
+    "rubric": [
+      { "criterion": "Identifica a prova ilícita por violação de domicílio", "points": 0.4, "required_terms": ["prova ilícita", "domicílio"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 157 do CPP", "points": 0.3, "required_terms": ["art. 157"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Requer desentranhamento e trata das provas derivadas", "points": 0.3, "required_terms": ["desentranhamento", "derivadas"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["prova-ilicita"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-thesis-absolvicao-sumaria",
+    "kind": "thesis_hunt",
+    "title": "Escolha a consequência",
+    "prompt": "Depois do recebimento da denúncia, Caetano foi citado para apresentar resposta à acusação. O Ministério Público lhe atribui furto por ter levado um objeto que os próprios documentos da acusação demonstram ser de sua propriedade exclusiva. Não há alegação de copropriedade, fraude ou violência; a divergência está apenas na classificação penal do fato narrado. A defesa possui o contrato de compra e o recibo já juntados aos autos.",
+    "question": "Qual providência deve ser pedida ao juiz neste momento?",
+    "answer": "Deve ser requerida a absolvição sumária, com fundamento no art. 397, III, do CPP, porque o fato narrado evidentemente não constitui crime.",
+    "options": ["Absolvição sumária — art. 397, III, do CPP", "Rejeição da denúncia — art. 395 do CPP", "Pronúncia — art. 413 do CPP", "Suspensão condicional do processo — art. 89 da Lei 9.099/95"],
+    "hints": ["A denúncia já foi recebida.", "O juízo agora pode antecipar uma decisão de mérito nas hipóteses do art. 397 do CPP."],
+    "rubric": [
+      { "criterion": "Identifica a absolvição sumária", "points": 0.65, "required_terms": ["absolvição sumária"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Relaciona a atipicidade ao art. 397, III, do CPP", "points": 0.35, "required_terms": ["397", "III"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "derive_legal_consequence"],
+    "thesis_ids": ["absolvicao-sumaria-atipicidade"],
+    "estimated_minutes": 3
+  },
+  {
+    "id": "adaptive-foundation-legitima-defesa",
+    "kind": "complete_foundation",
+    "title": "Complete a fundamentação",
+    "prompt": "Na saída de um mercado, Rui foi atacado por André com uma barra de ferro. As câmeras mostram Rui recuando, tentando fugir e, sem outra saída, usando uma cadeira para deter um único golpe iminente. Assim que André soltou a barra, Rui parou. A instrução confirmou essa sequência, mas o Ministério Público pediu condenação por lesão corporal.",
+    "question": "Complete: a conduta está amparada por ___, prevista no ___, devendo a defesa requerer ___.",
+    "answer": "A conduta está amparada por legítima defesa, prevista no art. 25 do CP, devendo a defesa requerer absolvição com fundamento no art. 386, VI, do CPP.",
+    "hints": ["Agressão injusta, atual ou iminente e uso moderado dos meios necessários.", "Depois da instrução, formule a consequência absolutória do CPP."],
+    "rubric": [
+      { "criterion": "Nomeia a legítima defesa", "points": 0.35, "required_terms": ["legítima defesa"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 25 do CP", "points": 0.3, "required_terms": ["art. 25"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede absolvição pelo art. 386, VI, do CPP", "points": 0.35, "required_terms": ["absolvição", "386", "VI"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "derive_legal_consequence"],
+    "thesis_ids": ["legitima-defesa"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-foundation-arrependimento-posterior",
+    "kind": "complete_foundation",
+    "title": "Complete a fundamentação",
+    "prompt": "Mara subtraiu uma bicicleta sem empregar violência ou grave ameaça. Uma semana depois, por iniciativa própria e antes do recebimento da denúncia, procurou a proprietária e restituiu a bicicleta em perfeito estado. A vítima confirmou a devolução integral do prejuízo. A acusação pede condenação sem considerar esse comportamento posterior.",
+    "question": "Indique instituto, fundamento e consequência na pena.",
+    "answer": "Incide o arrependimento posterior do art. 16 do CP, pois houve restituição voluntária antes do recebimento da denúncia em crime sem violência ou grave ameaça, devendo a pena ser reduzida de um a dois terços.",
+    "hints": ["A restituição ocorreu depois da consumação.", "O crime não envolveu violência ou grave ameaça."],
+    "rubric": [
+      { "criterion": "Identifica o arrependimento posterior", "points": 0.35, "required_terms": ["arrependimento posterior"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 16 do CP e os requisitos", "points": 0.35, "required_terms": ["art. 16", "antes do recebimento"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica redução de um a dois terços", "points": 0.3, "required_terms": ["um a dois terços"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["arrependimento-posterior"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-application-erro-tipo",
+    "kind": "fact_to_thesis",
+    "title": "Do fato à tese",
+    "prompt": "Durante uma mudança, Beto levou uma mala idêntica à sua acreditando sinceramente que era o próprio bem. As etiquetas haviam sido trocadas por terceiro.",
+    "question": "Ligue o fato decisivo à tese, ao fundamento e à consequência penal.",
+    "answer": "O erro inevitável sobre a titularidade da mala configura erro de tipo essencial, nos termos do art. 20 do CP, excluindo o dolo. Como o furto não tem modalidade culposa, a conduta é atípica e deve haver absolvição.",
+    "hints": ["O engano recai sobre elemento que integra o tipo penal.", "Verifique se existe furto culposo."],
+    "rubric": [
+      { "criterion": "Identifica o erro de tipo essencial", "points": 0.35, "required_terms": ["erro de tipo"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica o art. 20 do CP para excluir o dolo", "points": 0.35, "required_terms": ["art. 20", "exclui o dolo"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Conclui pela atipicidade e absolvição", "points": 0.3, "required_terms": ["atípica", "absolvição"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["erro-de-tipo"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-application-confissao",
+    "kind": "fact_to_thesis",
+    "title": "Do fato à consequência",
+    "prompt": "No interrogatório judicial, Joana admitiu espontaneamente a autoria. A sentença usou essa declaração para formar o convencimento, mas não reconheceu qualquer atenuante.",
+    "question": "Qual pedido subsidiário deve ser formulado na dosimetria?",
+    "answer": "Deve ser reconhecida a atenuante da confissão espontânea, prevista no art. 65, III, d, do CP, com sua incidência na segunda fase da dosimetria.",
+    "hints": ["A declaração foi espontânea e utilizada na condenação.", "A circunstância atua na segunda fase da dosimetria."],
+    "rubric": [
+      { "criterion": "Identifica a atenuante da confissão espontânea", "points": 0.45, "required_terms": ["confissão espontânea"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 65, III, d, do CP", "points": 0.3, "required_terms": ["65", "III", "d"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Situa a incidência na segunda fase", "points": 0.25, "required_terms": ["segunda fase"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["apply_rule_to_facts", "sentencing"],
+    "thesis_ids": ["confissao-espontanea"],
+    "estimated_minutes": 3
+  },
+  {
+    "id": "adaptive-structure-resposta-acusacao",
+    "kind": "piece_structure",
+    "title": "Organize a estratégia",
+    "prompt": "Você prepara uma resposta à acusação em que há uma preliminar de nulidade, uma tese manifesta de atipicidade, documentos e três testemunhas.",
+    "question": "Escreva, em ordem, os blocos que não podem faltar na peça. Não redija o conteúdo de cada tese.",
+    "answer": "Endereçamento; identificação do processo e do acusado; fundamento nos arts. 396 e 396-A do CPP; tempestividade; preliminar de nulidade; mérito com pedido de absolvição sumária; especificação de provas e juntada de documentos; rol de testemunhas com pedido de intimação, se necessário; pedidos; fechamento.",
+    "hints": ["Comece pelo órgão jurisdicional e pela identificação do processo.", "Separe preliminar, mérito, provas e pedidos."],
+    "rubric": [
+      { "criterion": "Abre com endereçamento, identificação e fundamento", "points": 0.25, "required_terms": ["endereçamento", "396-A"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Ordena preliminar antes do mérito", "points": 0.25, "required_terms": ["preliminar", "mérito"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Inclui provas, documentos e testemunhas", "points": 0.25, "required_terms": ["provas", "testemunhas"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Fecha com pedidos e encerramento", "points": 0.25, "required_terms": ["pedidos", "fechamento"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["structure_legal_document", "identify_procedural_timing"],
+    "thesis_ids": [],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-structure-apelacao",
+    "kind": "piece_structure",
+    "title": "Organize a estratégia",
+    "prompt": "A sentença condenou o réu. A defesa sustentará uma nulidade processual, absolvição por insuficiência probatória e, subsidiariamente, redução da pena-base.",
+    "question": "Organize a sequência lógica das teses nas razões de apelação e indique o pedido correspondente a cada uma.",
+    "answer": "Após a síntese processual, deve-se apresentar primeiro a preliminar de nulidade, com pedido de anulação; depois a tese principal de mérito, com pedido de absolvição; por fim a tese subsidiária de dosimetria, com pedido de redução da pena-base. Encerrar com o pedido de conhecimento e provimento do recurso.",
+    "hints": ["Questões que podem invalidar o processo antecedem o mérito.", "A dosimetria é subsidiária à absolvição."],
+    "rubric": [
+      { "criterion": "Apresenta primeiro a nulidade e pede anulação", "points": 0.3, "required_terms": ["nulidade", "anulação"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Apresenta o mérito e pede absolvição", "points": 0.3, "required_terms": ["mérito", "absolvição"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Trata a dosimetria como subsidiária", "points": 0.25, "required_terms": ["subsidiária", "pena-base"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede conhecimento e provimento", "points": 0.15, "required_terms": ["conhecimento", "provimento"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["structure_legal_document", "derive_legal_consequence"],
+    "thesis_ids": [],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-writing-tentativa",
+    "kind": "thesis_writing",
+    "title": "Redija a tese",
+    "prompt": "Eduardo arrombou o vidro de um carro para retirar uma mochila do banco traseiro. Antes de tocar no objeto ou obter sua posse, foi imobilizado por um segurança que presenciava a ação. O vídeo confirma que a execução havia começado, mas a subtração não ocorreu por intervenção de terceiro. Em memoriais, a acusação pede condenação por furto consumado.",
+    "question": "Redija somente o parágrafo da tese subsidiária sobre a forma de execução e sua consequência na pena.",
+    "answer": "Subsidiariamente, deve ser reconhecida a tentativa, pois a execução foi iniciada e a consumação não ocorreu por circunstância alheia à vontade do agente, nos termos do art. 14, II, do CP, com redução da pena de um a dois terços conforme o parágrafo único do mesmo artigo.",
+    "hints": ["A execução começou, mas um terceiro impediu o resultado.", "Inclua tese, fato, fundamento e consequência."],
+    "rubric": [
+      { "criterion": "Formula a tese de tentativa", "points": 0.3, "required_terms": ["tentativa"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica a circunstância alheia à vontade", "points": 0.25, "required_terms": ["circunstância alheia"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 14, II, do CP", "points": 0.25, "required_terms": ["art. 14", "II"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede redução de um a dois terços", "points": 0.2, "required_terms": ["um a dois terços"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["write_legal_thesis", "apply_rule_to_facts", "cite_legal_basis"],
+    "thesis_ids": ["tentativa"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-writing-insuficiencia-probatoria",
+    "kind": "thesis_writing",
+    "title": "Redija a tese",
+    "prompt": "Na instrução, nenhuma testemunha reconheceu o acusado. A única imputação de autoria consta de relato inquisitorial não confirmado em juízo.",
+    "question": "Redija um parágrafo defensivo com tese, aplicação aos fatos, fundamento processual e pedido.",
+    "answer": "A autoria não foi comprovada sob contraditório judicial, pois nenhuma testemunha reconheceu o acusado e o relato inquisitorial permaneceu isolado. Diante da insuficiência probatória, requer-se a absolvição com fundamento no art. 386, VII, do CPP.",
+    "hints": ["Destaque a ausência de confirmação judicial da autoria.", "Conclua com o inciso do art. 386 relativo à falta de prova suficiente para condenar."],
+    "rubric": [
+      { "criterion": "Sustenta insuficiência probatória", "points": 0.3, "required_terms": ["insuficiência probatória"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica a ausência de reconhecimento e confirmação judicial", "points": 0.3, "required_terms": ["não reconheceu", "judicial"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 386, VII, do CPP", "points": 0.2, "required_terms": ["386", "VII"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Formula pedido de absolvição", "points": 0.2, "required_terms": ["absolvição"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["write_legal_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["insuficiencia-probatoria"],
+    "estimated_minutes": 4
+  },
+  {
+    "id": "adaptive-thesis-citacao-inexistente",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "A denúncia foi recebida e o juízo marcou a audiência, mas o mandado de citação de Helena voltou negativo. Mesmo assim, a instrução ocorreu sem a acusada e sem defensor constituído; um defensor foi nomeado apenas para o ato. Helena descobriu o processo depois da sentença e demonstrou que morava no endereço conhecido nos autos. A defesa quer identificar o vício e os atos atingidos.",
+    "question": "Qual preliminar você sustentaria, qual prejuízo concreto apontaria e desde quando pediria a renovação dos atos?",
+    "answer": "Deve ser arguida a nulidade pela ausência de citação válida, pois Helena não pôde tomar ciência da acusação, preparar a resposta nem acompanhar a instrução. Com fundamento nos arts. 351 e 564, III, e, do CPP e nas garantias de defesa, requer-se a anulação desde a citação frustrada, com nova citação e renovação dos atos dependentes.",
+    "hints": ["A nomeação de defensor para a audiência não supre automaticamente a falta de ciência da acusada.", "Mostre o prejuízo e delimite o marco da anulação."],
+    "rubric": [
+      { "criterion": "Identifica a falta de citação válida", "points": 0.3, "required_terms": ["citação"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Explica o prejuízo à defesa", "points": 0.25, "required_terms": ["defesa"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica fundamento processual", "points": 0.2, "required_terms": ["564"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede renovação desde o ato viciado", "points": 0.25, "required_terms": ["anulação", "nova citação"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["nulidade-citacao"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-testemunha-defesa",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Na resposta à acusação, a defesa arrolou uma testemunha que presenciou a discussão imediatamente anterior à lesão. O juiz indeferiu sua oitiva com a frase 'prova desnecessária', sem explicar por que o depoimento seria irrelevante. Na sentença, afirmou que não havia prova da provocação narrada pelo acusado e usou justamente essa lacuna para rejeitar a tese defensiva. A defesa havia protestado pelo indeferimento na audiência.",
+    "question": "Construa a preliminar, relacionando o indeferimento ao prejuízo e ao pedido processual adequado.",
+    "answer": "Há cerceamento de defesa pelo indeferimento imotivado de prova pertinente, em afronta ao contraditório e à ampla defesa. O prejuízo é concreto porque a sentença usou a falta dessa prova para rejeitar a versão defensiva. Deve-se requerer a nulidade da instrução a partir do indeferimento, com oitiva da testemunha e nova decisão, à luz dos arts. 400, § 1º, e 563 do CPP.",
+    "hints": ["Não basta dizer que houve cerceamento: mostre como a sentença explorou a lacuna.", "Peça a reabertura da instrução, não uma absolvição automática."],
+    "rubric": [
+      { "criterion": "Aponta cerceamento de defesa", "points": 0.3, "required_terms": ["cerceamento"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Individualiza o prejuízo", "points": 0.3, "required_terms": ["sentença", "prova"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica a regra processual", "points": 0.2, "required_terms": ["400"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede renovação da instrução", "points": 0.2, "required_terms": ["oitiva"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["cerceamento-defesa"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-interrogatorio-antecipado",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "No procedimento comum, o juiz interrogou Samuel antes de ouvir as testemunhas de acusação. A defesa pediu que o interrogatório fosse repetido ao final, pois duas testemunhas trouxeram fatos novos sobre a suposta participação dele, mas o requerimento foi negado. A sentença se apoiou nesses fatos novos e criticou Samuel por não tê-los explicado no interrogatório inicial. A objeção constou da ata.",
+    "question": "Qual vício processual há, qual é o prejuízo e o que deve ser renovado?",
+    "answer": "O interrogatório deve ocorrer ao final da instrução, conforme o art. 400 do CPP. Antecipá-lo e negar sua repetição impediu Samuel de se manifestar sobre fatos novos surgidos depois; a sentença ainda valorou essa impossibilidade contra ele. Requer-se a nulidade a partir do interrogatório irregular, sua renovação após a prova oral e nova sentença, demonstrado o prejuízo pelo art. 563 do CPP.",
+    "hints": ["O acusado deve poder falar depois de conhecer a prova produzida em audiência.", "Aponte por que a ordem dos atos prejudicou esta defesa, não só a regra abstrata."],
+    "rubric": [
+      { "criterion": "Identifica a ordem do interrogatório", "points": 0.3, "required_terms": ["interrogatório", "final"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica o prejuízo dos fatos novos", "points": 0.25, "required_terms": ["fatos novos"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 400 do CPP", "points": 0.2, "required_terms": ["400"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede novo interrogatório e sentença", "points": 0.25, "required_terms": ["renovação", "sentença"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["interrogatorio-ao-final"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-sentenca-sem-fundamento",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Em memoriais, a defesa apontou que as duas testemunhas presenciais descreveram pessoa com características diferentes das de Paulo e pediu absolvição por dúvida de autoria. A sentença respondeu apenas que 'a versão defensiva não convence' e condenou, sem indicar como superou a divergência nem quais provas judicializadas demonstraram autoria. O tribunal ainda não examinou o caso.",
+    "question": "Qual tese processual formular na apelação e qual providência pedir ao tribunal?",
+    "answer": "A sentença carece de fundamentação sobre ponto decisivo da autoria, contrariando o art. 93, IX, da Constituição e os arts. 381, III, e 564, V, do CPP. A divergência entre testemunhas foi ignorada, o que impede controlar o raciocínio condenatório. Requer-se a anulação da sentença e nova decisão motivada; a absolvição por insuficiência probatória pode ser formulada em pedido próprio.",
+    "hints": ["Diferencie decisão mal fundamentada de mera discordância do resultado.", "Não trate anulação e absolvição como consequências idênticas."],
+    "rubric": [
+      { "criterion": "Identifica a falta de fundamentação", "points": 0.3, "required_terms": ["fundamentação"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Liga a falha à divergência de autoria", "points": 0.25, "required_terms": ["autoria"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o fundamento normativo", "points": 0.2, "required_terms": ["93", "IX"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede anulação e nova decisão", "points": 0.25, "required_terms": ["anulação", "nova decisão"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["sentenca-sem-fundamentacao"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-fato-novo-sem-aditamento",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "A denúncia atribuiu a Júlio apenas a subtração de mercadorias de uma loja. Na instrução, uma testemunha afirmou pela primeira vez que ele teria ameaçado o segurança com uma faca. Sem aditamento da denúncia e sem nova oportunidade de defesa sobre a ameaça, a sentença o condenou por roubo. A defesa havia impugnado a inclusão desse fato nos memoriais.",
+    "question": "Explique por que não se trata de simples mudança de classificação jurídica e formule o pedido.",
+    "answer": "A ameaça com faca é fato novo, não descrito na denúncia, que altera a imputação. A condenação por roubo sem aditamento viola a correlação e o procedimento da mutatio libelli, previsto no art. 384 do CPP; não é mera emendatio libelli do art. 383. Requer-se a anulação da sentença quanto à nova imputação e o aditamento com contraditório, ou o julgamento apenas dos fatos originalmente narrados.",
+    "hints": ["Compare os fatos narrados na denúncia com os usados na condenação.", "Fato novo exige procedimento diferente de mero reenquadramento jurídico."],
+    "rubric": [
+      { "criterion": "Reconhece fato novo e violação da correlação", "points": 0.3, "required_terms": ["fato novo"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Distingue mutatio de emendatio", "points": 0.2, "required_terms": ["mutatio"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 384 do CPP", "points": 0.2, "required_terms": ["384"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede anulação ou limitação aos fatos narrados", "points": 0.3, "required_terms": ["anulação"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["mutatio-libelli"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-prova-derivada",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Investigadores acessaram mensagens de um telefone sem autorização judicial nem consentimento válido. Nelas encontraram o endereço de um galpão, que não aparecia em nenhuma outra diligência anterior. Depois obtiveram mandado para o galpão, baseado exclusivamente nas mensagens, e apreenderam objetos usados na denúncia. A acusação afirma que o mandado posterior tornou regular toda a cadeia.",
+    "question": "Que tese alcança a prova inicial e a apreensão posterior? Há fato que afaste a contaminação?",
+    "answer": "O acesso ilícito ao telefone contamina as mensagens e, pelo nexo causal, a busca no galpão que delas derivou exclusivamente, conforme o art. 157, caput e § 1º, do CPP. O mandado posterior não rompe sozinho essa cadeia; o caso não traz fonte independente. Requer-se o desentranhamento das mensagens e das apreensões derivadas, com reexame da justa causa ou do mérito conforme o momento processual.",
+    "hints": ["Trace como os investigadores chegaram ao galpão.", "Uma ordem posterior não cria, por si, fonte independente."],
+    "rubric": [
+      { "criterion": "Identifica ilicitude e derivação", "points": 0.3, "required_terms": ["derivada"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica o nexo causal e ausência de fonte independente", "points": 0.3, "required_terms": ["fonte independente"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 157 do CPP", "points": 0.2, "required_terms": ["157"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Requer desentranhamento", "points": 0.2, "required_terms": ["desentranhamento"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["prova-ilicita"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-reconhecimento-irregular",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "A vítima viu o assaltante por poucos segundos, à noite. Dias depois, um policial lhe mostrou apenas a fotografia de Marcelo e perguntou se era ele. No processo, a vítima repetiu o reconhecimento sem descrever previamente as características observadas; não houve outras provas independentes de autoria. Marcelo apresentou comprovantes de que estava em outra cidade, não examinados na sentença.",
+    "question": "Que fragilidade probatória deve ser apontada e qual resultado pedir após a instrução?",
+    "answer": "O reconhecimento singular e sugestivo violou as regras obrigatórias do art. 226 do CPP e é inválido como prova de autoria, conforme o Tema 1.258 do STJ. Não há corroboração independente; a curta observação, a fotografia única e os comprovantes não enfrentados reforçam a dúvida. Requer-se absolvição por insuficiência de prova, nos termos do art. 386, VII, do CPP, sem afirmar que todo reconhecimento irregular gera absolvição automática quando existem outras provas autônomas.",
+    "hints": ["Não trate o reconhecimento como prova infalível nem como nulidade que sempre absolve.", "Depois da instrução, vincule a dúvida ao inciso adequado do art. 386."],
+    "rubric": [
+      { "criterion": "Aponta reconhecimento sugestivo e irregular", "points": 0.3, "required_terms": ["reconhecimento"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Explica ausência de corroboração", "points": 0.25, "required_terms": ["corroboração"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita os arts. 226 e 386, VII, do CPP", "points": 0.25, "required_terms": ["226", "386"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede absolvição", "points": 0.2, "required_terms": ["absolvição"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["insuficiencia-probatoria"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-cadeia-custodia",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "A acusação afirma que um envelope apreendido com Antônio continha substância ilícita. O auto de apreensão registra dois invólucros, mas o laboratório recebeu três, sem lacre identificado, e ninguém explica quem os transportou ou abriu. A defesa questionou a divergência antes do julgamento. Não há fotografia ou outro elemento que permita associar com segurança o material periciado ao apreendido com Antônio.",
+    "question": "Como usar a falha da cadeia de custódia sem afirmar que toda irregularidade gera nulidade automática?",
+    "answer": "A cadeia de custódia dos arts. 158-A e seguintes do CPP exige rastreabilidade do vestígio. A divergência de quantidade, a falta de lacre e a ausência de registro de transporte impedem verificar se o material periciado é o apreendido com Antônio. Deve-se impugnar a confiabilidade dessa prova, pedir esclarecimento ou exclusão de sua valoração e, se a autoria/materialidade ficar sem suporte, absolvição pelo art. 386, VII, do CPP; não há nulidade automática em toda falha formal.",
+    "hints": ["A questão central é a identidade entre o vestígio apreendido e o periciado.", "Fundamente a consequência na confiabilidade concreta da prova."],
+    "rubric": [
+      { "criterion": "Identifica a cadeia de custódia", "points": 0.3, "required_terms": ["cadeia de custódia"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aponta divergência e falta de rastreabilidade", "points": 0.3, "required_terms": ["lacre", "rastreabilidade"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 158-A do CPP", "points": 0.2, "required_terms": ["158-A"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Formula consequência probatória condicionada", "points": 0.2, "required_terms": ["confiabilidade"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["cadeia-de-custodia"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-exame-corpo-delito",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "A denúncia atribui a Lara o rompimento de um cadeado para entrar em uma loja. O cadeado e a porta permaneceram preservados, e a defesa pediu exame pericial durante a instrução. Nenhuma perícia foi feita; o Ministério Público apresentou apenas fotografias sem identificação de data e o relato de um segurança. A sentença reconheceu o rompimento de obstáculo como qualificadora do furto.",
+    "question": "Que tese subsidiária cabe sobre a qualificadora e qual regra de prova a sustenta?",
+    "answer": "Como o suposto rompimento deixou vestígios preservados, a prova pericial era a via exigida pelo art. 158 do CPP, ressalvadas hipóteses legais de impossibilidade do exame. Fotografias sem origem segura e relato isolado, neste quadro, não demonstram a qualificadora. Requer-se seu afastamento e o redimensionamento da pena, sem necessariamente afastar o furto básico.",
+    "hints": ["A materialidade do rompimento é distinta da subtração.", "A ausência de perícia tem peso especial quando os vestígios estavam disponíveis."],
+    "rubric": [
+      { "criterion": "Identifica necessidade de exame em infração com vestígios", "points": 0.3, "required_terms": ["perícia"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica preservação do cadeado", "points": 0.25, "required_terms": ["vestígios"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 158 do CPP", "points": 0.2, "required_terms": ["158"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede decote da qualificadora", "points": 0.25, "required_terms": ["qualificadora"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["exame-corpo-delito"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-prova-emprestada",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Para provar que Renata integrava um grupo criminoso, a acusação juntou depoimentos colhidos em processo contra outras pessoas. Renata não participou daquele processo e, no atual, a defesa recebeu os arquivos apenas depois de encerrados os debates, sem prazo para questionar seu conteúdo ou requerer contraprova. A sentença tratou os depoimentos emprestados como prova central da condenação.",
+    "question": "O problema é a origem da prova ou a falta de contraditório? Indique o prejuízo e o pedido.",
+    "answer": "A prova emprestada não é ilícita apenas por ter sido produzida em outro processo, mas sua utilização contra Renata exige contraditório efetivo no processo de destino. A juntada tardia impediu impugnação e contraprova, e a sentença a usou como eixo condenatório. Requer-se a nulidade dos atos posteriores à juntada para abrir contraditório, ou o afastamento de sua valoração, conforme os arts. 5º, LV, da Constituição e 563 do CPP.",
+    "hints": ["Prova emprestada pode ser admitida sob garantias.", "Mostre o prejuízo decorrente do uso central de prova não debatida."],
+    "rubric": [
+      { "criterion": "Distingue prova emprestada de prova ilícita automática", "points": 0.2, "required_terms": ["prova emprestada"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Identifica falta de contraditório", "points": 0.3, "required_terms": ["contraditório"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Demonstra prejuízo concreto", "points": 0.25, "required_terms": ["contraprova"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede renovação ou afastamento da valoração", "points": 0.25, "required_terms": ["nulidade"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["prova-emprestada"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-silencio-como-culpa",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "Igor permaneceu em silêncio no interrogatório, após ser informado de seu direito. As testemunhas divergem quanto à cor do veículo usado no crime e nenhuma identificou o motorista. A sentença afirmou que o silêncio de Igor 'deixou sem explicação a versão acusatória' e, junto da dúvida testemunhal, serviu para concluir pela autoria. A defesa havia contestado expressamente esse raciocínio.",
+    "question": "Qual erro de valoração há e como formular o pedido de mérito?",
+    "answer": "O silêncio é direito de Igor e não pode ser interpretado em prejuízo da defesa, conforme o art. 5º, LXIII, da Constituição e o art. 186, parágrafo único, do CPP. Ele não supre a falta de identificação e a divergência testemunhal. Excluído esse raciocínio, requer-se absolvição por insuficiência de prova de autoria, nos termos do art. 386, VII, do CPP.",
+    "hints": ["O ônus de provar autoria é da acusação.", "Associe o silêncio à dúvida que permanece nas provas positivas."],
+    "rubric": [
+      { "criterion": "Afirma o direito ao silêncio", "points": 0.3, "required_terms": ["silêncio"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Veda inferência desfavorável", "points": 0.25, "required_terms": ["prejuízo"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 186 do CPP", "points": 0.2, "required_terms": ["186"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede absolvição por falta de prova", "points": 0.25, "required_terms": ["absolvição", "386"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["direito-ao-silencio"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-thesis-denuncia-sem-individualizacao",
+    "kind": "thesis_hunt",
+    "title": "Encontre a tese",
+    "prompt": "A denúncia descreve fraude praticada por uma empresa durante seis meses e inclui todos os cinco diretores como réus. Quanto a Beatriz, limita-se a dizer que ela 'integrava a diretoria', sem narrar decisão, ato ou omissão individual ligado à fraude. Os documentos anexos mostram que ela assumiu o cargo após o último fato. A acusação não indica outro suporte para sua participação.",
+    "question": "Antes da instrução, qual tese processual cabe e que consequência deve ser pedida?",
+    "answer": "Há inépcia da denúncia quanto a Beatriz por não individualizar conduta minimamente atribuível a ela, e falta justa causa diante da cronologia documentada. Os arts. 41 e 395, I e III, do CPP exigem narrativa apta ao exercício da defesa e suporte mínimo da acusação. Requer-se a rejeição da denúncia em relação a Beatriz, sem estender automaticamente o pedido aos demais diretores.",
+    "hints": ["Cargo societário isolado não descreve uma conduta criminosa.", "Separe inépcia da narrativa e falta de lastro mínimo."],
+    "rubric": [
+      { "criterion": "Aponta inépcia ou falta de justa causa", "points": 0.3, "required_terms": ["inépcia"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Mostra ausência de conduta individualizada", "points": 0.25, "required_terms": ["conduta"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica arts. 41 e 395 do CPP", "points": 0.2, "required_terms": ["41", "395"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede rejeição quanto à acusada", "points": 0.25, "required_terms": ["rejeição"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["identify_thesis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["inepcia-denuncia"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-decadencia",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Em crime de ação penal condicionada à representação, a vítima recebeu em 10 de janeiro o nome e o endereço da pessoa apontada como autora. Mesmo assim, só apresentou representação em 20 de agosto do mesmo ano. Não houve dúvida sobre a identidade, nem ato anterior que pudesse ser entendido como manifestação inequívoca de vontade de processar. O Ministério Público ofereceu denúncia com base nessa representação tardia.",
+    "question": "Redija a tese com termo inicial, prazo, base legal e consequência para a punibilidade.",
+    "answer": "O direito de representação decaiu, pois a vítima conhecia a autoria em 10 de janeiro e deixou transcorrer o prazo de seis meses sem manifestação válida. Nos termos do art. 103 do CP e do art. 38 do CPP, a representação de 20 de agosto é tardia. Deve ser reconhecida a extinção da punibilidade pela decadência, conforme o art. 107, IV, do CP.",
+    "hints": ["O prazo começa com o conhecimento da autoria, não necessariamente com a data do fato.", "Calcule seis meses e formule a consequência do art. 107 do CP."],
+    "rubric": [
+      { "criterion": "Identifica a decadência", "points": 0.3, "required_terms": ["decadência"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica conhecimento da autoria e seis meses", "points": 0.25, "required_terms": ["seis meses"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita arts. 103 do CP e 38 do CPP", "points": 0.25, "required_terms": ["103", "38"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede extinção da punibilidade", "points": 0.2, "required_terms": ["extinção da punibilidade"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["decadencia-representacao"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-sursis-processual",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "O Ministério Público denunciou Clara por apropriação indébita simples, cuja pena mínima é de um ano. A certidão mostra que ela não responde a outro processo e não foi condenada por crime. Apesar disso, o órgão acusador não examinou a suspensão condicional do processo e nada justificou sobre o tema. A denúncia já foi recebida, mas ainda não houve instrução.",
+    "question": "Que providência a defesa deve requerer, sem tratar o benefício como concessão automática pelo juiz?",
+    "answer": "Deve ser provocado o exame de proposta de suspensão condicional do processo, pois a pena mínima é de um ano e Clara não responde a outro processo nem possui condenação criminal, atendidos os demais requisitos legais. O fundamento é o art. 89 da Lei 9.099/1995. Requer-se manifestação fundamentada do Ministério Público e, em caso de recusa indevida, o encaminhamento ao órgão competente para revisão, sem substituição automática da iniciativa acusatória pelo juiz.",
+    "hints": ["Veja a pena mínima do delito, não a máxima.", "O pedido inicial é de exame da proposta pelo titular da ação penal."],
+    "rubric": [
+      { "criterion": "Identifica a suspensão condicional do processo", "points": 0.3, "required_terms": ["suspensão condicional do processo"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica pena mínima e ausência de processos", "points": 0.25, "required_terms": ["pena mínima"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 89 da Lei 9.099", "points": 0.2, "required_terms": ["89"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede manifestação do Ministério Público", "points": 0.25, "required_terms": ["Ministério Público"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["sursis-processual"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-erro-tipo-permissivo",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Durante um apagão, Elisa ouviu pedidos de socorro vindos da casa vizinha e viu uma pessoa mascarada levantar um objeto metálico sobre a cabeça de outra. Ela arrombou a porta e empurrou a pessoa mascarada, causando lesão leve. As imagens revelaram depois que se tratava de uma gravação teatral: o objeto era de borracha e não havia agressão real. Os sinais externos, contudo, tornavam a aparência de perigo difícil de distinguir naquele instante, e Elisa não conhecia a gravação.",
+    "question": "Diferencie a justificante real da situação imaginada e redija tese, fundamento e pedido.",
+    "answer": "Não houve legítima defesa real porque a agressão era apenas aparente. Elisa supôs, por erro plenamente justificado pelas circunstâncias, situação de fato que tornaria legítima sua intervenção; trata-se de erro de tipo permissivo do art. 20, § 1º, do CP. Requer-se absolvição por isenção de pena, à luz do art. 386, VI, do CPP, examinando-se a evitabilidade do erro com base nos sinais disponíveis no momento.",
+    "hints": ["A agressão não existia objetivamente; o erro recaiu sobre os fatos.", "A evitabilidade do engano decide a consequência penal."],
+    "rubric": [
+      { "criterion": "Identifica erro de tipo permissivo", "points": 0.3, "required_terms": ["erro de tipo permissivo"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Mostra aparência de agressão e erro justificado", "points": 0.25, "required_terms": ["aparente"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 20, § 1º, do CP", "points": 0.2, "required_terms": ["20", "§ 1º"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede absolvição", "points": 0.25, "required_terms": ["absolvição"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["erro-tipo-permissivo"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-coacao-irresistivel",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Um grupo manteve o filho pequeno de Roberto sob ameaça imediata e ordenou que ele dirigisse um carro até um depósito, onde outros membros retirariam mercadorias. Roberto não participou do plano nem receberia vantagem. As mensagens e as câmeras mostram que o grupo controlava seus movimentos e que a ameaça só cessou quando o transporte terminou. A acusação pede condenação de Roberto como coautor da subtração.",
+    "question": "Redija a tese principal para Roberto, incluindo a exigência de irresistibilidade e seu efeito.",
+    "answer": "Deve ser reconhecida a coação moral irresistível: a ameaça imediata ao filho retirou de Roberto a possibilidade concreta de agir de outro modo, segundo os fatos comprovados. Pelo art. 22 do CP, somente os autores da coação respondem pelo crime praticado sob essa imposição. Requer-se absolvição de Roberto por exclusão da culpabilidade, nos termos do art. 386, VI, do CPP.",
+    "hints": ["Não confunda ameaça irresistível com medo genérico ou coação resistível.", "A tese afasta a culpabilidade do coagido, não a dos coatores."],
+    "rubric": [
+      { "criterion": "Identifica coação moral irresistível", "points": 0.3, "required_terms": ["coação moral irresistível"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica ameaça e impossibilidade de resistência", "points": 0.25, "required_terms": ["filho"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 22 do CP", "points": 0.2, "required_terms": ["22"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede absolvição por exclusão da culpabilidade", "points": 0.25, "required_terms": ["absolvição", "culpabilidade"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["coacao-moral-irresistivel"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-causa-superveniente",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Com intenção de matar, Leandro feriu Tiago no braço, causando lesão não letal. Tiago foi internado para observação e estava estável. Um incêndio iniciado por curto-circuito em outra ala do hospital provocou sua morte; o laudo afirma que a lesão do braço não contribuiu para o óbito. A sentença imputou a Leandro homicídio consumado apenas porque Tiago morreu após o ataque.",
+    "question": "Relacione causalidade, intenção inicial e enquadramento remanescente em um parágrafo defensivo.",
+    "answer": "A morte decorreu de causa superveniente relativamente independente que, por si só, produziu o resultado, sem contribuição da lesão, rompendo a imputação do óbito a Leandro pelo art. 13, § 1º, do CP. Como havia intenção de matar e execução iniciada, permanece possível a responsabilização por tentativa de homicídio, art. 14, II, do CP. Requer-se o afastamento da consumação e a adequação da pena à forma tentada.",
+    "hints": ["A morte posterior não basta: verifique se o ferimento contribuiu para ela.", "Não descarte a intenção de matar nem os atos já executados."],
+    "rubric": [
+      { "criterion": "Identifica causa superveniente independente", "points": 0.3, "required_terms": ["causa superveniente"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica ausência de contribuição da lesão", "points": 0.25, "required_terms": ["lesão"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 13, § 1º, do CP", "points": 0.2, "required_terms": ["13", "§ 1º"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede reconhecimento da tentativa", "points": 0.25, "required_terms": ["tentativa"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["causa-superveniente"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-furto-privilegiado",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Jorge, primário e sem condenações anteriores, subtraiu um livro usado avaliado em valor pequeno à época dos fatos. O bem foi recuperado, mas a condenação por furto foi mantida porque o juízo entendeu que o caso não preenchia os critérios para insignificância. Na dosimetria, a sentença não examinou a primariedade nem o valor do objeto e aplicou a resposta penal ordinária.",
+    "question": "Formule uma tese subsidiária distinta de insignificância e indique as opções legais de benefício.",
+    "answer": "Mesmo afastada a insignificância, cabe examinar o furto privilegiado do art. 155, § 2º, do CP: Jorge é primário e a coisa furtada é de pequeno valor. Esses requisitos autorizam substituir a reclusão por detenção, reduzir a pena de um a dois terços ou aplicar somente multa. Requer-se o reconhecimento do privilégio e a escolha fundamentada da resposta mais adequada ao caso.",
+    "hints": ["Atipicidade material e furto privilegiado são teses diferentes.", "O § 2º exige primariedade e pequeno valor da coisa."],
+    "rubric": [
+      { "criterion": "Identifica furto privilegiado", "points": 0.3, "required_terms": ["furto privilegiado"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica primariedade e pequeno valor", "points": 0.25, "required_terms": ["primário", "pequeno valor"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 155, § 2º, do CP", "points": 0.2, "required_terms": ["155", "§ 2º"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede benefício de redução, detenção ou multa", "points": 0.25, "required_terms": ["reduzir"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["furto-privilegiado"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-simulacro",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Durante um roubo, Otávio exibiu um objeto semelhante a uma pistola e a vítima, amedrontada, entregou a carteira. A perícia do objeto apreendido confirmou que era um simulacro de plástico, incapaz de funcionar como arma de fogo. A sentença reconheceu o roubo e ainda aumentou a pena pelo emprego de arma de fogo. A defesa não contesta neste ponto que o objeto produziu grave ameaça.",
+    "question": "Redija apenas a tese subsidiária sobre a causa de aumento, sem pedir absolvição do roubo.",
+    "answer": "A grave ameaça permanece apta a caracterizar o roubo, mas o simulacro periciado não preenche o requisito de arma de fogo da majorante do art. 157, § 2º-A, I, do CP. Não se pode tratar a aparência do objeto como emprego de arma de fogo. Requer-se o afastamento da causa de aumento e o redimensionamento da pena pelo roubo remanescente.",
+    "hints": ["Diferencie a grave ameaça do requisito específico da majorante.", "O pedido é de decote da causa de aumento e nova dosimetria."],
+    "rubric": [
+      { "criterion": "Distingue simulacro de arma de fogo", "points": 0.3, "required_terms": ["simulacro"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Preserva a grave ameaça do roubo", "points": 0.2, "required_terms": ["grave ameaça"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica o art. 157, § 2º-A, I, do CP", "points": 0.25, "required_terms": ["157", "§ 2º-A"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede afastamento da majorante", "points": 0.25, "required_terms": ["afastamento", "causa de aumento"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["majorante-arma-fogo"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-inquerito-pena-base",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Na sentença por crime patrimonial, a pena-base de Lívia foi elevada porque ela 'tem inclinação ao delito'. O único dado usado para isso foi um inquérito ainda sem denúncia. As demais circunstâncias judiciais foram expressamente consideradas favoráveis. A sentença também mencionou a gravidade abstrata do tipo, sem apontar consequência concreta além das normalmente previstas no crime.",
+    "question": "Redija o ataque à primeira fase da dosimetria e o pedido de recálculo.",
+    "answer": "A pena-base deve voltar ao mínimo legal: inquérito sem condenação não pode ser utilizado como maus antecedentes ou personalidade desfavorável, conforme o art. 59 do CP e a Súmula 444 do STJ. A gravidade abstrata já integra o tipo e não oferece fundamento concreto para exasperação. Requer-se o afastamento das valorações negativas e o recálculo da pena pelo sistema trifásico do art. 68 do CP.",
+    "hints": ["Investigação em curso não equivale a condenação.", "A valoração negativa precisa de dado concreto não inerente ao tipo."],
+    "rubric": [
+      { "criterion": "Rejeita uso do inquérito na pena-base", "points": 0.3, "required_terms": ["inquérito"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Rejeita gravidade abstrata", "points": 0.2, "required_terms": ["gravidade abstrata"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Indica art. 59 e Súmula 444", "points": 0.25, "required_terms": ["59", "444"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede pena-base mínima e recálculo", "points": 0.25, "required_terms": ["mínimo legal"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["maus-antecedentes"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-regime-inicial",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Após o julgamento da apelação, restou a Pedro pena de três anos por delito sem violência. Ele é primário e todas as circunstâncias judiciais são favoráveis. Mesmo assim, o acórdão manteve regime fechado porque o crime seria 'muito grave para a sociedade', sem apontar circunstância concreta do caso ou fundamento ligado à pessoa do condenado. Não há outra restrição legal específica ao regime aberto.",
+    "question": "Escreva a tese sobre o regime adequado após o redimensionamento da pena.",
+    "answer": "Com pena de três anos, Pedro é primário e tem circunstâncias judiciais favoráveis, podendo iniciar o cumprimento no regime aberto, nos termos do art. 33, § 2º, c, e § 3º, do CP. A gravidade abstrata do delito não justifica, isoladamente, regime mais severo, conforme as Súmulas 718 e 719 do STF. Requer-se a fixação do regime inicial aberto.",
+    "hints": ["Reavalie o regime pela pena concreta que restou.", "A gravidade abstrata não substitui fundamentação individualizada."],
+    "rubric": [
+      { "criterion": "Relaciona pena e primariedade ao regime", "points": 0.3, "required_terms": ["três anos", "primário"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Rejeita gravidade abstrata", "points": 0.2, "required_terms": ["gravidade abstrata"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 33 do CP", "points": 0.2, "required_terms": ["33"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede regime aberto", "points": 0.3, "required_terms": ["regime aberto"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["regime-inicial"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-detracao",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Bruna permaneceu presa provisoriamente por oito meses no mesmo processo. Ao condená-la, o juiz aplicou pena de quatro anos e fixou o regime inicial sem mencionar esse período de custódia. O atestado carcerário comprova as datas de entrada e soltura, e não há contagem do intervalo em outro título. A defesa prepara apelação limitada, nesse ponto, aos efeitos da custódia já cumprida.",
+    "question": "Indique como o tempo de prisão provisória repercute na pena e na análise do regime.",
+    "answer": "Os oito meses de prisão provisória devem ser computados na pena, por detração, conforme o art. 42 do CP. O juiz sentenciante também deve considerar esse período para determinar o regime inicial, na forma do art. 387, § 2º, do CPP. Requer-se o reconhecimento do tempo cumprido, o reexame fundamentado do regime e posterior retificação do cálculo de execução, sem dupla contagem.",
+    "hints": ["Detração não é causa de diminuição na terceira fase.", "Distinga abatimento da pena e consideração do período na escolha do regime."],
+    "rubric": [
+      { "criterion": "Identifica a detração", "points": 0.3, "required_terms": ["detração"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica oito meses de prisão provisória", "points": 0.2, "required_terms": ["oito meses"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita art. 42 do CP e 387, § 2º, do CPP", "points": 0.25, "required_terms": ["42", "387"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede abatimento e reexame do regime", "points": 0.25, "required_terms": ["regime"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["detracao"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-remicao-estudo",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "No regime semiaberto, Márcio concluiu um curso reconhecido cuja frequência foi comprovada por registro oficial de 120 horas, distribuídas ao longo de pelo menos 30 dias. Não houve abandono, sobreposição incompatível ou falta grave relacionada ao período. O cálculo da execução, porém, desconsiderou integralmente o estudo. A defesa pede a correção antes da próxima data de análise de benefício.",
+    "question": "Calcule a remição básica por estudo e indique o pedido ao juízo da execução.",
+    "answer": "Pelo art. 126, § 1º, I, da LEP, a cada 12 horas de estudo, divididas em pelo menos três dias, corresponde um dia de pena remido. As 120 horas comprovadas geram dez dias de remição básica. Requer-se ao juízo da execução a declaração desses dez dias, seu cômputo como pena cumprida e a retificação do cálculo e das datas de benefícios; eventual acréscimo por conclusão de etapa de ensino depende de seus requisitos próprios.",
+    "hints": ["Divida as horas comprovadas por 12.", "Verifique também a distribuição em dias e peça retificação do cálculo."],
+    "rubric": [
+      { "criterion": "Identifica remição pelo estudo", "points": 0.3, "required_terms": ["remição"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Calcula dez dias a partir de 120 horas", "points": 0.25, "required_terms": ["dez dias"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 126 da LEP", "points": 0.2, "required_terms": ["126"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede retificação do cálculo", "points": 0.25, "required_terms": ["cálculo"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["remicao-estudo"],
+    "estimated_minutes": 5
+  },
+  {
+    "id": "adaptive-foundation-substituicao-pena",
+    "kind": "complete_foundation",
+    "title": "Fundamente e peça",
+    "prompt": "Depois de afastada uma majorante, a pena definitiva de Aline ficou em dois anos e seis meses por crime doloso sem violência ou grave ameaça. Ela é primária, não possui antecedentes e as circunstâncias judiciais foram consideradas favoráveis. A sentença manteve a pena privativa de liberdade apenas porque a acusação havia pedido prisão, sem avaliar alternativas. O crime não tem vedação específica à substituição.",
+    "question": "Formule a tese subsidiária sobre a espécie de pena e o efeito pedido.",
+    "answer": "Aline preenche os requisitos do art. 44, I a III, do CP: pena não superior a quatro anos, delito doloso sem violência ou grave ameaça, ausência de reincidência impeditiva e circunstâncias favoráveis. O pedido acusatório não substitui a análise legal de suficiência. Requer-se a substituição da pena privativa de liberdade por restritivas de direitos, observada a forma adequada ao quantum pelo § 2º do art. 44.",
+    "hints": ["Regime inicial e substituição são decisões diferentes.", "Confira pena, violência, reincidência e circunstâncias judiciais."],
+    "rubric": [
+      { "criterion": "Identifica substituição da pena", "points": 0.3, "required_terms": ["substituição"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Aplica ausência de violência e pena inferior a quatro anos", "points": 0.25, "required_terms": ["sem violência"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Cita o art. 44 do CP", "points": 0.2, "required_terms": ["44"], "scoring": "transparent_pedagogical_weight" },
+      { "criterion": "Pede restritivas de direitos", "points": 0.25, "required_terms": ["restritivas de direitos"], "scoring": "transparent_pedagogical_weight" }
+    ],
+    "skill_ids": ["cite_legal_basis", "apply_rule_to_facts", "derive_legal_consequence"],
+    "thesis_ids": ["substituicao-pena"],
+    "estimated_minutes": 5
+  }
+]

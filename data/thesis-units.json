@@ -1,0 +1,3552 @@
+{
+  "generated_at": "2026-09-22",
+  "audit": {
+    "curated_units": 20,
+    "curated_ids_overlapping_exam_tags": 17,
+    "official_exam_thesis_ids": 74,
+    "generated_missing_units": 57,
+    "total_deep_units": 77,
+    "explanation": "Os 20 cartões editoriais existentes incluíam 3 agregações/renomeações fora dos 74 IDs usados nas provas; por isso 57 IDs oficiais estavam sem unidade e o total normalizado é 77."
+  },
+  "units": [
+    {
+      "id": "regime-inicial",
+      "name": "Regime inicial de cumprimento",
+      "category": "Dosimetria",
+      "concept": "Definição do regime a partir da pena, reincidência e circunstâncias judiciais, com necessidade de fundamentação concreta para maior gravidade.",
+      "case_elements": [
+        "quantidade da pena",
+        "reincidência",
+        "circunstâncias judiciais",
+        "fundamentação do julgador"
+      ],
+      "fgv_cues": [
+        "gravidade do delito",
+        "regime fechado",
+        "réu reincidente",
+        "circunstâncias favoráveis"
+      ],
+      "legal_basis": [
+        "CP, art. 33, § 2º",
+        "Súmulas 269 e 440 do STJ",
+        "Súmulas 718 e 719 do STF"
+      ],
+      "consequence": "Fixação de regime menos gravoso quando presentes os requisitos.",
+      "related_requests": [
+        "fixação do regime aberto",
+        "fixação do regime semiaberto"
+      ],
+      "pieces": [
+        "Apelação",
+        "Memoriais",
+        "Agravo em execução"
+      ],
+      "exam_ids": [
+        27,
+        28,
+        33,
+        35,
+        37,
+        38,
+        39,
+        40,
+        44,
+        45
+      ],
+      "common_errors": [
+        "usar apenas a quantidade da pena",
+        "ignorar reincidência",
+        "não atacar fundamentação abstrata"
+      ],
+      "confusable_with": [
+        "substituição da pena",
+        "progressão de regime"
+      ],
+      "short_example": "Pena inferior a quatro anos, circunstâncias favoráveis e regime fechado apoiado apenas na gravidade abstrata.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "atenuante-confissao",
+      "name": "Atenuante da confissão",
+      "category": "Dosimetria",
+      "concept": "A confissão utilizada para formar o convencimento judicial deve repercutir na segunda fase da pena.",
+      "case_elements": [
+        "admissão de fatos",
+        "uso da confissão na decisão"
+      ],
+      "fgv_cues": [
+        "confessou",
+        "confissão parcial",
+        "interrogatório"
+      ],
+      "legal_basis": [
+        "CP, art. 65, III, d"
+      ],
+      "consequence": "Reconhecimento da atenuante na pena intermediária.",
+      "related_requests": [
+        "incidência da atenuante"
+      ],
+      "pieces": [
+        "Apelação",
+        "Memoriais",
+        "Contrarrazões"
+      ],
+      "exam_ids": [
+        27,
+        35,
+        37,
+        39,
+        45
+      ],
+      "common_errors": [
+        "não pedir a consequência",
+        "descartar confissão parcial automaticamente"
+      ],
+      "confusable_with": [
+        "arrependimento posterior"
+      ],
+      "short_example": "O réu admite a execução do fato, ainda que sustente tese jurídica defensiva.",
+      "difficulty": 2,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "substituicao-pena",
+      "name": "Substituição por restritivas de direitos",
+      "category": "Dosimetria",
+      "concept": "Substituição da pena privativa quando atendidos os requisitos objetivos e subjetivos, observadas violência e reincidência.",
+      "case_elements": [
+        "pena aplicada",
+        "violência ou grave ameaça",
+        "reincidência específica",
+        "circunstâncias judiciais"
+      ],
+      "fgv_cues": [
+        "primário",
+        "crime sem violência",
+        "pena inferior a quatro anos",
+        "reincidência não específica"
+      ],
+      "legal_basis": [
+        "CP, art. 44"
+      ],
+      "consequence": "Conversão da pena privativa em restritiva de direitos.",
+      "related_requests": [
+        "substituição da pena"
+      ],
+      "pieces": [
+        "Apelação",
+        "Memoriais",
+        "Contrarrazões"
+      ],
+      "exam_ids": [
+        27,
+        28,
+        35,
+        37,
+        40,
+        43,
+        44
+      ],
+      "common_errors": [
+        "tratar toda reincidência como vedação absoluta",
+        "ignorar violência"
+      ],
+      "confusable_with": [
+        "sursis penal",
+        "regime inicial"
+      ],
+      "short_example": "Crime patrimonial sem violência, pena abaixo de quatro anos e circunstâncias favoráveis.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "maus-antecedentes",
+      "name": "Maus antecedentes e processos em curso",
+      "category": "Dosimetria",
+      "concept": "Inquéritos e ações em andamento não podem agravar a pena-base; a cronologia do fato e do trânsito é determinante.",
+      "case_elements": [
+        "data do fato",
+        "data do trânsito em julgado",
+        "natureza do registro"
+      ],
+      "fgv_cues": [
+        "folha de antecedentes",
+        "responde a ação",
+        "condenação posterior"
+      ],
+      "legal_basis": [
+        "CP, art. 59",
+        "Súmula 444 do STJ"
+      ],
+      "consequence": "Neutralização da circunstância judicial e redução da pena-base.",
+      "related_requests": [
+        "pena-base no mínimo legal"
+      ],
+      "pieces": [
+        "Apelação",
+        "Contrarrazões"
+      ],
+      "exam_ids": [
+        27,
+        33,
+        35,
+        45
+      ],
+      "common_errors": [
+        "confundir fato anterior com trânsito anterior",
+        "usar processo em curso"
+      ],
+      "confusable_with": [
+        "reincidência"
+      ],
+      "short_example": "A única ação penal em curso foi usada como personalidade negativa.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "prescricao-menor-21",
+      "name": "Prescrição e menoridade relativa",
+      "category": "Extinção da punibilidade",
+      "concept": "O prazo prescricional é reduzido pela metade quando o agente era menor de 21 anos ao tempo do crime.",
+      "case_elements": [
+        "data de nascimento",
+        "data do fato",
+        "marcos interruptivos",
+        "pena em abstrato ou concreta"
+      ],
+      "fgv_cues": [
+        "20 anos",
+        "18 anos",
+        "datas separadas no enunciado",
+        "pronúncia tardia"
+      ],
+      "legal_basis": [
+        "CP, arts. 107, IV, 109, 115 e 117"
+      ],
+      "consequence": "Extinção da punibilidade.",
+      "related_requests": [
+        "reconhecimento da prescrição"
+      ],
+      "pieces": [
+        "Recurso em sentido estrito",
+        "Resposta à acusação"
+      ],
+      "exam_ids": [
+        28,
+        31,
+        45,
+        46
+      ],
+      "common_errors": [
+        "não montar linha do tempo",
+        "esquecer a redução pela idade"
+      ],
+      "confusable_with": [
+        "decadência",
+        "prescrição executória"
+      ],
+      "short_example": "Réu de 20 anos e mais de quatro anos entre recebimento e pronúncia.",
+      "difficulty": 4,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "crime-impossivel",
+      "name": "Crime impossível",
+      "category": "Tipicidade",
+      "concept": "Não se pune a tentativa quando a consumação é impossível por ineficácia absoluta do meio ou impropriedade absoluta do objeto.",
+      "case_elements": [
+        "meio absolutamente ineficaz ou objeto absolutamente impróprio",
+        "impossibilidade de risco ao bem jurídico"
+      ],
+      "fgv_cues": [
+        "ferramenta incapaz",
+        "nunca esteve grávida",
+        "impossível consumar"
+      ],
+      "legal_basis": [
+        "CP, art. 17"
+      ],
+      "consequence": "Atipicidade e absolvição.",
+      "related_requests": [
+        "absolvição",
+        "absolvição sumária"
+      ],
+      "pieces": [
+        "Memoriais",
+        "Recurso em sentido estrito"
+      ],
+      "exam_ids": [
+        28,
+        37
+      ],
+      "common_errors": [
+        "confundir ineficácia absoluta com dificuldade relativa",
+        "tratar como tentativa"
+      ],
+      "confusable_with": [
+        "tentativa",
+        "desistência voluntária"
+      ],
+      "short_example": "Tenta romper estrutura imune à ação da ferramenta escolhida.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "desistencia-voluntaria",
+      "name": "Desistência voluntária",
+      "category": "Iter criminis",
+      "concept": "O agente inicia a execução, pode prosseguir, mas voluntariamente interrompe os atos executórios.",
+      "case_elements": [
+        "início da execução",
+        "possibilidade de continuar",
+        "decisão voluntária de parar"
+      ],
+      "fgv_cues": [
+        "poderia prosseguir",
+        "mudou de ideia",
+        "decidiu não continuar"
+      ],
+      "legal_basis": [
+        "CP, art. 15"
+      ],
+      "consequence": "Responsabilidade apenas pelos atos já praticados.",
+      "related_requests": [
+        "desclassificação",
+        "afastamento da tentativa"
+      ],
+      "pieces": [
+        "Recurso em sentido estrito",
+        "Questão discursiva"
+      ],
+      "exam_ids": [
+        31,
+        46
+      ],
+      "common_errors": [
+        "chamar de tentativa",
+        "ignorar a voluntariedade"
+      ],
+      "confusable_with": [
+        "tentativa",
+        "arrependimento eficaz",
+        "crime impossível"
+      ],
+      "short_example": "Com condições físicas de prosseguir, o agente muda de ideia antes de tocar a vítima.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "tentativa",
+      "name": "Tentativa",
+      "category": "Iter criminis",
+      "concept": "Iniciada a execução, o crime não se consuma por circunstâncias alheias à vontade do agente.",
+      "case_elements": [
+        "início da execução",
+        "não consumação",
+        "causa externa impeditiva"
+      ],
+      "fgv_cues": [
+        "polícia impediu",
+        "não houve inversão da posse",
+        "circunstâncias alheias"
+      ],
+      "legal_basis": [
+        "CP, art. 14, II e parágrafo único"
+      ],
+      "consequence": "Diminuição da pena de um a dois terços.",
+      "related_requests": [
+        "reconhecimento da tentativa",
+        "redução máxima quando distante da consumação"
+      ],
+      "pieces": [
+        "Memoriais",
+        "Apelação"
+      ],
+      "exam_ids": [
+        28,
+        31,
+        37,
+        45
+      ],
+      "common_errors": [
+        "confundir causa externa com decisão voluntária",
+        "citar artigo sem relacionar o iter"
+      ],
+      "confusable_with": [
+        "desistência voluntária",
+        "crime impossível"
+      ],
+      "short_example": "A polícia intervém antes que o agente obtenha a posse do veículo.",
+      "difficulty": 2,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "embriaguez-fortuita",
+      "name": "Embriaguez completa fortuita",
+      "category": "Culpabilidade",
+      "concept": "Embriaguez completa proveniente de caso fortuito ou força maior pode isentar de pena quando elimina a capacidade de entendimento ou autodeterminação.",
+      "case_elements": [
+        "ingestão não voluntária nem culposa",
+        "embriaguez completa",
+        "incapacidade integral"
+      ],
+      "fgv_cues": [
+        "bebida trocada",
+        "substância colocada sem conhecimento",
+        "laudo de incapacidade"
+      ],
+      "legal_basis": [
+        "CP, art. 28, § 1º"
+      ],
+      "consequence": "Exclusão da culpabilidade e absolvição.",
+      "related_requests": [
+        "absolvição",
+        "absolvição sumária"
+      ],
+      "pieces": [
+        "Resposta à acusação",
+        "Apelação",
+        "Recurso em sentido estrito"
+      ],
+      "exam_ids": [
+        34,
+        35,
+        36
+      ],
+      "common_errors": [
+        "usar regra da embriaguez voluntária",
+        "não demonstrar completude e origem fortuita"
+      ],
+      "confusable_with": [
+        "embriaguez voluntária",
+        "inimputabilidade por doença"
+      ],
+      "short_example": "Atendente serve bebida alcoólica por engano a pessoa intolerante.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "erro-tipo-permissivo",
+      "name": "Erro de tipo permissivo",
+      "category": "Erro e ilicitude",
+      "concept": "O agente supõe situação fática que, se existisse, tornaria legítima sua conduta.",
+      "case_elements": [
+        "representação equivocada dos fatos",
+        "situação justificante imaginada",
+        "análise da evitabilidade"
+      ],
+      "fgv_cues": [
+        "acreditou estar em risco",
+        "pensou ser um animal",
+        "supôs agressão"
+      ],
+      "legal_basis": [
+        "CP, art. 20, § 1º"
+      ],
+      "consequence": "Isenção de pena no erro plenamente justificado; afastamento do dolo e eventual punição culposa no erro evitável.",
+      "related_requests": [
+        "absolvição"
+      ],
+      "pieces": [
+        "Apelação",
+        "Questão discursiva"
+      ],
+      "exam_ids": [
+        27,
+        44
+      ],
+      "common_errors": [
+        "chamar de erro de proibição",
+        "não verificar tipo culposo"
+      ],
+      "confusable_with": [
+        "erro de proibição",
+        "legítima defesa real"
+      ],
+      "short_example": "O agente destrói objeto decorativo pensando tratar-se de animal que o atacaria.",
+      "difficulty": 4,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "continuidade-delitiva",
+      "name": "Continuidade delitiva",
+      "category": "Concurso de crimes",
+      "concept": "Crimes da mesma espécie, em condições semelhantes, podem ser tratados como continuação dos anteriores.",
+      "case_elements": [
+        "pluralidade de condutas",
+        "crimes da mesma espécie",
+        "semelhança de tempo, lugar e execução"
+      ],
+      "fgv_cues": [
+        "mesma forma",
+        "dias subsequentes",
+        "mesma vítima"
+      ],
+      "legal_basis": [
+        "CP, art. 71"
+      ],
+      "consequence": "Exasperação da pena de um só crime, em lugar da soma material.",
+      "related_requests": [
+        "reconhecimento da continuidade",
+        "unificação das penas"
+      ],
+      "pieces": [
+        "Apelação",
+        "Agravo em execução"
+      ],
+      "exam_ids": [
+        38,
+        40
+      ],
+      "common_errors": [
+        "aplicar concurso material automaticamente",
+        "não comparar circunstâncias"
+      ],
+      "confusable_with": [
+        "concurso formal",
+        "crime único"
+      ],
+      "short_example": "Infrações idênticas, contra a mesma vítima e pelo mesmo método em curto período.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "perempcao",
+      "name": "Perempção",
+      "category": "Ação penal privada",
+      "concept": "Inércia qualificada do querelante em hipóteses legais extingue a punibilidade na ação privada.",
+      "case_elements": [
+        "ação penal privada",
+        "conduta processual do querelante",
+        "hipótese do art. 60"
+      ],
+      "fgv_cues": [
+        "não pediu condenação nas alegações finais",
+        "querelante",
+        "queixa-crime"
+      ],
+      "legal_basis": [
+        "CPP, art. 60, III",
+        "CP, art. 107, IV"
+      ],
+      "consequence": "Extinção da punibilidade.",
+      "related_requests": [
+        "reconhecimento da perempção",
+        "extinção da punibilidade"
+      ],
+      "pieces": [
+        "Apelação",
+        "Alegações finais"
+      ],
+      "exam_ids": [
+        38,
+        44
+      ],
+      "common_errors": [
+        "confundir com decadência",
+        "não identificar natureza privada da ação"
+      ],
+      "confusable_with": [
+        "decadência",
+        "renúncia",
+        "perdão"
+      ],
+      "short_example": "O querelante encerra as alegações finais sem requerer condenação.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "decadencia-representacao",
+      "name": "Decadência da representação",
+      "category": "Ação penal",
+      "concept": "A perda do direito de representar pelo decurso do prazo extingue a punibilidade nos delitos condicionados.",
+      "case_elements": [
+        "natureza condicionada",
+        "ciência da autoria",
+        "ausência de representação válida",
+        "seis meses"
+      ],
+      "fgv_cues": [
+        "nunca manifestou interesse",
+        "não compareceu",
+        "passaram-se seis meses"
+      ],
+      "legal_basis": [
+        "CPP, art. 38",
+        "CP, art. 107, IV",
+        "Lei 9.099/1995, art. 88"
+      ],
+      "consequence": "Extinção da punibilidade.",
+      "related_requests": [
+        "reconhecimento da decadência"
+      ],
+      "pieces": [
+        "Apelação",
+        "Memoriais"
+      ],
+      "exam_ids": [
+        30,
+        32
+      ],
+      "common_errors": [
+        "presumir representação pelo boletim",
+        "ignorar exceções de violência doméstica contra a mulher"
+      ],
+      "confusable_with": [
+        "perempção",
+        "prescrição"
+      ],
+      "short_example": "A vítima identificou o autor, mas não representou em seis meses.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "prova-ilicita",
+      "name": "Prova ilícita e desentranhamento",
+      "category": "Prova penal",
+      "concept": "Prova obtida com violação de garantia constitucional deve ser desentranhada e não sustentar a acusação.",
+      "case_elements": [
+        "meio de obtenção",
+        "garantia violada",
+        "nexo com as demais provas"
+      ],
+      "fgv_cues": [
+        "sem mandado",
+        "sem autorização",
+        "denúncia anônima",
+        "dados do celular"
+      ],
+      "legal_basis": [
+        "CRFB, art. 5º, XI, XII e LVI",
+        "CPP, art. 157"
+      ],
+      "consequence": "Desentranhamento e possível ausência de justa causa.",
+      "related_requests": [
+        "desentranhamento",
+        "rejeição da denúncia"
+      ],
+      "pieces": [
+        "Resposta à acusação"
+      ],
+      "exam_ids": [
+        39,
+        42,
+        46
+      ],
+      "common_errors": [
+        "pedir só absolvição",
+        "não ligar a ilicitude à justa causa"
+      ],
+      "confusable_with": [
+        "prova ilegítima",
+        "insuficiência probatória"
+      ],
+      "short_example": "Policiais acessam mensagens no aparelho sem consentimento nem ordem judicial.",
+      "difficulty": 4,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "inepcia-denuncia",
+      "name": "Inépcia da denúncia",
+      "category": "Ação penal",
+      "concept": "A acusação deve expor o fato criminoso com suas circunstâncias e individualizar minimamente a conduta.",
+      "case_elements": [
+        "descrição do fato",
+        "individualização da conduta",
+        "elementares do tipo"
+      ],
+      "fgv_cues": [
+        "não descreveu a função",
+        "não indicou infração antecedente",
+        "denúncia genérica"
+      ],
+      "legal_basis": [
+        "CPP, arts. 41 e 395, I"
+      ],
+      "consequence": "Rejeição da denúncia.",
+      "related_requests": [
+        "rejeição por inépcia"
+      ],
+      "pieces": [
+        "Resposta à acusação"
+      ],
+      "exam_ids": [
+        42,
+        46
+      ],
+      "common_errors": [
+        "confundir inépcia com ausência de prova",
+        "pedir absolvição sem rejeição"
+      ],
+      "confusable_with": [
+        "ausência de justa causa",
+        "atipicidade"
+      ],
+      "short_example": "A denúncia afirma integração em grupo, mas não descreve qualquer função ou ato do acusado.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "sursis-processual",
+      "name": "Suspensão condicional do processo",
+      "category": "Justiça consensual",
+      "concept": "Benefício vinculado à pena mínima cominada e aos requisitos do art. 89, não à pena máxima ou à categoria de menor potencial ofensivo.",
+      "case_elements": [
+        "pena mínima até um ano",
+        "ausência de processo ou condenação por crime",
+        "requisitos pessoais"
+      ],
+      "fgv_cues": [
+        "pena máxima elevada",
+        "condenação por contravenção",
+        "não ofereceu proposta"
+      ],
+      "legal_basis": [
+        "Lei 9.099/1995, art. 89"
+      ],
+      "consequence": "Remessa para análise e eventual proposta do benefício.",
+      "related_requests": [
+        "oferecimento da proposta",
+        "anulação dos atos posteriores"
+      ],
+      "pieces": [
+        "Resposta à acusação",
+        "Memoriais",
+        "Recurso em sentido estrito"
+      ],
+      "exam_ids": [
+        28,
+        32,
+        36
+      ],
+      "common_errors": [
+        "usar a pena máxima",
+        "tratar contravenção como crime"
+      ],
+      "confusable_with": [
+        "sursis penal",
+        "ANPP"
+      ],
+      "short_example": "O MP nega o benefício porque a pena máxima é de cinco anos.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "menoridade-relativa",
+      "name": "Atenuante da menoridade relativa",
+      "category": "Dosimetria",
+      "concept": "Ser menor de 21 anos na data do fato constitui circunstância atenuante.",
+      "case_elements": [
+        "data de nascimento",
+        "data do fato"
+      ],
+      "fgv_cues": [
+        "20 anos",
+        "idade destacada no início do enunciado"
+      ],
+      "legal_basis": [
+        "CP, art. 65, I"
+      ],
+      "consequence": "Atenuação na segunda fase da pena.",
+      "related_requests": [
+        "reconhecimento da atenuante"
+      ],
+      "pieces": [
+        "Apelação",
+        "Memoriais"
+      ],
+      "exam_ids": [
+        39,
+        45
+      ],
+      "common_errors": [
+        "calcular pela data da sentença",
+        "perceber a idade sem formular pedido"
+      ],
+      "confusable_with": [
+        "redução prescricional do art. 115"
+      ],
+      "short_example": "O agente tinha 20 anos quando praticou o fato.",
+      "difficulty": 2,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "bis-in-idem",
+      "name": "Vedação ao bis in idem",
+      "category": "Dosimetria",
+      "concept": "A mesma circunstância não pode ser valorada mais de uma vez na determinação da pena.",
+      "case_elements": [
+        "mesmo fato valorado em fases distintas",
+        "duplicidade de consequências"
+      ],
+      "fgv_cues": [
+        "reincidência na pena-base e como agravante",
+        "violência doméstica em agravante e majorante"
+      ],
+      "legal_basis": [
+        "Súmula 241 do STJ",
+        "CP, sistema trifásico"
+      ],
+      "consequence": "Afastamento de uma das valorações e redução da pena.",
+      "related_requests": [
+        "pena-base no mínimo",
+        "afastamento da agravante"
+      ],
+      "pieces": [
+        "Apelação",
+        "Memoriais"
+      ],
+      "exam_ids": [
+        39,
+        45
+      ],
+      "common_errors": [
+        "nomear sem apontar a duplicidade concreta"
+      ],
+      "confusable_with": [
+        "concurso de causas de aumento"
+      ],
+      "short_example": "A reincidência eleva a pena-base e volta a atuar na segunda fase.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "competencia",
+      "name": "Competência penal",
+      "category": "Processo penal",
+      "concept": "Definição do órgão jurisdicional por matéria, pessoa, lugar e regras constitucionais específicas.",
+      "case_elements": [
+        "local do fato",
+        "bem jurídico ou ente envolvido",
+        "veículo ou território",
+        "rito especial"
+      ],
+      "fgv_cues": [
+        "navio em alto-mar",
+        "empresa pública federal",
+        "Juizado Especial",
+        "Tribunal do Júri"
+      ],
+      "legal_basis": [
+        "CRFB, art. 109",
+        "CPP, regras de competência"
+      ],
+      "consequence": "Remessa ao juízo competente e possível nulidade dos atos decisórios.",
+      "related_requests": [
+        "declinação de competência",
+        "nulidade dos atos decisórios"
+      ],
+      "pieces": [
+        "Apelação",
+        "Resposta à acusação"
+      ],
+      "exam_ids": [
+        28,
+        31,
+        34,
+        39,
+        44
+      ],
+      "common_errors": [
+        "escolher pela comarca mais visível",
+        "não distinguir competência absoluta"
+      ],
+      "confusable_with": [
+        "endereçamento"
+      ],
+      "short_example": "Crime praticado a bordo de navio apto à navegação internacional.",
+      "difficulty": 4,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "perda-remicao",
+      "name": "Perda de dias remidos por falta grave",
+      "category": "Execução penal",
+      "concept": "A falta grave autoriza revogação de até um terço do tempo remido, mediante decisão motivada.",
+      "case_elements": [
+        "falta grave",
+        "dias remidos",
+        "procedimento de apuração",
+        "fração perdida"
+      ],
+      "fgv_cues": [
+        "perda da totalidade",
+        "celular no colchão",
+        "diretor reconheceu a falta"
+      ],
+      "legal_basis": [
+        "LEP, art. 127"
+      ],
+      "consequence": "Limitação da perda a até um terço.",
+      "related_requests": [
+        "reforma da decisão executória"
+      ],
+      "pieces": [
+        "Agravo em execução",
+        "Questão discursiva"
+      ],
+      "exam_ids": [
+        29,
+        46
+      ],
+      "common_errors": [
+        "aceitar perda integral",
+        "ignorar contraditório"
+      ],
+      "confusable_with": [
+        "regressão de regime",
+        "interrupção de prazo"
+      ],
+      "short_example": "O juízo determina perda de todos os dias remidos após fuga.",
+      "difficulty": 3,
+      "classification": "editorial_from_verified_fgv_items",
+      "review_status": "curated",
+      "skill_ids": [
+        "identify_thesis",
+        "recall_legal_basis",
+        "apply_rule_to_facts",
+        "derive_legal_consequence"
+      ]
+    },
+    {
+      "id": "prova-ilicita-celular",
+      "name": "Prova Ilicita Celular",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Deve ser requerido o desentranhamento das provas ilícitas (0,35), nos termos do\nArt. 157 do CPP, ou do Art. 5º, inciso LVI, da CRFB/88 (0,10).",
+      "case_elements": [
+        "Denúncia por milícia privada fundada em mensagens extraídas de celular sem autorização e sem descrição da função do acusado."
+      ],
+      "fgv_cues": [
+        "prova",
+        "ilicita",
+        "celular"
+      ],
+      "legal_basis": [
+        "Art. 157",
+        "Art. 5º, inciso LVI"
+      ],
+      "consequence": "Deve ser requerido o desentranhamento das provas ilícitas (0,35), nos termos do\nArt. 157 do CPP, ou do Art. 5º, inciso LVI, da CRFB/88 (0,10).",
+      "related_requests": [
+        "desentranhamento da prova ilícita",
+        "rejeição por inépcia",
+        "rejeição por ausência de justa causa",
+        "absolvição sumária",
+        "rol de até oito testemunhas"
+      ],
+      "exam_ids": [
+        "oab-46-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288 -A do CP, sendo\nacusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores,\nEstado de Campo Belo.\nDe acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de\nexplorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os\nmembros da sua milícia teriam ",
+      "source_unit_id": "oab-46-penal-piece",
+      "source_rubric_item_id": "oab-46-penal-piece-rubric-07"
+    },
+    {
+      "id": "ausencia-justa-causa",
+      "name": "Ausencia Justa Causa",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Rejeição da denúncia por ausência de justa causa (0,20), nos termos do Art. 395,\ninciso III, do CPP (0,10).",
+      "case_elements": [
+        "Denúncia por milícia privada fundada em mensagens extraídas de celular sem autorização e sem descrição da função do acusado."
+      ],
+      "fgv_cues": [
+        "ausencia",
+        "justa",
+        "causa"
+      ],
+      "legal_basis": [
+        "Art. 395, inciso III"
+      ],
+      "consequence": "Rejeição da denúncia por ausência de justa causa (0,20), nos termos do Art. 395,\ninciso III, do CPP (0,10).",
+      "related_requests": [
+        "desentranhamento da prova ilícita",
+        "rejeição por inépcia",
+        "rejeição por ausência de justa causa",
+        "absolvição sumária",
+        "rol de até oito testemunhas"
+      ],
+      "exam_ids": [
+        "oab-46-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288 -A do CP, sendo\nacusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores,\nEstado de Campo Belo.\nDe acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de\nexplorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os\nmembros da sua milícia teriam ",
+      "source_unit_id": "oab-46-penal-piece",
+      "source_rubric_item_id": "oab-46-penal-piece-rubric-09"
+    },
+    {
+      "id": "atipicidade-milicia-contravencao",
+      "name": "Atipicidade Milicia Contravencao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Mérito: atipicidade da conduta (0,45), porque o crime de milícia privada\npressupõe a prática de crimes previstos no Código Penal, ao passo que a milícia\nsupostamente existente se destina à prática de contravenção, (ou) prevista em lei\nespecial (0,35).\n\nPedidos",
+      "case_elements": [
+        "Denúncia por milícia privada fundada em mensagens extraídas de celular sem autorização e sem descrição da função do acusado."
+      ],
+      "fgv_cues": [
+        "atipicidade",
+        "milicia",
+        "contravencao"
+      ],
+      "legal_basis": [],
+      "consequence": "Mérito: atipicidade da conduta (0,45), porque o crime de milícia privada\npressupõe a prática de crimes previstos no Código Penal, ao passo que a milícia\nsupostamente existente se destina à prática de contravenção, (ou) prevista em lei\nespecial (0,35).\n\nPedidos",
+      "related_requests": [
+        "desentranhamento da prova ilícita",
+        "rejeição por inépcia",
+        "rejeição por ausência de justa causa",
+        "absolvição sumária",
+        "rol de até oito testemunhas"
+      ],
+      "exam_ids": [
+        "oab-46-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Jorge foi denunciado como incurso nas penas do crime de milícia privada, previsto no Art. 288 -A do CP, sendo\nacusado de integrar a milícia constituída por Adilson, que domina a região da Zona Leste da cidade de Flores,\nEstado de Campo Belo.\nDe acordo com a inicial acusatória, Adilson constituiu uma milícia privada, fortemente armada, com o intuito de\nexplorar a prática de jogos de azar, contravenção penal prevista no Art. 50 do Decreto-Lei nº 3.688/1941. Assim, os\nmembros da sua milícia teriam ",
+      "source_unit_id": "oab-46-penal-piece",
+      "source_rubric_item_id": "oab-46-penal-piece-rubric-06"
+    },
+    {
+      "id": "simulacro-arma-fogo",
+      "name": "Simulacro Arma Fogo",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Afastamento da causa de aumento de pena relativa no caso de emprego de\narma de fogo (0,30), pois efetivamente comprovado que não havia\npotencialidade lesiva, sendo impossível a caracterização do simulacro como arma\nde fogo (0,35).",
+      "case_elements": [
+        "Roubo imputado como consumado e majorado por arma de fogo, embora utilizado simulacro e sem inversão da posse."
+      ],
+      "fgv_cues": [
+        "simulacro",
+        "arma",
+        "fogo"
+      ],
+      "legal_basis": [],
+      "consequence": "Afastamento da causa de aumento de pena relativa no caso de emprego de\narma de fogo (0,30), pois efetivamente comprovado que não havia\npotencialidade lesiva, sendo impossível a caracterização do simulacro como arma\nde fogo (0,35).",
+      "related_requests": [
+        "afastamento da majorante",
+        "reconhecimento da tentativa",
+        "pena no mínimo",
+        "regime semiaberto",
+        "sursis"
+      ],
+      "exam_ids": [
+        "oab-45-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art.\n157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de\nsimulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo\ngrave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido\npor esforço comum na constância da sociedade conjugal.\nQuando as vítimas deixaram",
+      "source_unit_id": "oab-45-penal-piece",
+      "source_rubric_item_id": "oab-45-penal-piece-rubric-04"
+    },
+    {
+      "id": "bis-in-idem-reincidencia",
+      "name": "BIS IN Idem Reincidencia",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Fixação da pena-base no mínimo legal (0,30) , pois a reincidência não pode ser\nusada, simultaneamente, como circunstância judicial e agravante (0,15) , nos\ntermos da Súmula 241 do STJ (0,10) .\n\n0,40/0,45/0,55",
+      "case_elements": [
+        "Roubo imputado como consumado e majorado por arma de fogo, embora utilizado simulacro e sem inversão da posse."
+      ],
+      "fgv_cues": [
+        "bis",
+        "idem",
+        "reincidencia"
+      ],
+      "legal_basis": [
+        "Súmula 241"
+      ],
+      "consequence": "Fixação da pena-base no mínimo legal (0,30) , pois a reincidência não pode ser\nusada, simultaneamente, como circunstância judicial e agravante (0,15) , nos\ntermos da Súmula 241 do STJ (0,10) .\n\n0,40/0,45/0,55",
+      "related_requests": [
+        "afastamento da majorante",
+        "reconhecimento da tentativa",
+        "pena no mínimo",
+        "regime semiaberto",
+        "sursis"
+      ],
+      "exam_ids": [
+        "oab-45-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art.\n157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de\nsimulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo\ngrave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido\npor esforço comum na constância da sociedade conjugal.\nQuando as vítimas deixaram",
+      "source_unit_id": "oab-45-penal-piece",
+      "source_rubric_item_id": "oab-45-penal-piece-rubric-06"
+    },
+    {
+      "id": "sursis-penal",
+      "name": "Sursis Penal",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "concessão de sursis penal (0,10).\nFechamento",
+      "case_elements": [
+        "Roubo imputado como consumado e majorado por arma de fogo, embora utilizado simulacro e sem inversão da posse."
+      ],
+      "fgv_cues": [
+        "sursis",
+        "penal"
+      ],
+      "legal_basis": [],
+      "consequence": "concessão de sursis penal (0,10).\nFechamento",
+      "related_requests": [
+        "afastamento da majorante",
+        "reconhecimento da tentativa",
+        "pena no mínimo",
+        "regime semiaberto",
+        "sursis"
+      ],
+      "exam_ids": [
+        "oab-45-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Gabriel, de 20 anos de idade, foi denunciado por roubo circunstanciado pelo emprego de arma de fogo (Art.\n157, § 2º-A, inciso I, do Código Penal), porque, de forma livre e consciente, no dia 10/4/2025, munido de\nsimulacro de arma de fogo, abordou o casal Andrea e Fabiano, casado em comunhão de bens, e, exercendo\ngrave ameaça com a arma de fogo simulada, determinou que ambos deixassem o veículo, o qual foi adquirido\npor esforço comum na constância da sociedade conjugal.\nQuando as vítimas deixaram",
+      "source_unit_id": "oab-45-penal-piece",
+      "source_rubric_item_id": "oab-45-penal-piece-rubric-15"
+    },
+    {
+      "id": "atipicidade-sem-culpa",
+      "name": "Atipicidade SEM Culpa",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Atipicidade da conduta (0,35) , diante da previsão contratual de autotutela, não\nse verificando a elementar de arbitrariedade na conduta de Karina e Daniel (0,25) .\n\n\n\n\n44º Exame de Ordem Unificado\nProva Prático-profissional Aplicada em 19/10/2025\nPadrão de Resposta da Prova Prático-Profissional Pá gina 7/6",
+      "case_elements": [
+        "Condenação por dano simples em ação privada após o querelante deixar de pedir condenação nas alegações finais."
+      ],
+      "fgv_cues": [
+        "atipicidade",
+        "culpa"
+      ],
+      "legal_basis": [],
+      "consequence": "Atipicidade da conduta (0,35) , diante da previsão contratual de autotutela, não\nse verificando a elementar de arbitrariedade na conduta de Karina e Daniel (0,25) .\n\n\n\n\n44º Exame de Ordem Unificado\nProva Prático-profissional Aplicada em 19/10/2025\nPadrão de Resposta da Prova Prático-Profissional Pá gina 7/6",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "afastamento da reincidência",
+        "regime aberto",
+        "substituição da pena"
+      ],
+      "exam_ids": [
+        "oab-44-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "identify_thesis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Karina e Daniel, casados, celebraram um contrato de locação residencial com César, ajustando o direito de retenção\nde benfeitorias voluptuárias. Ao término da locação , César, locador, recusou-se a pagar pela banheira de\nhidromassagem instalada pelos locatários Karina e Daniel. Por isso, a banheira foi retirada. Indignado, César ajuizou\nqueixa-crime em desfavor de Karina, pelo tipo penal de exercício arbitrário das próprias razões. Deixou de oferecer\na queixa em desfavor de Daniel, pois eles era",
+      "source_unit_id": "oab-44-penal-question-3",
+      "source_rubric_item_id": "oab-44-penal-question-3-rubric-02"
+    },
+    {
+      "id": "reincidencia-crime-militar",
+      "name": "Reincidencia Crime Militar",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Subsidiariamente, afastamento da agravante da rein cidência (0,25), pois a condenação\nanterior ocorreu por crime militar próprio, o que n ão induz reincidência (0,20), nos termos\ndo Art. 64, inciso II, do CP (0,10) .\n\n0,35/0,45/0,55",
+      "case_elements": [
+        "Condenação por dano simples em ação privada após o querelante deixar de pedir condenação nas alegações finais."
+      ],
+      "fgv_cues": [
+        "reincidencia",
+        "crime",
+        "militar"
+      ],
+      "legal_basis": [
+        "Art. 64, inciso II"
+      ],
+      "consequence": "Subsidiariamente, afastamento da agravante da rein cidência (0,25), pois a condenação\nanterior ocorreu por crime militar próprio, o que n ão induz reincidência (0,20), nos termos\ndo Art. 64, inciso II, do CP (0,10) .\n\n0,35/0,45/0,55",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "afastamento da reincidência",
+        "regime aberto",
+        "substituição da pena"
+      ],
+      "exam_ids": [
+        "oab-44-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "No dia 10/1/2024, Aluísio, entregador, foi realizar uma entrega na residência de Manoel, e, lá chegando, deparou-\nse com uma peça que imitava um jacaré. Pensando tratar-se do animal e acreditando estar em risco, deu golpes no\nsuposto animal, vindo a destruir a peça de decoraçã o avaliada em R$15.000,00 (quinze mil reais). Em ra zão disso,\nManoel ajuizou queixa-crime em face de Aluísio, imp utando-o como incurso nas penas do Art. 163 do CP ( dano\nsimples).\nFrustradas as tentativas de composição c",
+      "source_unit_id": "oab-44-penal-piece",
+      "source_rubric_item_id": "oab-44-penal-piece-rubric-10"
+    },
+    {
+      "id": "acao-publica-violencia-domestica",
+      "name": "Acao Publica Violencia Domestica",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "A ação penal é pública incondicionada, por se tratar de violência doméstica e familiar contra a\nmulher (0,45), consoante Súmula 542 do STJ, ou Art. 41 da Lei nº 11.340/2006 ou ADI 4.424\n(0,10) .",
+      "case_elements": [
+        "Assistente de acusação deve responder a apelação em caso de lesão corporal no contexto de violência doméstica."
+      ],
+      "fgv_cues": [
+        "acao",
+        "publica",
+        "violencia",
+        "domestica"
+      ],
+      "legal_basis": [
+        "Súmula 542",
+        "Art. 41"
+      ],
+      "consequence": "A ação penal é pública incondicionada, por se tratar de violência doméstica e familiar contra a\nmulher (0,45), consoante Súmula 542 do STJ, ou Art. 41 da Lei nº 11.340/2006 ou ADI 4.424\n(0,10) .",
+      "related_requests": [
+        "desprovimento do recurso",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-43-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nArthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da\nComarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua\nentão esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu\num chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital",
+      "source_unit_id": "oab-43-penal-piece",
+      "source_rubric_item_id": "oab-43-penal-piece-rubric-05"
+    },
+    {
+      "id": "materialidade-laudo-medico",
+      "name": "Materialidade Laudo Medico",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Há prova suficiente da materialidade delitiva, d iante do laudo médico fornecido pelo hospital\nonde Aline recebeu atendimento (0,55), nos termos do Art. 12, § 3º, da Lei nº 11.340/2006 (0,10) .",
+      "case_elements": [
+        "Assistente de acusação deve responder a apelação em caso de lesão corporal no contexto de violência doméstica."
+      ],
+      "fgv_cues": [
+        "materialidade",
+        "laudo",
+        "medico"
+      ],
+      "legal_basis": [
+        "Art. 12, § 3º"
+      ],
+      "consequence": "Há prova suficiente da materialidade delitiva, d iante do laudo médico fornecido pelo hospital\nonde Aline recebeu atendimento (0,55), nos termos do Art. 12, § 3º, da Lei nº 11.340/2006 (0,10) .",
+      "related_requests": [
+        "desprovimento do recurso",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-43-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nArthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da\nComarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua\nentão esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu\num chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital",
+      "source_unit_id": "oab-43-penal-piece",
+      "source_rubric_item_id": "oab-43-penal-piece-rubric-07"
+    },
+    {
+      "id": "embriaguez-voluntaria",
+      "name": "Embriaguez Voluntaria",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "A embriaguez voluntária ou culposa apresentada por Arthur não exclui a imputabilidade penal\n(0,55) , na forma do Art. 28, inciso II, do CP (0,10) .",
+      "case_elements": [
+        "Assistente de acusação deve responder a apelação em caso de lesão corporal no contexto de violência doméstica."
+      ],
+      "fgv_cues": [
+        "embriaguez",
+        "voluntaria"
+      ],
+      "legal_basis": [
+        "Art. 28, inciso II"
+      ],
+      "consequence": "A embriaguez voluntária ou culposa apresentada por Arthur não exclui a imputabilidade penal\n(0,55) , na forma do Art. 28, inciso II, do CP (0,10) .",
+      "related_requests": [
+        "desprovimento do recurso",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-43-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nArthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da\nComarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua\nentão esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu\num chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital",
+      "source_unit_id": "oab-43-penal-piece",
+      "source_rubric_item_id": "oab-43-penal-piece-rubric-08"
+    },
+    {
+      "id": "indenizacao-minima",
+      "name": "Indenizacao Minima",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Correta a sentença ao estipular valor mínimo de indenização, pois houve regular\ncomprovação dos valores, devidamente submetidos ao contraditório acerca do tema (0,35) , nos\ntermos do Art. 387, inciso IV, do CPP (0,10) .\n\nPedidos",
+      "case_elements": [
+        "Assistente de acusação deve responder a apelação em caso de lesão corporal no contexto de violência doméstica."
+      ],
+      "fgv_cues": [
+        "indenizacao",
+        "minima"
+      ],
+      "legal_basis": [
+        "Art. 387, inciso IV"
+      ],
+      "consequence": "Correta a sentença ao estipular valor mínimo de indenização, pois houve regular\ncomprovação dos valores, devidamente submetidos ao contraditório acerca do tema (0,35) , nos\ntermos do Art. 387, inciso IV, do CPP (0,10) .\n\nPedidos",
+      "related_requests": [
+        "desprovimento do recurso",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-43-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nArthur, primário e sem antecedentes, foi denunciado perante o Juizado de Violência Doméstica e Familiar contra a Mulher da\nComarca de Flores, Estado de Campo Belo, por lesão corporal leve, inserta no Art. 129, § 13, do CP, praticada contra Aline, sua\nentão esposa. Consta que, quando o time de futebol de Arthur sofreu uma derrota, este chegou em casa embriagado e desferiu\num chute em Aline. As lesões foram constatadas e descritas em laudo assinado pelo médico do hospital",
+      "source_unit_id": "oab-43-penal-piece",
+      "source_rubric_item_id": "oab-43-penal-piece-rubric-11"
+    },
+    {
+      "id": "prova-ilicita-domicilio",
+      "name": "Prova Ilicita Domicilio",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Preliminar: ilicitude do meio de obtenção da prova (0,40) , tendo em vista ter sido obtida\npor meio ilícito, já que uma denúncia anônima é ins uficiente para caracterizar a fundada\nsuspeita de existência de flagrante delito, não aut orizando o ingresso em domicílio (0,25) ,\nconforme trata o Art. 5º, inciso XI ou LVI, da CRFB /88 ou Art. 157, ou 241 ou 245, do CPP\n(0,10) .\n\n0,50/0,65/0,75",
+      "case_elements": [
+        "Denúncia por lavagem de dinheiro fundada em busca domiciliar sem mandado e sem descrição de infração antecedente."
+      ],
+      "fgv_cues": [
+        "prova",
+        "ilicita",
+        "domicilio"
+      ],
+      "legal_basis": [
+        "Art. 5º, inciso XI",
+        "Art. 157"
+      ],
+      "consequence": "Preliminar: ilicitude do meio de obtenção da prova (0,40) , tendo em vista ter sido obtida\npor meio ilícito, já que uma denúncia anônima é ins uficiente para caracterizar a fundada\nsuspeita de existência de flagrante delito, não aut orizando o ingresso em domicílio (0,25) ,\nconforme trata o Art. 5º, inciso XI ou LVI, da CRFB /88 ou Art. 157, ou 241 ou 245, do CPP\n(0,10) .\n\n0,50/0,65/0,75",
+      "related_requests": [
+        "rejeição da denúncia",
+        "remessa ao órgão superior do MP",
+        "absolvição sumária",
+        "rol de testemunhas"
+      ],
+      "exam_ids": [
+        "oab-42-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nPoliciais militares receberam uma denúncia anônima, em 10/1o/2023, indicando que Diogo seria o responsável pela\ndistribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-\nse à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.\nNo local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em\natividade de tráfi",
+      "source_unit_id": "oab-42-penal-piece",
+      "source_rubric_item_id": "oab-42-penal-piece-rubric-04"
+    },
+    {
+      "id": "anpp-revisao",
+      "name": "Anpp Revisao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Os motivos apontados pelo Ministério Público par a recusar a oferta de ANPP não são\nsubsistentes (ou é cabível o Acordo de Não Persecução Penal) (0,15) .",
+      "case_elements": [
+        "Denúncia por lavagem de dinheiro fundada em busca domiciliar sem mandado e sem descrição de infração antecedente."
+      ],
+      "fgv_cues": [
+        "anpp",
+        "revisao"
+      ],
+      "legal_basis": [],
+      "consequence": "Os motivos apontados pelo Ministério Público par a recusar a oferta de ANPP não são\nsubsistentes (ou é cabível o Acordo de Não Persecução Penal) (0,15) .",
+      "related_requests": [
+        "rejeição da denúncia",
+        "remessa ao órgão superior do MP",
+        "absolvição sumária",
+        "rol de testemunhas"
+      ],
+      "exam_ids": [
+        "oab-42-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nPoliciais militares receberam uma denúncia anônima, em 10/1o/2023, indicando que Diogo seria o responsável pela\ndistribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-\nse à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.\nNo local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em\natividade de tráfi",
+      "source_unit_id": "oab-42-penal-piece",
+      "source_rubric_item_id": "oab-42-penal-piece-rubric-07"
+    },
+    {
+      "id": "periodo-depurador",
+      "name": "Periodo Depurador",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Diogo é tecnicamente primário (0,40) , diante do transcurso do período depurador entre\no término da pena anterior e a data do novo fato (0,25) , nos termos do Art. 64, inciso I, do\nCP (0,10) .\n\n0,50/0,65/0,75",
+      "case_elements": [
+        "Denúncia por lavagem de dinheiro fundada em busca domiciliar sem mandado e sem descrição de infração antecedente."
+      ],
+      "fgv_cues": [
+        "periodo",
+        "depurador"
+      ],
+      "legal_basis": [
+        "Art. 64, inciso I"
+      ],
+      "consequence": "Diogo é tecnicamente primário (0,40) , diante do transcurso do período depurador entre\no término da pena anterior e a data do novo fato (0,25) , nos termos do Art. 64, inciso I, do\nCP (0,10) .\n\n0,50/0,65/0,75",
+      "related_requests": [
+        "rejeição da denúncia",
+        "remessa ao órgão superior do MP",
+        "absolvição sumária",
+        "rol de testemunhas"
+      ],
+      "exam_ids": [
+        "oab-42-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nPoliciais militares receberam uma denúncia anônima, em 10/1o/2023, indicando que Diogo seria o responsável pela\ndistribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-\nse à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.\nNo local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em\natividade de tráfi",
+      "source_unit_id": "oab-42-penal-piece",
+      "source_rubric_item_id": "oab-42-penal-piece-rubric-08"
+    },
+    {
+      "id": "atipicidade-lavagem",
+      "name": "Atipicidade Lavagem",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O delito de lavagem de dinheiro somente se tipif ica se os recursos ocultados forem\nprovenientes de outra infração penal (0,30) , de forma que a conduta narrada na denúncia\né atípica (0,40) , não constituindo o fato infração penal (0,15) .\n\n0,45/0,55/0,70/0,85\nPedidos",
+      "case_elements": [
+        "Denúncia por lavagem de dinheiro fundada em busca domiciliar sem mandado e sem descrição de infração antecedente."
+      ],
+      "fgv_cues": [
+        "atipicidade",
+        "lavagem"
+      ],
+      "legal_basis": [],
+      "consequence": "O delito de lavagem de dinheiro somente se tipif ica se os recursos ocultados forem\nprovenientes de outra infração penal (0,30) , de forma que a conduta narrada na denúncia\né atípica (0,40) , não constituindo o fato infração penal (0,15) .\n\n0,45/0,55/0,70/0,85\nPedidos",
+      "related_requests": [
+        "rejeição da denúncia",
+        "remessa ao órgão superior do MP",
+        "absolvição sumária",
+        "rol de testemunhas"
+      ],
+      "exam_ids": [
+        "oab-42-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nPoliciais militares receberam uma denúncia anônima, em 10/1o/2023, indicando que Diogo seria o responsável pela\ndistribuição de drogas na região conhecida como “Fazendinha”, na cidade de Flores, Estado de Campo Belo. Por isso, dirigiram-\nse à residência de Diogo e, sem pedir consentimento de qualquer morador, ingressaram no imóvel.\nNo local, a guarnição logrou localizar, em um envelope escondido em um armário, cerca de R$ 100.000,00 (cem mil reais) em\natividade de tráfi",
+      "source_unit_id": "oab-42-penal-piece",
+      "source_rubric_item_id": "oab-42-penal-piece-rubric-09"
+    },
+    {
+      "id": "nulidade-delator-delatado",
+      "name": "Nulidade Delator Delatado",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Preliminar: cerceamento de defesa ( ou violação ao contraditório ou ampla\ndefesa, ou ao devido processo legal ou nulidade por omissão de formalidade\nessencial) (0,30) , porque não poderia ter sido concedido prazo comum ao\ncolaborador e ao corréu delatado (0,15), em violação ao Art. 4º, § 10-A, da Lei\nnº 12.850/2013, ao Art. 5º, inciso LIV ou LV, da CRFB/88, ou ao Art. 564, inciso\nIV, do CPP (0,10) .\n\n0,40/0,45/0,55",
+      "case_elements": [
+        "Condenação baseada em colaboração sem corroboração, com vícios na ordem de manifestação e na identidade física do juiz."
+      ],
+      "fgv_cues": [
+        "nulidade",
+        "delator",
+        "delatado"
+      ],
+      "legal_basis": [
+        "Art. 4º, § 10",
+        "Art. 5º, inciso LIV",
+        "Art. 564, inciso IV"
+      ],
+      "consequence": "Preliminar: cerceamento de defesa ( ou violação ao contraditório ou ampla\ndefesa, ou ao devido processo legal ou nulidade por omissão de formalidade\nessencial) (0,30) , porque não poderia ter sido concedido prazo comum ao\ncolaborador e ao corréu delatado (0,15), em violação ao Art. 4º, § 10-A, da Lei\nnº 12.850/2013, ao Art. 5º, inciso LIV ou LV, da CRFB/88, ou ao Art. 564, inciso\nIV, do CPP (0,10) .\n\n0,40/0,45/0,55",
+      "related_requests": [
+        "nulidade",
+        "absolvição",
+        "afastamento de efeitos e majorantes"
+      ],
+      "exam_ids": [
+        "oab-41-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nO Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido\nvantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos\nmunicipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo\núnico, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita\nno Art. 317, § 1º, c/c ",
+      "source_unit_id": "oab-41-penal-piece",
+      "source_rubric_item_id": "oab-41-penal-piece-rubric-05"
+    },
+    {
+      "id": "juiz-natural",
+      "name": "Juiz Natural",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Nulidade da sentença (0, 40) , ante a violação ao princípio da identidade física\ndo Juiz ou do Juiz Natural (0,25) , nos termos do Art. 399, § 2º, do CPP ou Art.\n5º, LIII, CRFB (0,10) .\n\n0,50/0,65/0,75",
+      "case_elements": [
+        "Condenação baseada em colaboração sem corroboração, com vícios na ordem de manifestação e na identidade física do juiz."
+      ],
+      "fgv_cues": [
+        "juiz",
+        "natural"
+      ],
+      "legal_basis": [
+        "Art. 399, § 2º",
+        "Art. 5º"
+      ],
+      "consequence": "Nulidade da sentença (0, 40) , ante a violação ao princípio da identidade física\ndo Juiz ou do Juiz Natural (0,25) , nos termos do Art. 399, § 2º, do CPP ou Art.\n5º, LIII, CRFB (0,10) .\n\n0,50/0,65/0,75",
+      "related_requests": [
+        "nulidade",
+        "absolvição",
+        "afastamento de efeitos e majorantes"
+      ],
+      "exam_ids": [
+        "oab-41-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nO Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido\nvantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos\nmunicipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo\núnico, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita\nno Art. 317, § 1º, c/c ",
+      "source_unit_id": "oab-41-penal-piece",
+      "source_rubric_item_id": "oab-41-penal-piece-rubric-06"
+    },
+    {
+      "id": "colaboracao-sem-corroboracao",
+      "name": "Colaboracao SEM Corroboracao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Tendo em vista que a palavra do colaborador, sem provas de corroboração,\nnão pode ensejar a condenação do corréu delatado (0,35), na forma do Art. 4º,\n§ 16, inciso III, da Lei nº 12.850/13 (0,10) .",
+      "case_elements": [
+        "Condenação baseada em colaboração sem corroboração, com vícios na ordem de manifestação e na identidade física do juiz."
+      ],
+      "fgv_cues": [
+        "colaboracao",
+        "corroboracao"
+      ],
+      "legal_basis": [
+        "Art. 4º, § 16"
+      ],
+      "consequence": "Tendo em vista que a palavra do colaborador, sem provas de corroboração,\nnão pode ensejar a condenação do corréu delatado (0,35), na forma do Art. 4º,\n§ 16, inciso III, da Lei nº 12.850/13 (0,10) .",
+      "related_requests": [
+        "nulidade",
+        "absolvição",
+        "afastamento de efeitos e majorantes"
+      ],
+      "exam_ids": [
+        "oab-41-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nO Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido\nvantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos\nmunicipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo\núnico, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita\nno Art. 317, § 1º, c/c ",
+      "source_unit_id": "oab-41-penal-piece",
+      "source_rubric_item_id": "oab-41-penal-piece-rubric-08"
+    },
+    {
+      "id": "concurso-majorantes",
+      "name": "Concurso Majorantes",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Não, diante do princípio da intranscendência da pena ou o da responsabilidade\npessoal ou personalidade ou intransmissibilidade da pena (0,20) , a morte do\ncondenado extingue a punibilidade (0,35) , na forma do Art. 107, inciso I, do CP, ou\ndo Art. 5º, inciso XLV, da CRFB/88 ou Artigo 5, item 3, da Convenção Americana\nsobre Direitos Humanos o Pacto de San José da Costa Rica (aprovada pelo Decreto\n678/92) (0,10) .\n\n0,45/0,55/0,65",
+      "case_elements": [
+        "Condenação baseada em colaboração sem corroboração, com vícios na ordem de manifestação e na identidade física do juiz."
+      ],
+      "fgv_cues": [
+        "concurso",
+        "majorantes"
+      ],
+      "legal_basis": [
+        "Art. 107, inciso I",
+        "Art. 5º, inciso XLV"
+      ],
+      "consequence": "Não, diante do princípio da intranscendência da pena ou o da responsabilidade\npessoal ou personalidade ou intransmissibilidade da pena (0,20) , a morte do\ncondenado extingue a punibilidade (0,35) , na forma do Art. 107, inciso I, do CP, ou\ndo Art. 5º, inciso XLV, da CRFB/88 ou Artigo 5, item 3, da Convenção Americana\nsobre Direitos Humanos o Pacto de San José da Costa Rica (aprovada pelo Decreto\n678/92) (0,10) .\n\n0,45/0,55/0,65",
+      "related_requests": [
+        "nulidade",
+        "absolvição",
+        "afastamento de efeitos e majorantes"
+      ],
+      "exam_ids": [
+        "oab-41-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "QUESTÃO 4\nJorge foi definitivamente condenado à pena de desacato, fixada em um ano de detenção, em regime aberto.\nPresentes os requisitos, a pena de reclusão foi substituída por uma pena de prestação pecuniária. Foi autorizado o\nparcelamento do cumprimento da pena em 12 (doze) prestações iguais e sucessivas.\nApós o pagamento de cinco parcelas, Jorge faleceu. A filha de Jorge, Janaína, maior e herdeira de bens deixados\npelo falecido, procura você, como advogado(a), informando ter obtido novas pro",
+      "source_unit_id": "oab-41-penal-question-4",
+      "source_rubric_item_id": "oab-41-penal-question-4-rubric-01"
+    },
+    {
+      "id": "efeitos-condenacao",
+      "name": "Efeitos Condenacao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "No mérito, deve ser def endida a absolvição de Mendonça (0 ,40) , diante da\nausência de provas suficientes para a condenação (0,25), na forma do Art. 386,\ninciso II, ou V, ou VII, do CPP (0,10) .\n\n0,50/0,65/0,75",
+      "case_elements": [
+        "Condenação baseada em colaboração sem corroboração, com vícios na ordem de manifestação e na identidade física do juiz.",
+        "Lesão corporal em violência doméstica praticada a bordo de navio em alto-mar, com erros de competência e dosimetria."
+      ],
+      "fgv_cues": [
+        "efeitos",
+        "condenacao"
+      ],
+      "legal_basis": [
+        "Art. 386, inciso II"
+      ],
+      "consequence": "No mérito, deve ser def endida a absolvição de Mendonça (0 ,40) , diante da\nausência de provas suficientes para a condenação (0,25), na forma do Art. 386,\ninciso II, ou V, ou VII, do CPP (0,10) .\n\n0,50/0,65/0,75",
+      "related_requests": [
+        "nulidade",
+        "absolvição",
+        "afastamento de efeitos e majorantes",
+        "nulidade dos atos decisórios",
+        "redução da pena",
+        "regime aberto",
+        "afastamento da perda do cargo"
+      ],
+      "exam_ids": [
+        "oab-41-penal",
+        "oab-39-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nO Ministério Público denunciou Abelardo, Lineu e Mendonça, afirmando que Abelardo, empresário, teria oferecido\nvantagem indevida a fim de obstar os atos de ofício de Lineu, subordinado a Mendonça, ambos servidores públicos\nmunicipais da administração direta. Foi imputada ao acusado Abelardo a conduta tipificada no Art. 333, parágrafo\núnico, do CP; a Lineu, a prática das condutas descritas no Art. 317, § 1º, do CP; e a Mendonça, a conduta descrita\nno Art. 317, § 1º, c/c ",
+      "source_unit_id": "oab-41-penal-piece",
+      "source_rubric_item_id": "oab-41-penal-piece-rubric-07"
+    },
+    {
+      "id": "furto-de-uso",
+      "name": "Furto DE USO",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Atipicidade das condutas de “furto de uso” (0,30) , pois não houve ânimo de assenhoramento\ndefinitivo da res furtiva ou porque foram os bens restituídos sem desgaste ou d ano (0,20) , devendo\nse constatar que o fato não é crime (0,15) .\n\n0,35/0,45/0,50/0,65",
+      "case_elements": [
+        "Oito subtrações de bicicletas, sete com restituição intencional e uma com destruição e reparação integral."
+      ],
+      "fgv_cues": [
+        "furto",
+        "uso"
+      ],
+      "legal_basis": [],
+      "consequence": "Atipicidade das condutas de “furto de uso” (0,30) , pois não houve ânimo de assenhoramento\ndefinitivo da res furtiva ou porque foram os bens restituídos sem desgaste ou d ano (0,20) , devendo\nse constatar que o fato não é crime (0,15) .\n\n0,35/0,45/0,50/0,65",
+      "related_requests": [
+        "absolvição nos sete fatos",
+        "desclassificação para furto simples",
+        "diminuição",
+        "continuidade delitiva",
+        "regime e substituição"
+      ],
+      "exam_ids": [
+        "oab-40-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nGustavo trabalha como entregador por aplicativo e aluga bicicletas para desempenhar sua função. Certo dia, descobriu que,\npróximo à sua residência, havia um depósito de bicicletas seminovas para revenda. Gustavo, então, para ter economia na\nlocação diária de bicicleta, valeu-se de escalada para adentrar o depósito e retirar uma bicicleta, devolvendo-a intacta e sem\ndanos ao final do dia. Gustavo pôs-se a adotar o mesmo procedimento nos dias subsequentes, sempre com inte",
+      "source_unit_id": "oab-40-penal-piece",
+      "source_rubric_item_id": "oab-40-penal-piece-rubric-05"
+    },
+    {
+      "id": "afastamento-qualificadora",
+      "name": "Afastamento Qualificadora",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Pedido de desclassificação da conduta de furto qua lificado para furto simples (0,40) , pois, neste\ndia, Gustavo adentrou o depósito pela porta da frente, não se valendo de escalada ou qualquer outra\nqualificadora (0,20) , na forma do Art. 155, caput , do CP (0,10) .\n\n0,50/0,60/0,70",
+      "case_elements": [
+        "Oito subtrações de bicicletas, sete com restituição intencional e uma com destruição e reparação integral."
+      ],
+      "fgv_cues": [
+        "afastamento",
+        "qualificadora"
+      ],
+      "legal_basis": [
+        "Art. 155"
+      ],
+      "consequence": "Pedido de desclassificação da conduta de furto qua lificado para furto simples (0,40) , pois, neste\ndia, Gustavo adentrou o depósito pela porta da frente, não se valendo de escalada ou qualquer outra\nqualificadora (0,20) , na forma do Art. 155, caput , do CP (0,10) .\n\n0,50/0,60/0,70",
+      "related_requests": [
+        "absolvição nos sete fatos",
+        "desclassificação para furto simples",
+        "diminuição",
+        "continuidade delitiva",
+        "regime e substituição"
+      ],
+      "exam_ids": [
+        "oab-40-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nGustavo trabalha como entregador por aplicativo e aluga bicicletas para desempenhar sua função. Certo dia, descobriu que,\npróximo à sua residência, havia um depósito de bicicletas seminovas para revenda. Gustavo, então, para ter economia na\nlocação diária de bicicleta, valeu-se de escalada para adentrar o depósito e retirar uma bicicleta, devolvendo-a intacta e sem\ndanos ao final do dia. Gustavo pôs-se a adotar o mesmo procedimento nos dias subsequentes, sempre com inte",
+      "source_unit_id": "oab-40-penal-piece",
+      "source_rubric_item_id": "oab-40-penal-piece-rubric-07"
+    },
+    {
+      "id": "arrependimento-posterior",
+      "name": "Arrependimento Posterior",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Em acréscimo, deve ser postulada a aplicação da causa de diminuição de pena do arrependimento\nposterior (0,40) , pois o acusado restituiu integralmente o valor do dano antes do recebimento da\ndenúncia, presentes os demais requisitos (crime pra ticado sem violência ou grave ameaça) (0,20) ,\nna forma do Art. 16 do CP (0,10) .\n\n0,50/0,60/0,70",
+      "case_elements": [
+        "Oito subtrações de bicicletas, sete com restituição intencional e uma com destruição e reparação integral."
+      ],
+      "fgv_cues": [
+        "arrependimento",
+        "posterior"
+      ],
+      "legal_basis": [
+        "Art. 16"
+      ],
+      "consequence": "Em acréscimo, deve ser postulada a aplicação da causa de diminuição de pena do arrependimento\nposterior (0,40) , pois o acusado restituiu integralmente o valor do dano antes do recebimento da\ndenúncia, presentes os demais requisitos (crime pra ticado sem violência ou grave ameaça) (0,20) ,\nna forma do Art. 16 do CP (0,10) .\n\n0,50/0,60/0,70",
+      "related_requests": [
+        "absolvição nos sete fatos",
+        "desclassificação para furto simples",
+        "diminuição",
+        "continuidade delitiva",
+        "regime e substituição"
+      ],
+      "exam_ids": [
+        "oab-40-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nGustavo trabalha como entregador por aplicativo e aluga bicicletas para desempenhar sua função. Certo dia, descobriu que,\npróximo à sua residência, havia um depósito de bicicletas seminovas para revenda. Gustavo, então, para ter economia na\nlocação diária de bicicleta, valeu-se de escalada para adentrar o depósito e retirar uma bicicleta, devolvendo-a intacta e sem\ndanos ao final do dia. Gustavo pôs-se a adotar o mesmo procedimento nos dias subsequentes, sempre com inte",
+      "source_unit_id": "oab-40-penal-piece",
+      "source_rubric_item_id": "oab-40-penal-piece-rubric-08"
+    },
+    {
+      "id": "competencia-federal-navio",
+      "name": "Competencia Federal Navio",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Preliminar: incompetência absoluta da Justiça Estadual (0,35) tendo em vista a ocorrência\ndo delito a bordo de navio (0,30) , na forma do Art. 109, inciso IX, da CRFB/88 (0,10) .\n\n0,45/0,65/0,75",
+      "case_elements": [
+        "Lesão corporal em violência doméstica praticada a bordo de navio em alto-mar, com erros de competência e dosimetria."
+      ],
+      "fgv_cues": [
+        "competencia",
+        "federal",
+        "navio"
+      ],
+      "legal_basis": [
+        "Art. 109, inciso IX"
+      ],
+      "consequence": "Preliminar: incompetência absoluta da Justiça Estadual (0,35) tendo em vista a ocorrência\ndo delito a bordo de navio (0,30) , na forma do Art. 109, inciso IX, da CRFB/88 (0,10) .\n\n0,45/0,65/0,75",
+      "related_requests": [
+        "nulidade dos atos decisórios",
+        "redução da pena",
+        "regime aberto",
+        "afastamento da perda do cargo"
+      ],
+      "exam_ids": [
+        "oab-39-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Luíza e Alfredo, servidores públicos, casados, ambos com vinte anos de idade, decidiram fazer um cruzeiro pela costa brasileira\nem um navio transatlântico, apto a navegar por água s internacionais, tendo embarcado no Porto de Santo s-SP no dia\n10/12/2020, com destino a Salvador, BA. Durante o c urso da viagem, a bordo do navio e em alto-mar, no dia 11/12/2020,\nAlfredo desferiu um golpe no rosto de Luíza, que veio a sofrer fratura dos ossos da face.\nO acusado foi contido pela tripulação e, ao apo",
+      "source_unit_id": "oab-39-penal-piece",
+      "source_rubric_item_id": "oab-39-penal-piece-rubric-05"
+    },
+    {
+      "id": "pena-base-termo-medio",
+      "name": "Pena Base Termo Medio",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Subsidiariamente, aplicação da pena-base no mínimo legal (0,30), ante a inadmissibilidade\nda pena base no termo médio (0,20) .",
+      "case_elements": [
+        "Lesão corporal em violência doméstica praticada a bordo de navio em alto-mar, com erros de competência e dosimetria."
+      ],
+      "fgv_cues": [
+        "pena",
+        "base",
+        "termo",
+        "medio"
+      ],
+      "legal_basis": [],
+      "consequence": "Subsidiariamente, aplicação da pena-base no mínimo legal (0,30), ante a inadmissibilidade\nda pena base no termo médio (0,20) .",
+      "related_requests": [
+        "nulidade dos atos decisórios",
+        "redução da pena",
+        "regime aberto",
+        "afastamento da perda do cargo"
+      ],
+      "exam_ids": [
+        "oab-39-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Luíza e Alfredo, servidores públicos, casados, ambos com vinte anos de idade, decidiram fazer um cruzeiro pela costa brasileira\nem um navio transatlântico, apto a navegar por água s internacionais, tendo embarcado no Porto de Santo s-SP no dia\n10/12/2020, com destino a Salvador, BA. Durante o c urso da viagem, a bordo do navio e em alto-mar, no dia 11/12/2020,\nAlfredo desferiu um golpe no rosto de Luíza, que veio a sofrer fratura dos ossos da face.\nO acusado foi contido pela tripulação e, ao apo",
+      "source_unit_id": "oab-39-penal-piece",
+      "source_rubric_item_id": "oab-39-penal-piece-rubric-07"
+    },
+    {
+      "id": "bis-in-idem-violencia-domestica",
+      "name": "BIS IN Idem Violencia Domestica",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Afastamento da agravante da violência doméstica (0,15) , ante a ocorrência de bis in idem\n(0,20) ou compensação com a atenuante (0,35) .",
+      "case_elements": [
+        "Lesão corporal em violência doméstica praticada a bordo de navio em alto-mar, com erros de competência e dosimetria."
+      ],
+      "fgv_cues": [
+        "bis",
+        "idem",
+        "violencia",
+        "domestica"
+      ],
+      "legal_basis": [],
+      "consequence": "Afastamento da agravante da violência doméstica (0,15) , ante a ocorrência de bis in idem\n(0,20) ou compensação com a atenuante (0,35) .",
+      "related_requests": [
+        "nulidade dos atos decisórios",
+        "redução da pena",
+        "regime aberto",
+        "afastamento da perda do cargo"
+      ],
+      "exam_ids": [
+        "oab-39-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Luíza e Alfredo, servidores públicos, casados, ambos com vinte anos de idade, decidiram fazer um cruzeiro pela costa brasileira\nem um navio transatlântico, apto a navegar por água s internacionais, tendo embarcado no Porto de Santo s-SP no dia\n10/12/2020, com destino a Salvador, BA. Durante o c urso da viagem, a bordo do navio e em alto-mar, no dia 11/12/2020,\nAlfredo desferiu um golpe no rosto de Luíza, que veio a sofrer fratura dos ossos da face.\nO acusado foi contido pela tripulação e, ao apo",
+      "source_unit_id": "oab-39-penal-piece",
+      "source_rubric_item_id": "oab-39-penal-piece-rubric-08"
+    },
+    {
+      "id": "reconversao-restritivas",
+      "name": "Reconversao Restritivas",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Manutenção da substituiç ão da pena privativa de liberdade por penas\nrestritivas de direito (0,40), pois as penas alternativas são compatíveis entre si ,\npodendo ser executadas de forma simultânea ou suces siva ou por estar fora das\nhipóteses legais de conversão (0,15) , na forma do Art. 69, § 2º, do CP, ou do Art.\n44, §§ 4º e 5º, do CP ou Art. 181, § 1º, da LEP (0,10) .\n\n0,50/0,55/0,65",
+      "case_elements": [
+        "Unificação de condenações e reconversão de penas restritivas no curso da execução."
+      ],
+      "fgv_cues": [
+        "reconversao",
+        "restritivas"
+      ],
+      "legal_basis": [
+        "Art. 69, § 2º",
+        "Art. 44",
+        "Art. 181, § 1º"
+      ],
+      "consequence": "Manutenção da substituiç ão da pena privativa de liberdade por penas\nrestritivas de direito (0,40), pois as penas alternativas são compatíveis entre si ,\npodendo ser executadas de forma simultânea ou suces siva ou por estar fora das\nhipóteses legais de conversão (0,15) , na forma do Art. 69, § 2º, do CP, ou do Art.\n44, §§ 4º e 5º, do CP ou Art. 181, § 1º, da LEP (0,10) .\n\n0,50/0,55/0,65",
+      "related_requests": [
+        "unificação",
+        "regime aberto ou semiaberto",
+        "afastamento da reconversão",
+        "contramandado de prisão"
+      ],
+      "exam_ids": [
+        "oab-38-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nMarieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código\nPenal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de\ndireitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INss informações fraudulentas, consistentes em\nvínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de J",
+      "source_unit_id": "oab-38-penal-piece",
+      "source_rubric_item_id": "oab-38-penal-piece-rubric-09"
+    },
+    {
+      "id": "reincidencia-transito",
+      "name": "Reincidencia Transito",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Afastamento da reincidência (0,30) , uma vez que não houve trânsito em\njulgado de condenação antes da prática do novo crime (0,25) , na forma do Art. 63\ndo CP (0,10) .",
+      "case_elements": [
+        "Unificação de condenações e reconversão de penas restritivas no curso da execução."
+      ],
+      "fgv_cues": [
+        "reincidencia",
+        "transito"
+      ],
+      "legal_basis": [
+        "Art. 63"
+      ],
+      "consequence": "Afastamento da reincidência (0,30) , uma vez que não houve trânsito em\njulgado de condenação antes da prática do novo crime (0,25) , na forma do Art. 63\ndo CP (0,10) .",
+      "related_requests": [
+        "unificação",
+        "regime aberto ou semiaberto",
+        "afastamento da reconversão",
+        "contramandado de prisão"
+      ],
+      "exam_ids": [
+        "oab-38-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nMarieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código\nPenal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de\ndireitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INss informações fraudulentas, consistentes em\nvínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de J",
+      "source_unit_id": "oab-38-penal-piece",
+      "source_rubric_item_id": "oab-38-penal-piece-rubric-10"
+    },
+    {
+      "id": "pena-multa",
+      "name": "Pena Multa",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Manutenção da substituiç ão da pena privativa de liberdade por penas\nrestritivas de direito (0,40), pois as penas alternativas são compatíveis entre si ,\npodendo ser executadas de forma simultânea ou suces siva ou por estar fora das\nhipóteses legais de conversão (0,15) , na forma do Art. 69, § 2º, do CP, ou do Art.\n44, §§ 4º e 5º, do CP ou Art. 181, § 1º, da LEP (0,10) .\n\n0,50/0,55/0,65",
+      "case_elements": [
+        "Unificação de condenações e reconversão de penas restritivas no curso da execução."
+      ],
+      "fgv_cues": [
+        "pena",
+        "multa"
+      ],
+      "legal_basis": [
+        "Art. 69, § 2º",
+        "Art. 44",
+        "Art. 181, § 1º"
+      ],
+      "consequence": "Manutenção da substituiç ão da pena privativa de liberdade por penas\nrestritivas de direito (0,40), pois as penas alternativas são compatíveis entre si ,\npodendo ser executadas de forma simultânea ou suces siva ou por estar fora das\nhipóteses legais de conversão (0,15) , na forma do Art. 69, § 2º, do CP, ou do Art.\n44, §§ 4º e 5º, do CP ou Art. 181, § 1º, da LEP (0,10) .\n\n0,50/0,55/0,65",
+      "related_requests": [
+        "unificação",
+        "regime aberto ou semiaberto",
+        "afastamento da reconversão",
+        "contramandado de prisão"
+      ],
+      "exam_ids": [
+        "oab-38-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "PEÇA PRÁTICO-PROFISSIONAL\nMarieta, funcionária pública do Instituto Nacional do Seguro Social (INSS), foi condenada por infração ao Art. 313-A do Código\nPenal, a uma pena de dois anos de reclusão e 10 dias-multa, em regime aberto e substituída por duas penas restritivas de\ndireitos, porque, em 10/10/2017, inseriu nos sistemas informatizados do INss informações fraudulentas, consistentes em\nvínculos empregatícios falsos, o que ensejou a concessão de benefício previdenciário indevido em favor de J",
+      "source_unit_id": "oab-38-penal-piece",
+      "source_rubric_item_id": "oab-38-penal-piece-rubric-09"
+    },
+    {
+      "id": "pericia-rompimento-obstaculo",
+      "name": "Pericia Rompimento Obstaculo",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Impõe-se o afastamento da qualificadora de rompi mento de obstáculo (0,40) , ante a\nausência de prova pericial (0,25) nos termos do Art. 158 do CPP (0,10) .\n\n0,40/0,50/0,65/0,75",
+      "case_elements": [
+        "Tentativa de romper caixa eletrônico com ferramentas absolutamente ineficazes, sem perícia de rompimento."
+      ],
+      "fgv_cues": [
+        "pericia",
+        "rompimento",
+        "obstaculo"
+      ],
+      "legal_basis": [
+        "Art. 158"
+      ],
+      "consequence": "Impõe-se o afastamento da qualificadora de rompi mento de obstáculo (0,40) , ante a\nausência de prova pericial (0,25) nos termos do Art. 158 do CPP (0,10) .\n\n0,40/0,50/0,65/0,75",
+      "related_requests": [
+        "absolvição",
+        "afastamento da qualificadora",
+        "redução da tentativa",
+        "regime e substituição"
+      ],
+      "exam_ids": [
+        "oab-37-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam d a agência\nbancária do Banco Peixe , localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de\nequipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que,\nremotamente, por meio de câmeras de segurança, acom panharam a ação de Ricardo e Roberto, que tentaram\nutilizar o serrote para romper a placa de aço e, as sim, ter acesso a",
+      "source_unit_id": "oab-37-penal-piece",
+      "source_rubric_item_id": "oab-37-penal-piece-rubric-06"
+    },
+    {
+      "id": "detracao",
+      "name": "Detracao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Deve ser reconhecida a detração do período de pr isão preventiva, de 30 dias para Ricardo e 2\n(dois) dias para Roberto (0,20), nos termos do Art. 387, § 2º, do CPP (0,10) .\nPedidos",
+      "case_elements": [
+        "Tentativa de romper caixa eletrônico com ferramentas absolutamente ineficazes, sem perícia de rompimento."
+      ],
+      "fgv_cues": [
+        "detracao"
+      ],
+      "legal_basis": [
+        "Art. 387, § 2º"
+      ],
+      "consequence": "Deve ser reconhecida a detração do período de pr isão preventiva, de 30 dias para Ricardo e 2\n(dois) dias para Roberto (0,20), nos termos do Art. 387, § 2º, do CPP (0,10) .\nPedidos",
+      "related_requests": [
+        "absolvição",
+        "afastamento da qualificadora",
+        "redução da tentativa",
+        "regime e substituição"
+      ],
+      "exam_ids": [
+        "oab-37-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Ricardo e Roberto, no dia 10/08/2020, às 19 horas, foram flagrados pela Polícia Militar quando saíam d a agência\nbancária do Banco Peixe , localizada no centro de Barnabeu, Estado de Campo Novo (CN), de posse de\nequipamentos tipo serrote, chave de fenda e alicate. A Polícia Militar fora acionada por vigilantes da agência que,\nremotamente, por meio de câmeras de segurança, acom panharam a ação de Ricardo e Roberto, que tentaram\nutilizar o serrote para romper a placa de aço e, as sim, ter acesso a",
+      "source_unit_id": "oab-37-penal-piece",
+      "source_rubric_item_id": "oab-37-penal-piece-rubric-11"
+    },
+    {
+      "id": "ausencia-corpo-delito",
+      "name": "Ausencia Corpo Delito",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Nulidade em razão da ausência de exame de corpo de delito, direto ou indireto\n(0,40), nos termos do Art. 158 do CPP (0,10).",
+      "case_elements": [
+        "Lesão corporal grave sem exame de corpo de delito e com embriaguez completa decorrente de erro de terceiro."
+      ],
+      "fgv_cues": [
+        "ausencia",
+        "corpo",
+        "delito"
+      ],
+      "legal_basis": [
+        "Art. 158"
+      ],
+      "consequence": "Nulidade em razão da ausência de exame de corpo de delito, direto ou indireto\n(0,40), nos termos do Art. 158 do CPP (0,10).",
+      "related_requests": [
+        "nulidade ou rejeição",
+        "oferta de suspensão condicional do processo",
+        "absolvição sumária",
+        "rol de testemunhas"
+      ],
+      "exam_ids": [
+        "oab-36-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano\nNovo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Mat heus\ningeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica,\npois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria\nem situação de embriaguez. Ocorr e que, em determinado momento, soli",
+      "source_unit_id": "oab-36-penal-piece",
+      "source_rubric_item_id": "oab-36-penal-piece-rubric-06"
+    },
+    {
+      "id": "absolvicao-sumaria",
+      "name": "Absolvicao Sumaria",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Absolvição sumária (0,30), nos termos do Art. 397, inciso II, do CPP (0,10).",
+      "case_elements": [
+        "Lesão corporal grave sem exame de corpo de delito e com embriaguez completa decorrente de erro de terceiro."
+      ],
+      "fgv_cues": [
+        "absolvicao",
+        "sumaria"
+      ],
+      "legal_basis": [
+        "Art. 397, inciso II"
+      ],
+      "consequence": "Absolvição sumária (0,30), nos termos do Art. 397, inciso II, do CPP (0,10).",
+      "related_requests": [
+        "nulidade ou rejeição",
+        "oferta de suspensão condicional do processo",
+        "absolvição sumária",
+        "rol de testemunhas"
+      ],
+      "exam_ids": [
+        "oab-36-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "No dia 31 de dezembro de 2019, Matheus, nascido em 10 de fevereiro de 2000, compareceu a uma festa de Ano\nNovo, em Vitória, Espírito Santo, juntamente com seus amigos. Animados com o evento, os amigos de Mat heus\ningeriram grande quantidade de bebida alcoólica, enquanto Matheus permaneceu bebendo somente água tônica,\npois sabia que tinha intolerância ao álcool e que qualquer pequena quantidade de bebida alcoólica já o colocaria\nem situação de embriaguez. Ocorr e que, em determinado momento, soli",
+      "source_unit_id": "oab-36-penal-piece",
+      "source_rubric_item_id": "oab-36-penal-piece-rubric-14"
+    },
+    {
+      "id": "producao-antecipada-prova",
+      "name": "Producao Antecipada Prova",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Preliminarmente, nulidade na oitiva das vítimas (0,35) , tendo em vista que o\nmero decurso de tempo não é fundamento idôneo para produção antecipada de\nprovas (0,15) , nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou\nSúmula 455 do STJ (0,10) .",
+      "case_elements": [
+        "Condenação por incêndio em imóvel isolado, com prova antecipada e embriaguez completa decorrente de erro de terceiro."
+      ],
+      "fgv_cues": [
+        "producao",
+        "antecipada",
+        "prova"
+      ],
+      "legal_basis": [
+        "Art. 225",
+        "Art. 564, inciso IV",
+        "Súmula 455"
+      ],
+      "consequence": "Preliminarmente, nulidade na oitiva das vítimas (0,35) , tendo em vista que o\nmero decurso de tempo não é fundamento idôneo para produção antecipada de\nprovas (0,15) , nos termos do Art. 225 do CPP, ou Art. 564, inciso IV, do CPP, ou\nSúmula 455 do STJ (0,10) .",
+      "related_requests": [
+        "nulidade",
+        "absolvição",
+        "redução da pena",
+        "regime aberto",
+        "substituição"
+      ],
+      "exam_ids": [
+        "oab-35-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinh a fazendo\ncontra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do ce ntro da\ncidade. Para tanto, coloca gasolina na casa, que es tava desabitada, e acende um fósforo, sendo certo q ue o fogo\ngerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e , como\nninguém costumava passar pelo local, o crime demorou",
+      "source_unit_id": "oab-35-penal-piece",
+      "source_rubric_item_id": "oab-35-penal-piece-rubric-05"
+    },
+    {
+      "id": "perigo-concreto-incendio",
+      "name": "Perigo Concreto Incendio",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Atipicidade da conduta ou desclassificaçã o para crime de dano qualificado\n(0,25) , tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou\nperigo a número indeterminado de pessoas (0,15) e o crime de incêndio é crime\nde perigo comum, exigindo prova de perigo concreto (0,35) .",
+      "case_elements": [
+        "Condenação por incêndio em imóvel isolado, com prova antecipada e embriaguez completa decorrente de erro de terceiro."
+      ],
+      "fgv_cues": [
+        "perigo",
+        "concreto",
+        "incendio"
+      ],
+      "legal_basis": [],
+      "consequence": "Atipicidade da conduta ou desclassificaçã o para crime de dano qualificado\n(0,25) , tendo em vista que a conduta de Júlio de colocar fogo no imóvel não gerou\nperigo a número indeterminado de pessoas (0,15) e o crime de incêndio é crime\nde perigo comum, exigindo prova de perigo concreto (0,35) .",
+      "related_requests": [
+        "nulidade",
+        "absolvição",
+        "redução da pena",
+        "regime aberto",
+        "substituição"
+      ],
+      "exam_ids": [
+        "oab-35-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "No dia 04 de março de 2019, Júlio, insatisfeito com a falta de ajuda de sua mãe no tratamento que vinh a fazendo\ncontra dependência química, decide colocar fogo no imóvel da família em fazenda localizada longe do ce ntro da\ncidade. Para tanto, coloca gasolina na casa, que es tava desabitada, e acende um fósforo, sendo certo q ue o fogo\ngerado destruiu de maneira significativa o imóvel, que era completamente afastado de outros imóveis, e , como\nninguém costumava passar pelo local, o crime demorou",
+      "source_unit_id": "oab-35-penal-piece",
+      "source_rubric_item_id": "oab-35-penal-piece-rubric-07"
+    },
+    {
+      "id": "ordem-inquiricao",
+      "name": "Ordem Inquiricao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Sim, o argumento seria o de que não poderia o ré u ser obrigado a fornecer sua voz\npara perícia ou que não poderia o magistrado ter exigido um compor tamento\npositivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de\nFlávio (0,15) , já que o acusado não pode ser obrigado a produzir prova contra si (0,40) ,\nconforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do\nDecreto 678/1992 (0,10).\n\n0,40/0,50/0,55/0,65\n\n\n\n\nXXXIV EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 24/04/2022\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 9 de 12\nProva Prático-Pr",
+      "case_elements": [
+        "Pronúncia por homicídio após embriaguez completa acidental e inversão da ordem de oitiva."
+      ],
+      "fgv_cues": [
+        "ordem",
+        "inquiricao"
+      ],
+      "legal_basis": [
+        "Art. 5º, inciso LXIII",
+        "Art. 8º"
+      ],
+      "consequence": "Sim, o argumento seria o de que não poderia o ré u ser obrigado a fornecer sua voz\npara perícia ou que não poderia o magistrado ter exigido um compor tamento\npositivo/ativo por parte do réu ou a perícia de voz dependeria da concordância de\nFlávio (0,15) , já que o acusado não pode ser obrigado a produzir prova contra si (0,40) ,\nconforme Art. 5º, inciso LXIII da CRFB/88 ou Art. 8º, item 2, alínea g, do anexo do\nDecreto 678/1992 (0,10).\n\n0,40/0,50/0,55/0,65\n\n\n\n\nXXXIV EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 24/04/2022\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 9 de 12\nProva Prático-Profissional – XXXIV Exame de Ordem Unificado",
+      "related_requests": [
+        "nulidade",
+        "absolvição sumária ou desclassificação",
+        "afastamento da causa de aumento"
+      ],
+      "exam_ids": [
+        "oab-34-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Flávio figurava como indiciado em procedimento em q ue se investigava a prática do crime de concussão. Após\nnão mais ter disponíveis outros meios de investigaç ão, o Ministério Público formulou requerimento de\ninterceptação das conversas telefônicas de Flávio, sendo o pedido deferido pela autoridade judicial pe lo prazo de\n10 dias.\nNo período interceptado, todas as conversas de Fláv io foram transcritas. Em uma das conversas intercep tadas,\nFlávio mantinha contato com seu advogado João e con fes",
+      "source_unit_id": "oab-34-penal-question-2",
+      "source_rubric_item_id": "oab-34-penal-question-2-rubric-02"
+    },
+    {
+      "id": "desclassificacao-juri",
+      "name": "Desclassificacao Juri",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Subsidiariamente, desclassificação para crime nã o doloso contra a vida (0,30) , nos\ntermos do Art. 419 do CPP (0,10), pois Rodrigo pretendia desferir um soco na barriga da\nvítima e um empurrão, tendo apenas intenção de caus ar lesão, mas não o resultado\nmorte ou houve dolo na lesão e culpa em relação ao resultad o morte (0,25)",
+      "case_elements": [
+        "Pronúncia por homicídio após embriaguez completa acidental e inversão da ordem de oitiva.",
+        "Pronúncia por homicídio tentado com lapso prescricional e interrupção voluntária da execução."
+      ],
+      "fgv_cues": [
+        "desclassificacao",
+        "juri"
+      ],
+      "legal_basis": [
+        "Art. 419"
+      ],
+      "consequence": "Subsidiariamente, desclassificação para crime nã o doloso contra a vida (0,30) , nos\ntermos do Art. 419 do CPP (0,10), pois Rodrigo pretendia desferir um soco na barriga da\nvítima e um empurrão, tendo apenas intenção de caus ar lesão, mas não o resultado\nmorte ou houve dolo na lesão e culpa em relação ao resultad o morte (0,25)",
+      "related_requests": [
+        "nulidade",
+        "absolvição sumária ou desclassificação",
+        "afastamento da causa de aumento",
+        "extinção da punibilidade",
+        "desclassificação"
+      ],
+      "exam_ids": [
+        "oab-34-penal",
+        "oab-31-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Rodrigo foi denunciado pelo crime de homicídio simp les consumado, com a causa de aumento prevista na\nprimeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que\nconsta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rod rigo\nteria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse\nem cima da garrafa de vidro que segurava. O corte g erado foi a cau",
+      "source_unit_id": "oab-34-penal-piece",
+      "source_rubric_item_id": "oab-34-penal-piece-rubric-09"
+    },
+    {
+      "id": "causa-aumento-socorro",
+      "name": "Causa Aumento Socorro",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Ainda de maneira subsidiária, afastamento da cau sa de aumento imputada na\ndenúncia (0,30) , tendo em vista que somente aplicável ao homicídio culposo ou tendo\nem vista que foi imputada a prática do crime de homicídio doloso (0,40)\n\nPedidos",
+      "case_elements": [
+        "Pronúncia por homicídio após embriaguez completa acidental e inversão da ordem de oitiva."
+      ],
+      "fgv_cues": [
+        "causa",
+        "aumento",
+        "socorro"
+      ],
+      "legal_basis": [],
+      "consequence": "Ainda de maneira subsidiária, afastamento da cau sa de aumento imputada na\ndenúncia (0,30) , tendo em vista que somente aplicável ao homicídio culposo ou tendo\nem vista que foi imputada a prática do crime de homicídio doloso (0,40)\n\nPedidos",
+      "related_requests": [
+        "nulidade",
+        "absolvição sumária ou desclassificação",
+        "afastamento da causa de aumento"
+      ],
+      "exam_ids": [
+        "oab-34-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Rodrigo foi denunciado pelo crime de homicídio simp les consumado, com a causa de aumento prevista na\nprimeira parte do Art. 121, § 4º, do CP, perante o Tribunal do Júri da Comarca de São Paulo. De acordo com o que\nconsta na denúncia, no dia 26 de dezembro de 2019, em uma boate localizada na cidade de São Paulo, Rod rigo\nteria desferido um soco na barriga de João, além de ter lhe dado um empurrão, que fez com que a vítima caísse\nem cima da garrafa de vidro que segurava. O corte g erado foi a cau",
+      "source_unit_id": "oab-34-penal-piece",
+      "source_rubric_item_id": "oab-34-penal-piece-rubric-11"
+    },
+    {
+      "id": "cross-examination",
+      "name": "Cross Examination",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Sim, o argume nto seria que , considerando a imputabilidade elemento da\nculpabilidade, o fato praticado é típico, ilícito e culpável OU que não deveria ser\nafastada a culpabilidade do agente (0,15), tend o em vista que a paixão não\nexclui a imputabilidade penal (0,40), nos termos do Art. 28, inciso I, do CP (0,10)\n\n\n\n\n\nXXXIII EXAME DE ORDEM UNIFICADO\n\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 12/12/2021\n“O g abarito preliminar da prova práti co-profissional corresponde apenas a uma expectativa de respo sta,\n\nPadrão de Resposta Página 11 de 12\nProva Prático-Profissional – XXXIII Exame de Ordem Unificado",
+      "case_elements": [
+        "Sentença condenatória após inquirição dirigida pelo juiz e imputação de corrupção de menores sem ciência da idade."
+      ],
+      "fgv_cues": [
+        "cross",
+        "examination"
+      ],
+      "legal_basis": [
+        "Art. 28, inciso I"
+      ],
+      "consequence": "Sim, o argume nto seria que , considerando a imputabilidade elemento da\nculpabilidade, o fato praticado é típico, ilícito e culpável OU que não deveria ser\nafastada a culpabilidade do agente (0,15), tend o em vista que a paixão não\nexclui a imputabilidade penal (0,40), nos termos do Art. 28, inciso I, do CP (0,10)\n\n\n\n\n\nXXXIII EXAME DE ORDEM UNIFICADO\n\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 12/12/2021\n“O g abarito preliminar da prova práti co-profissional corresponde apenas a uma expectativa de respo sta,\n\nPadrão de Resposta Página 11 de 12\nProva Prático-Profissional – XXXIII Exame de Ordem Unificado",
+      "related_requests": [
+        "nulidade da instrução",
+        "absolvição",
+        "redução da pena"
+      ],
+      "exam_ids": [
+        "oab-33-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Beatriz e seu esposo José, no dia 02/01/2021 , enquanto celeb ravam o aniversário de casamento em um\nrestaurante, iniciaram uma discussão, por José entender que a esposa não lhe dispensava a devida atenção.\nDurante a discussão, José desferiu um soco no rosto de Beat riz, causando-lhe lesão corporal de natureza leve.\nTestemunhas presenciais do fato chamaram a Polícia, sendo José preso em flagrante, mas posteriormente\nliberado pelo magistrado, em sede de audiência de custódia.\nO Ministério Público",
+      "source_unit_id": "oab-33-penal-question-3",
+      "source_rubric_item_id": "oab-33-penal-question-3-rubric-02"
+    },
+    {
+      "id": "erro-tipo-elementar",
+      "name": "Erro Tipo Elementar",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "No mérito, deveria ser buscada a absolvição do réu em relação ao crime de\ncorrupção d e menores (0,20), tendo em vista que ocorreu erro d e tipo (0,40), nos\ntermos do Art. 20, caput, do CP (0,10).",
+      "case_elements": [
+        "Sentença condenatória após inquirição dirigida pelo juiz e imputação de corrupção de menores sem ciência da idade."
+      ],
+      "fgv_cues": [
+        "erro",
+        "tipo",
+        "elementar"
+      ],
+      "legal_basis": [
+        "Art. 20"
+      ],
+      "consequence": "No mérito, deveria ser buscada a absolvição do réu em relação ao crime de\ncorrupção d e menores (0,20), tendo em vista que ocorreu erro d e tipo (0,40), nos\ntermos do Art. 20, caput, do CP (0,10).",
+      "related_requests": [
+        "nulidade da instrução",
+        "absolvição",
+        "redução da pena"
+      ],
+      "exam_ids": [
+        "oab-33-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de\nmenores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para\nCarlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de\nconveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com\nmetade dos bens subtraídos.\nA dupla, então, comparece ao local, anuncia ",
+      "source_unit_id": "oab-33-penal-piece",
+      "source_rubric_item_id": "oab-33-penal-piece-rubric-06"
+    },
+    {
+      "id": "dosimetria",
+      "name": "Dosimetria",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Redução do quantum de aumento realizado na terceira fase da dosimetria do crime\nde roubo (0,20), já que os fatos foram praticados antes da entrada em vigor da lei que\naumentou o percentual de aumento em razão do emprego de arma de fogo OU em\nrazão do princípio da irre troatividade da lei penal prejudicial ao réu (0,35), conforme\nArt. 5º, inciso XL, da CRFB (0,10).",
+      "case_elements": [
+        "Sentença condenatória após inquirição dirigida pelo juiz e imputação de corrupção de menores sem ciência da idade.",
+        "Lesão corporal contra vítima masculina em relação doméstica, sem representação e em contexto de necessidade."
+      ],
+      "fgv_cues": [
+        "dosimetria"
+      ],
+      "legal_basis": [
+        "Art. 5º, inciso XL"
+      ],
+      "consequence": "Redução do quantum de aumento realizado na terceira fase da dosimetria do crime\nde roubo (0,20), já que os fatos foram praticados antes da entrada em vigor da lei que\naumentou o percentual de aumento em razão do emprego de arma de fogo OU em\nrazão do princípio da irre troatividade da lei penal prejudicial ao réu (0,35), conforme\nArt. 5º, inciso XL, da CRFB (0,10).",
+      "related_requests": [
+        "nulidade da instrução",
+        "absolvição",
+        "redução da pena",
+        "extinção da punibilidade",
+        "aplicação subsidiária da pena"
+      ],
+      "exam_ids": [
+        "oab-33-penal",
+        "oab-32-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Breno, 19 anos, no dia 03 de novembro de 2017, quando estava em uma festa em que era proibida a entrada de\nmenores de 18 anos, conheceu Carlos. Após ingerirem grande quantidade de bebida alcoólica, Breno conta para\nCarlos que estava portando uma arma de fogo e que tinha a intenção de subtrair o dinheiro da loja de\nconveniência de um posto de gasolina. Carlos concorda, de imediato, com o plano delitivo, desde que ficasse com\nmetade dos bens subtraídos.\nA dupla, então, comparece ao local, anuncia ",
+      "source_unit_id": "oab-33-penal-piece",
+      "source_rubric_item_id": "oab-33-penal-piece-rubric-10"
+    },
+    {
+      "id": "estado-necessidade",
+      "name": "Estado Necessidade",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "No mérito, reconhecimento do estado de necessidade (0,40), que é causa excludente da\nilicitude (0,20), na forma do Art. 24 ou do Art. 23, inciso I, ambos do CP (0,10)",
+      "case_elements": [
+        "Lesão corporal contra vítima masculina em relação doméstica, sem representação e em contexto de necessidade."
+      ],
+      "fgv_cues": [
+        "estado",
+        "necessidade"
+      ],
+      "legal_basis": [
+        "Art. 24",
+        "Art. 23, inciso I"
+      ],
+      "consequence": "No mérito, reconhecimento do estado de necessidade (0,40), que é causa excludente da\nilicitude (0,20), na forma do Art. 24 ou do Art. 23, inciso I, ambos do CP (0,10)",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "aplicação subsidiária da pena"
+      ],
+      "exam_ids": [
+        "oab-32-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Na madrugada do dia 1º de janeiro de 2020, Luiz, nascido em 24 de abril de 1948, estava em sua residência, em\nPorto Alegre, na companhia de seus três filhos e do irmão Igor, nascido em 29 de novembro de 1965 , que\ntambém morava há dois anos no mesmo imóvel. Em determinado momento, um dos filhos de Luiz acionou fogos\nde artifício, no quintal do imóvel, para comemorar a chegada do novo ano. Ocorre que as faíscas atingiram o\ntelhado da casa, que começou a pegar f ogo. Todos correram para sair pela ",
+      "source_unit_id": "oab-32-penal-piece",
+      "source_rubric_item_id": "oab-32-penal-piece-rubric-06"
+    },
+    {
+      "id": "nulidade-audiencia-sem-reu",
+      "name": "Nulidade Audiencia SEM REU",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O examinando deve apresentar, na qualidade de advogado(a) de Rômulo, recurso em sentido estrito, com\nfundamento no Art. 581, inciso IV, do Código de Processo Penal.\nInicialmente, o examinando deve apresentar petição de interposição do recurso, que deve ser direcionada ao\nJuízo do Tribunal do Júri da Comarca de Maricá/RJ, local em que foram praticados os atos, sendo certo que o\ncrime imputado era de natureza dolosa contra a vida, logo, órgão competente para o julgamento, de acordo com\na infração penal imputada na denúncia. Já na petição de interposição, deve ser formulado pedido de retratação\npor parte do juízo a quo, nos termos do Art. 589 do CPP. Em seguida, caso mantida a decisão de pronún",
+      "case_elements": [
+        "Pronúncia por homicídio tentado com lapso prescricional e interrupção voluntária da execução."
+      ],
+      "fgv_cues": [
+        "nulidade",
+        "audiencia",
+        "reu"
+      ],
+      "legal_basis": [
+        "Art. 581, inciso IV",
+        "Art. 589",
+        "Art. 117, inciso I",
+        "Art. 109, inciso I",
+        "Art. 115",
+        "Art. 110",
+        "Art. 5º, inciso LV",
+        "Art. 419",
+        "Art. 15",
+        "Art. 121, § 2º",
+        "Art. 5º, inciso XL",
+        "Art. 586"
+      ],
+      "consequence": "Conferir a consequência no padrão oficial vinculado.",
+      "related_requests": [
+        "extinção da punibilidade",
+        "nulidade",
+        "desclassificação"
+      ],
+      "exam_ids": [
+        "oab-31-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Rômulo, nascido em 04 de abril de 1991, em Maricá, ficou inconformado por encontrar, em 02 de janeiro de\n2010, mensagens de sua esposa Paola, nascida em 06 de junho de 1992, para Bruno, desejando a este, um\npróspero ano. Em razão disso, desferiu golpes de faca nas mãos de Paola, pretendendo, em seguida, utilizar a\narma branca para golpear a vítima e causar sua morte. Ocorre que Rômulo ficou sensível ao sofrimento de sua\nesposa após as facadas na mão, decidindo deixar o local dos fatos para se ac",
+      "source_unit_id": "oab-31-penal-piece",
+      "source_rubric_item_id": null
+    },
+    {
+      "id": "principio-correlacao",
+      "name": "Principio Correlacao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O examinando deveria apresentar, na condição de advogado de Carlos, Recurso de Apelação, com fundamento no\n\n\n\nXXX EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 01/12/2019\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 2 de 9\nProva Prático-Profissional – XXX Exame de Ordem Unificado\nArt. 593, inciso I, do Código de Processo Penal.\nA petição de interposição do recurso de apelação deveria ser direcionada ao juízo da 3ª Vara Criminal da Comarca\nde São Gonçalo/RJ, enquanto que as razões recursais deveriam ser apresentadas ao Tribunal de Justiça do Estado\ndo Rio de Janeiro.\nInicialmente, deveria o ",
+      "case_elements": [
+        "Condenação por crimes culposos de trânsito sem representação e com violação à correlação entre denúncia e sentença."
+      ],
+      "fgv_cues": [
+        "principio",
+        "correlacao"
+      ],
+      "legal_basis": [
+        "Art. 593, inciso I",
+        "Art. 291, §1º",
+        "Art. 88",
+        "Art. 38",
+        "Art. 107, inciso IV",
+        "Art. 386, inciso VII",
+        "Art. 61, inciso II",
+        "Art. 70",
+        "Art. 69",
+        "Art. 33",
+        "Art. 44, inciso I"
+      ],
+      "consequence": "Conferir a consequência no padrão oficial vinculado.",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "afastamento de agravante",
+        "concurso formal",
+        "regime adequado"
+      ],
+      "exam_ids": [
+        "oab-30-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos\n302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque,\nde acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo\nautomotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e\nMário, este com 9 anos, causando lesões que foram a causa efici",
+      "source_unit_id": "oab-30-penal-piece",
+      "source_rubric_item_id": null
+    },
+    {
+      "id": "insuficiencia-probatoria",
+      "name": "Insuficiencia Probatoria",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O examinando deveria apresentar, na condição de advogado de Carlos, Recurso de Apelação, com fundamento no\n\n\n\nXXX EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 01/12/2019\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 2 de 9\nProva Prático-Profissional – XXX Exame de Ordem Unificado\nArt. 593, inciso I, do Código de Processo Penal.\nA petição de interposição do recurso de apelação deveria ser direcionada ao juízo da 3ª Vara Criminal da Comarca\nde São Gonçalo/RJ, enquanto que as razões recursais deveriam ser apresentadas ao Tribunal de Justiça do Estado\ndo Rio de Janeiro.\nInicialmente, deveria o ",
+      "case_elements": [
+        "Condenação por crimes culposos de trânsito sem representação e com violação à correlação entre denúncia e sentença."
+      ],
+      "fgv_cues": [
+        "insuficiencia",
+        "probatoria"
+      ],
+      "legal_basis": [
+        "Art. 593, inciso I",
+        "Art. 291, §1º",
+        "Art. 88",
+        "Art. 38",
+        "Art. 107, inciso IV",
+        "Art. 386, inciso VII",
+        "Art. 61, inciso II",
+        "Art. 70",
+        "Art. 69",
+        "Art. 33",
+        "Art. 44, inciso I"
+      ],
+      "consequence": "Conferir a consequência no padrão oficial vinculado.",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "afastamento de agravante",
+        "concurso formal",
+        "regime adequado"
+      ],
+      "exam_ids": [
+        "oab-30-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos\n302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque,\nde acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo\nautomotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e\nMário, este com 9 anos, causando lesões que foram a causa efici",
+      "source_unit_id": "oab-30-penal-piece",
+      "source_rubric_item_id": null
+    },
+    {
+      "id": "agravante-crime-culposo",
+      "name": "Agravante Crime Culposo",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O examinando deveria apresentar, na condição de advogado de Carlos, Recurso de Apelação, com fundamento no\n\n\n\nXXX EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 01/12/2019\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 2 de 9\nProva Prático-Profissional – XXX Exame de Ordem Unificado\nArt. 593, inciso I, do Código de Processo Penal.\nA petição de interposição do recurso de apelação deveria ser direcionada ao juízo da 3ª Vara Criminal da Comarca\nde São Gonçalo/RJ, enquanto que as razões recursais deveriam ser apresentadas ao Tribunal de Justiça do Estado\ndo Rio de Janeiro.\nInicialmente, deveria o ",
+      "case_elements": [
+        "Condenação por crimes culposos de trânsito sem representação e com violação à correlação entre denúncia e sentença."
+      ],
+      "fgv_cues": [
+        "agravante",
+        "crime",
+        "culposo"
+      ],
+      "legal_basis": [
+        "Art. 593, inciso I",
+        "Art. 291, §1º",
+        "Art. 88",
+        "Art. 38",
+        "Art. 107, inciso IV",
+        "Art. 386, inciso VII",
+        "Art. 61, inciso II",
+        "Art. 70",
+        "Art. 69",
+        "Art. 33",
+        "Art. 44, inciso I"
+      ],
+      "consequence": "Conferir a consequência no padrão oficial vinculado.",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "afastamento de agravante",
+        "concurso formal",
+        "regime adequado"
+      ],
+      "exam_ids": [
+        "oab-30-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos\n302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque,\nde acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo\nautomotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e\nMário, este com 9 anos, causando lesões que foram a causa efici",
+      "source_unit_id": "oab-30-penal-piece",
+      "source_rubric_item_id": null
+    },
+    {
+      "id": "concurso-formal",
+      "name": "Concurso Formal",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O examinando deveria apresentar, na condição de advogado de Carlos, Recurso de Apelação, com fundamento no\n\n\n\nXXX EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 01/12/2019\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 2 de 9\nProva Prático-Profissional – XXX Exame de Ordem Unificado\nArt. 593, inciso I, do Código de Processo Penal.\nA petição de interposição do recurso de apelação deveria ser direcionada ao juízo da 3ª Vara Criminal da Comarca\nde São Gonçalo/RJ, enquanto que as razões recursais deveriam ser apresentadas ao Tribunal de Justiça do Estado\ndo Rio de Janeiro.\nInicialmente, deveria o ",
+      "case_elements": [
+        "Condenação por crimes culposos de trânsito sem representação e com violação à correlação entre denúncia e sentença."
+      ],
+      "fgv_cues": [
+        "concurso",
+        "formal"
+      ],
+      "legal_basis": [
+        "Art. 593, inciso I",
+        "Art. 291, §1º",
+        "Art. 88",
+        "Art. 38",
+        "Art. 107, inciso IV",
+        "Art. 386, inciso VII",
+        "Art. 61, inciso II",
+        "Art. 70",
+        "Art. 69",
+        "Art. 33",
+        "Art. 44, inciso I"
+      ],
+      "consequence": "Conferir a consequência no padrão oficial vinculado.",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "afastamento de agravante",
+        "concurso formal",
+        "regime adequado"
+      ],
+      "exam_ids": [
+        "oab-30-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos\n302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque,\nde acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo\nautomotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e\nMário, este com 9 anos, causando lesões que foram a causa efici",
+      "source_unit_id": "oab-30-penal-piece",
+      "source_rubric_item_id": null
+    },
+    {
+      "id": "regime-detencao",
+      "name": "Regime Detencao",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O examinando deveria apresentar, na condição de advogado de Carlos, Recurso de Apelação, com fundamento no\n\n\n\nXXX EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 01/12/2019\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 2 de 9\nProva Prático-Profissional – XXX Exame de Ordem Unificado\nArt. 593, inciso I, do Código de Processo Penal.\nA petição de interposição do recurso de apelação deveria ser direcionada ao juízo da 3ª Vara Criminal da Comarca\nde São Gonçalo/RJ, enquanto que as razões recursais deveriam ser apresentadas ao Tribunal de Justiça do Estado\ndo Rio de Janeiro.\nInicialmente, deveria o ",
+      "case_elements": [
+        "Condenação por crimes culposos de trânsito sem representação e com violação à correlação entre denúncia e sentença."
+      ],
+      "fgv_cues": [
+        "regime",
+        "detencao"
+      ],
+      "legal_basis": [
+        "Art. 593, inciso I",
+        "Art. 291, §1º",
+        "Art. 88",
+        "Art. 38",
+        "Art. 107, inciso IV",
+        "Art. 386, inciso VII",
+        "Art. 61, inciso II",
+        "Art. 70",
+        "Art. 69",
+        "Art. 33",
+        "Art. 44, inciso I"
+      ],
+      "consequence": "Conferir a consequência no padrão oficial vinculado.",
+      "related_requests": [
+        "extinção da punibilidade",
+        "absolvição",
+        "afastamento de agravante",
+        "concurso formal",
+        "regime adequado"
+      ],
+      "exam_ids": [
+        "oab-30-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Carlos, primário e de bons antecedentes, 45 anos, foi denunciado como incurso nas sanções penais dos artigos\n302 da Lei nº 9.503/97, por duas vezes, e 303, do mesmo diploma legal, todos eles em concurso material, porque,\nde acordo com a denúncia, “no dia 08 de julho de 2017, em São Gonçalo, Rio de Janeiro, na direção de veículo\nautomotor, com imprudência em razão do excesso de velocidade, colidiu com o veículo em que estavam Júlio e\nMário, este com 9 anos, causando lesões que foram a causa efici",
+      "source_unit_id": "oab-30-penal-piece",
+      "source_rubric_item_id": null
+    },
+    {
+      "id": "audiencia-falta-grave",
+      "name": "Audiencia Falta Grave",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O reconhecimento de falta grave depende de prévio procedimento administrativo\n(0,30), garantido o direito de defesa (0,25), conforme a Súmula 533 do STJ (0,10)",
+      "case_elements": [
+        "Falta grave reconhecida sem audiência do apenado, com perda total de remição e reinício de prazos."
+      ],
+      "fgv_cues": [
+        "audiencia",
+        "falta",
+        "grave"
+      ],
+      "legal_basis": [
+        "Súmula 533"
+      ],
+      "consequence": "O reconhecimento de falta grave depende de prévio procedimento administrativo\n(0,30), garantido o direito de defesa (0,25), conforme a Súmula 533 do STJ (0,10)",
+      "related_requests": [
+        "nulidade",
+        "limitação da perda de dias remidos",
+        "afastamento do reinício de prazos"
+      ],
+      "exam_ids": [
+        "oab-29-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe\naplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do\nfato.\nApós cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na\nunidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da\npena nesse regime, veio a ser encontrado escondido em seu colc",
+      "source_unit_id": "oab-29-penal-piece",
+      "source_rubric_item_id": "oab-29-penal-piece-rubric-06"
+    },
+    {
+      "id": "livramento-condicional",
+      "name": "Livramento Condicional",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Incabível o reinício da contagem dos prazos do indulto e livramento condicional em\nrazão do princípio da legalidade, que também é aplicável na execução penal (0,30).\nPedidos",
+      "case_elements": [
+        "Falta grave reconhecida sem audiência do apenado, com perda total de remição e reinício de prazos."
+      ],
+      "fgv_cues": [
+        "livramento",
+        "condicional"
+      ],
+      "legal_basis": [],
+      "consequence": "Incabível o reinício da contagem dos prazos do indulto e livramento condicional em\nrazão do princípio da legalidade, que também é aplicável na execução penal (0,30).\nPedidos",
+      "related_requests": [
+        "nulidade",
+        "limitação da perda de dias remidos",
+        "afastamento do reinício de prazos"
+      ],
+      "exam_ids": [
+        "oab-29-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe\naplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do\nfato.\nApós cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na\nunidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da\npena nesse regime, veio a ser encontrado escondido em seu colc",
+      "source_unit_id": "oab-29-penal-piece",
+      "source_rubric_item_id": "oab-29-penal-piece-rubric-11"
+    },
+    {
+      "id": "indulto",
+      "name": "Indulto",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Incabível o reinício da contagem dos prazos do indulto e livramento condicional em\nrazão do princípio da legalidade, que também é aplicável na execução penal (0,30).\nPedidos",
+      "case_elements": [
+        "Falta grave reconhecida sem audiência do apenado, com perda total de remição e reinício de prazos."
+      ],
+      "fgv_cues": [
+        "indulto"
+      ],
+      "legal_basis": [],
+      "consequence": "Incabível o reinício da contagem dos prazos do indulto e livramento condicional em\nrazão do princípio da legalidade, que também é aplicável na execução penal (0,30).\nPedidos",
+      "related_requests": [
+        "nulidade",
+        "limitação da perda de dias remidos",
+        "afastamento do reinício de prazos"
+      ],
+      "exam_ids": [
+        "oab-29-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Guilherme foi condenado definitivamente pela prática do crime de lesão corporal seguida de morte, sendo-lhe\naplicada a pena de 06 anos de reclusão, a ser cumprida em regime inicial fechado, em razão das circunstâncias do\nfato.\nApós cumprir 01 ano da pena aplicada, Guilherme foi beneficiado com progressão para o regime semiaberto. Na\nunidade penitenciária, o apenado trabalhava internamente em busca da remição. Durante o cumprimento da\npena nesse regime, veio a ser encontrado escondido em seu colc",
+      "source_unit_id": "oab-29-penal-piece",
+      "source_rubric_item_id": "oab-29-penal-piece-rubric-11"
+    },
+    {
+      "id": "contraditorio-documentos",
+      "name": "Contraditorio Documentos",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O examinando deveria apresentar, na qualidade de ad vogado de Túlio, Recurso em Sentido Estrito , com\nfundamento no Art. 581, inciso IV, do Código de Processo Penal.\n\n\n\nXXVIII EXAME DE ORDEM UNIFICADO\nPROVA PRÁTICO-PROFISSIONAL Aplicada em 05/05/2019\n“O gabarito preliminar da prova prático-profissional corresponde apenas a uma expectativa de resposta,\n\nPadrão de Resposta Página 2 de 11\nProva Prático-Profissional – XXVIII Exame de Ordem Unificado\nInicialmente, deveria o examinando apresentar petiç ão de interposição do recurso, que deveria ser dire cionada\nao Juízo do Tribunal do Júri de Porto Alegre, Rio G rande do Sul, local onde foi praticado o ato de exe cução do\ndelito imputado, sendo ce",
+      "case_elements": [
+        "Pronúncia por tentativa de aborto de pessoa que nunca esteve grávida, com documentos juntados após alegações finais."
+      ],
+      "fgv_cues": [
+        "contraditorio",
+        "documentos"
+      ],
+      "legal_basis": [
+        "Art. 581, inciso IV",
+        "Art. 589",
+        "Art. 117, inciso I",
+        "Art. 117, inciso II",
+        "Art. 109, inciso IV",
+        "Art. 115",
+        "Art. 89",
+        "Art. 17",
+        "Art. 41",
+        "Art. 415, inciso III",
+        "Art. 586"
+      ],
+      "consequence": "Conferir a consequência no padrão oficial vinculado.",
+      "related_requests": [
+        "prescrição",
+        "nulidade",
+        "absolvição sumária"
+      ],
+      "exam_ids": [
+        "oab-28-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "calculate_deadline",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_competence",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "Túlio, nascido em 01/01/1996, primário, começa a na morar Joaquina, jovem que recém completou 15 anos. Logo\napós o início do namoro, ainda muito apaixonado, é surpreendido pela informação de que Joaquina estari a\ngrávida de seu ex-namorado, o adolescente João, com quem mantivera relações sexuais. Joaquina demonstr a\ntoda a sua preocupação com a reação de seus pais di ante desta gravidez quando tão jovem e, em desesper o,\nsolicita ajuda de Túlio para realizar um aborto.\nDiante disso, no dia 03/01",
+      "source_unit_id": "oab-28-penal-piece",
+      "source_rubric_item_id": null
+    },
+    {
+      "id": "interrogatorio-ultimo-ato",
+      "name": "Interrogatorio Ultimo ATO",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "O interrogatório, como instrumento de defesa, poderá ser realizado como último ato da\ninstrução OU o procedimento da Lei nº 11.343/06 deve se adequar àquele previsto no CPP\n(0,25).",
+      "case_elements": [
+        "Réu absolvido de associação para o tráfico e beneficiado no tráfico; MP recorre de nulidade, mérito e dosimetria."
+      ],
+      "fgv_cues": [
+        "interrogatorio",
+        "ultimo",
+        "ato"
+      ],
+      "legal_basis": [],
+      "consequence": "O interrogatório, como instrumento de defesa, poderá ser realizado como último ato da\ninstrução OU o procedimento da Lei nº 11.343/06 deve se adequar àquele previsto no CPP\n(0,25).",
+      "related_requests": [
+        "desprovimento do recurso do MP",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-27-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo\nconsigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no i nterior da\nmochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato,\nencaminhadas para a Delegacia.\nRealizado laudo de exame de material entorpecente, constatou -se que João trazia 25 g de cocaína,\nacondicionados em 35 pinos plásticos, enquanto, na mochila do a",
+      "source_unit_id": "oab-27-penal-piece",
+      "source_rubric_item_id": "oab-27-penal-piece-rubric-05"
+    },
+    {
+      "id": "associacao-trafico-estabilidade",
+      "name": "Associacao Trafico Estabilidade",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Manutenção da absolvição em relação crime de associação para o tráfico (0,20), tendo\nem vista que não restou prova da situação de permanência/estabilidade entre o adolescente\ne o acusado (0,40).",
+      "case_elements": [
+        "Réu absolvido de associação para o tráfico e beneficiado no tráfico; MP recorre de nulidade, mérito e dosimetria."
+      ],
+      "fgv_cues": [
+        "associacao",
+        "trafico",
+        "estabilidade"
+      ],
+      "legal_basis": [],
+      "consequence": "Manutenção da absolvição em relação crime de associação para o tráfico (0,20), tendo\nem vista que não restou prova da situação de permanência/estabilidade entre o adolescente\ne o acusado (0,40).",
+      "related_requests": [
+        "desprovimento do recurso do MP",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-27-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo\nconsigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no i nterior da\nmochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato,\nencaminhadas para a Delegacia.\nRealizado laudo de exame de material entorpecente, constatou -se que João trazia 25 g de cocaína,\nacondicionados em 35 pinos plásticos, enquanto, na mochila do a",
+      "source_unit_id": "oab-27-penal-piece",
+      "source_rubric_item_id": "oab-27-penal-piece-rubric-06"
+    },
+    {
+      "id": "pena-base-gravidade-abstrata",
+      "name": "Pena Base Gravidade Abstrata",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Manutenção da pena base no mínimo lega l (0,20), uma vez que o argumento utilizado\npelo Ministério Público considera a gravidade em abstrato do delito OU tendo em vista que\nhaveria bis in idem no aumento da pena em razão de violação ao bem jurídico protegido\npela norma (0,40).",
+      "case_elements": [
+        "Réu absolvido de associação para o tráfico e beneficiado no tráfico; MP recorre de nulidade, mérito e dosimetria."
+      ],
+      "fgv_cues": [
+        "pena",
+        "base",
+        "gravidade",
+        "abstrata"
+      ],
+      "legal_basis": [],
+      "consequence": "Manutenção da pena base no mínimo lega l (0,20), uma vez que o argumento utilizado\npelo Ministério Público considera a gravidade em abstrato do delito OU tendo em vista que\nhaveria bis in idem no aumento da pena em razão de violação ao bem jurídico protegido\npela norma (0,40).",
+      "related_requests": [
+        "desprovimento do recurso do MP",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-27-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recognize_nullity",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo\nconsigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no i nterior da\nmochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato,\nencaminhadas para a Delegacia.\nRealizado laudo de exame de material entorpecente, constatou -se que João trazia 25 g de cocaína,\nacondicionados em 35 pinos plásticos, enquanto, na mochila do a",
+      "source_unit_id": "oab-27-penal-piece",
+      "source_rubric_item_id": "oab-27-penal-piece-rubric-07"
+    },
+    {
+      "id": "trafico-privilegiado",
+      "name": "Trafico Privilegiado",
+      "classification": "machine_derived_from_official_standard",
+      "review_status": "machine_checked",
+      "concept": "Afastamento do pedido de aplicação do regime inicial fechado (0,20), pois o crime de\ntráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a\nprevisão do Art. 2º, § 1º, da Lei nº 8.072 /90 de aplicação obrigatória do regime inicial\nfechado aos crimes hediondos (0,40).",
+      "case_elements": [
+        "Réu absolvido de associação para o tráfico e beneficiado no tráfico; MP recorre de nulidade, mérito e dosimetria."
+      ],
+      "fgv_cues": [
+        "trafico",
+        "privilegiado"
+      ],
+      "legal_basis": [
+        "Art. 2º, § 1º"
+      ],
+      "consequence": "Afastamento do pedido de aplicação do regime inicial fechado (0,20), pois o crime de\ntráfico privilegiado não é considerando hediondo pelo STF OU porque é inconstitucional a\nprevisão do Art. 2º, § 1º, da Lei nº 8.072 /90 de aplicação obrigatória do regime inicial\nfechado aos crimes hediondos (0,40).",
+      "related_requests": [
+        "desprovimento do recurso do MP",
+        "manutenção da sentença"
+      ],
+      "exam_ids": [
+        "oab-27-penal"
+      ],
+      "skill_ids": [
+        "apply_rule_to_facts",
+        "derive_legal_consequence",
+        "formulate_request",
+        "identify_piece",
+        "identify_procedural_stage",
+        "identify_thesis",
+        "perform_sentencing_analysis",
+        "recall_legal_basis",
+        "structure_argument",
+        "write_concisely"
+      ],
+      "confusable_with": [],
+      "short_example": "João, 22 anos, no dia 04 de maio de 2018, caminhava com o adolescente Marcelo, cada um deles trazendo\nconsigo uma mochila nas costas. Realizada uma abordagem por policiais, foi constatado que, no i nterior da\nmochila de cada um, havia uma certa quantidade de drogas, razão pela qual elas foram, de imediato,\nencaminhadas para a Delegacia.\nRealizado laudo de exame de material entorpecente, constatou -se que João trazia 25 g de cocaína,\nacondicionados em 35 pinos plásticos, enquanto, na mochila do a",
+      "source_unit_id": "oab-27-penal-piece",
+      "source_rubric_item_id": "oab-27-penal-piece-rubric-10"
+    }
+  ]
+}

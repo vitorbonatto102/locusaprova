@@ -1,0 +1,84 @@
+{
+  "category": { "id": "public-exam", "name": "Concurso público" },
+  "career": { "id": "police", "name": "Carreira policial" },
+  "boards": [
+    { "id": "cebraspe", "name": "Cebraspe", "scoringStrategies": ["cebraspe_true_false"] },
+    { "id": "fundatec", "name": "Fundatec", "scoringStrategies": ["standard_multiple_choice"] }
+  ],
+  "institutions": [
+    { "id": "pf", "name": "Polícia Federal", "scope": "federal" },
+    { "id": "prf", "name": "Polícia Rodoviária Federal", "scope": "federal" },
+    { "id": "pc-rs", "name": "Polícia Civil do Rio Grande do Sul", "scope": "state" }
+  ],
+  "positions": [
+    { "id": "pf-agent", "institutionId": "pf", "name": "Agente de Polícia Federal" },
+    { "id": "prf-policial", "institutionId": "prf", "name": "Policial Rodoviário Federal" },
+    { "id": "pc-rs-inspector", "institutionId": "pc-rs", "name": "Inspetor de Polícia" }
+  ],
+  "targets": [
+    {
+      "id": "pf-agent-2025",
+      "trackId": "public-exams-police-pf-agent-2025",
+      "mode": "notice",
+      "careerId": "police",
+      "institutionId": "pf",
+      "positionId": "pf-agent",
+      "noticeId": "pf-policial-2025-edital-1",
+      "boardId": "cebraspe",
+      "label": "PF — Agente 2025",
+      "status": "active",
+      "knowledgeNodeIds": [
+        "pt-interpretation", "pt-text-types", "pt-cohesion", "pt-morphosyntax", "pt-rewriting", "pt-official-writing",
+        "adm-organization", "adm-acts", "adm-public-agents", "adm-powers", "adm-control", "adm-state-liability", "adm-principles",
+        "const-fundamental-rights", "const-executive", "const-public-security", "const-social-order",
+        "penal-principles", "penal-law-application", "penal-typical-fact", "penal-special-part", "proc-inquiry", "proc-evidence", "proc-liberty",
+        "special-security-private", "special-chemical-control", "special-migration", "special-drugs", "special-torture", "special-eca", "special-firearms", "special-environment", "special-federal-repercussion", "special-identification", "special-cybercrime"
+      ]
+    },
+    {
+      "id": "prf-2021",
+      "trackId": "public-exams-police-prf",
+      "mode": "notice",
+      "careerId": "police",
+      "institutionId": "prf",
+      "positionId": "prf-policial",
+      "noticeId": "prf-policial-2021-edital-1",
+      "boardId": "cebraspe",
+      "label": "PRF — referência: último edital oficial disponível (2021)",
+      "status": "active",
+      "knowledgeNodeIds": [
+        "pt-interpretation", "pt-text-types", "pt-cohesion", "pt-morphosyntax", "pt-rewriting", "pt-official-writing",
+        "rlm-equations-functions", "rlm-ratio-percent", "rlm-sequences", "rlm-counting-probability", "rlm-statistics", "rlm-sets", "rlm-geometry",
+        "it-internet-intranet", "it-operating-tools", "it-digital-transformation", "it-security", "it-cloud",
+        "physics-kinematics", "physics-circular", "physics-newton", "physics-work-energy", "physics-friction", "physics-momentum", "physics-collisions",
+        "ethics-values", "ethics-public-function", "ethics-public-principles", "ethics-governance", "ethics-citizenship",
+        "geo-nation-territory", "geo-regional-production", "geo-population-urbanization", "geo-economic-integration", "geo-transport-network", "geo-environment",
+        "foreign-comprehension", "foreign-grammar",
+        "traffic-snt", "traffic-general-rules", "traffic-signage", "traffic-vehicles", "traffic-drivers", "traffic-infractions", "traffic-crimes", "traffic-contran",
+        "adm-organization", "adm-acts", "adm-public-agents", "adm-powers", "adm-control", "adm-state-liability", "adm-principles", "adm-prf-career", "adm-procurement",
+        "const-fundamental-rights", "const-executive", "const-public-security", "const-social-order", "const-constituent-power", "const-union",
+        "penal-principles", "penal-law-application", "penal-typical-fact", "penal-special-part", "penal-culpability",
+        "proc-evidence", "proc-liberty", "proc-criminal-action", "proc-tco", "proc-identification-diligences",
+        "special-identification", "special-eca", "special-drugs", "special-torture", "special-firearms", "special-environment", "special-heinous", "special-prf-competence", "special-jecrim", "special-organized-crime", "special-susp", "special-abuse-authority",
+        "human-rights-constitution", "human-rights-universal", "human-rights-american"
+      ]
+    },
+    {
+      "id": "pc-rs-inspector-2025",
+      "trackId": "public-exams-police-civil",
+      "mode": "notice",
+      "careerId": "police",
+      "institutionId": "pc-rs",
+      "positionId": "pc-rs-inspector",
+      "noticeId": "pc-rs-2025-edital-6",
+      "boardId": "fundatec",
+      "label": "PC-RS — Inspetor 2025",
+      "status": "structural_test",
+      "knowledgeNodeIds": [
+        "pt-interpretation", "pt-cohesion", "pt-morphosyntax", "adm-public-agents", "adm-powers",
+        "const-fundamental-rights", "const-public-security", "penal-law-application", "penal-typical-fact",
+        "penal-special-part", "proc-inquiry", "proc-evidence", "proc-liberty", "special-drugs", "special-firearms"
+      ]
+    }
+  ]
+}

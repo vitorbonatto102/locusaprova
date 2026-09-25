@@ -1,0 +1,120 @@
+{
+  "id": "pf-policial-2025-edital-1",
+  "examTargetId": "pf-agent-2025",
+  "title": "Edital nº 1 — PF — Policial, de 20 de maio de 2025",
+  "institution": "Polícia Federal",
+  "position": "Agente de Polícia Federal",
+  "board": "Cebraspe",
+  "publishedAt": "2025-05-21",
+  "retrievedAt": "2026-09-20",
+  "source": {
+    "sourceUrl": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file",
+    "sourceDocument": "Edital nº 1 — PF — Policial, de 20 de maio de 2025",
+    "publisher": "Polícia Federal / Diário Oficial da União",
+    "validationStatus": "verified"
+  },
+  "stages": [
+    { "name": "Prova objetiva", "character": "eliminatório e classificatório", "page": 21 },
+    { "name": "Prova discursiva", "character": "eliminatório e classificatório", "page": 21 },
+    { "name": "Exame de aptidão física", "character": "eliminatório", "page": 22 },
+    { "name": "Avaliação médica", "character": "eliminatório", "page": 22 },
+    { "name": "Avaliação psicológica — primeiro momento", "character": "presença obrigatória, sem caráter eliminatório", "page": 22 },
+    { "name": "Investigação social", "character": "eliminatório", "page": 22 },
+    { "name": "Curso de Formação Profissional", "character": "segunda etapa, eliminatório", "page": 1 }
+  ],
+  "objectiveExam": {
+    "durationMinutes": 270,
+    "totalItems": 120,
+    "questionType": "true_false",
+    "scoringStrategy": "cebraspe_true_false",
+    "scoring": { "correct": 1, "incorrect": -1, "blankOrDouble": 0, "sourcePage": 23 },
+    "blocks": [
+      { "id": "block-1", "label": "Bloco I — conhecimentos básicos", "items": 60, "minimumScore": 6, "sourcePages": [21, 24] },
+      { "id": "block-2", "label": "Bloco II — conhecimentos básicos", "items": 36, "minimumScore": 3, "sourcePages": [21, 24] },
+      { "id": "block-3", "label": "Bloco III — conhecimentos específicos", "items": 24, "minimumScore": 2, "sourcePages": [21, 24] }
+    ],
+    "minimumTotalScore": 48,
+    "minimumTotalSourcePage": 24
+  },
+  "discursiveExam": {
+    "format": "texto dissertativo",
+    "maximumLines": 30,
+    "maximumScore": 20,
+    "minimumScore": 10,
+    "sourcePages": [25, 27]
+  },
+  "subjectsInNotice": [
+    { "name": "Língua Portuguesa", "block": "block-1", "sourcePage": 75, "contentStatus": "deep" },
+    { "name": "Noções de Direito Administrativo", "block": "block-1", "sourcePage": 75, "contentStatus": "deep" },
+    { "name": "Noções de Direito Constitucional", "block": "block-1", "sourcePage": 76, "contentStatus": "deep" },
+    { "name": "Noções de Direito Penal e de Direito Processual Penal", "block": "block-1", "sourcePage": 76, "contentStatus": "deep" },
+    { "name": "Direitos Humanos", "block": "block-1", "sourcePage": 76, "contentStatus": "mapped" },
+    { "name": "Legislação Especial", "block": "block-1", "sourcePage": 76, "contentStatus": "deep" },
+    { "name": "Estatística", "block": "block-1", "sourcePage": 76, "contentStatus": "mapped" },
+    { "name": "Raciocínio Lógico", "block": "block-1", "sourcePage": 77, "contentStatus": "mapped" },
+    { "name": "Informática", "block": "block-2", "sourcePages": [77, 78], "contentStatus": "mapped" },
+    { "name": "Contabilidade Geral", "block": "block-3", "sourcePage": 78, "contentStatus": "mapped" }
+  ],
+  "knowledgeTree": [
+    {
+      "id": "subject-portuguese", "name": "Língua Portuguesa", "type": "subject", "block": "block-1", "sourcePage": 75,
+      "topics": [
+        { "id": "pt-interpretation", "name": "Compreensão e interpretação", "subtopics": ["Inferência", "Informação explícita", "Relações semânticas"] },
+        { "id": "pt-text-types", "name": "Tipos e gêneros textuais", "subtopics": ["Reconhecimento de gênero", "Finalidade comunicativa"] },
+        { "id": "pt-cohesion", "name": "Coesão textual", "subtopics": ["Referenciação", "Conectores", "Tempos e modos verbais"] },
+        { "id": "pt-morphosyntax", "name": "Morfossintaxe do período", "subtopics": ["Classes de palavras", "Coordenação e subordinação", "Pontuação", "Concordância", "Regência e crase"] },
+        { "id": "pt-rewriting", "name": "Reescrita", "subtopics": ["Significação", "Substituição", "Reorganização de períodos", "Níveis de formalidade"] },
+        { "id": "pt-official-writing", "name": "Correspondência oficial", "subtopics": ["Redação oficial", "Finalidade", "Adequação de linguagem e formato"] }
+      ]
+    },
+    {
+      "id": "subject-administrative", "name": "Direito Administrativo", "type": "subject", "block": "block-1", "sourcePage": 75,
+      "topics": [
+        { "id": "adm-organization", "name": "Organização administrativa", "subtopics": ["Centralização e descentralização", "Administração direta e indireta"] },
+        { "id": "adm-acts", "name": "Ato administrativo", "subtopics": ["Conceito e requisitos", "Atributos", "Classificação e espécies"] },
+        { "id": "adm-public-agents", "name": "Agentes públicos", "subtopics": ["Lei nº 8.112/1990", "Cargo, emprego e função"] },
+        { "id": "adm-powers", "name": "Poderes administrativos", "subtopics": ["Hierárquico e disciplinar", "Regulamentar e de polícia", "Uso e abuso"] },
+        { "id": "adm-control", "name": "Controle da Administração", "subtopics": ["Controle administrativo", "Judicial", "Legislativo"] },
+        { "id": "adm-state-liability", "name": "Responsabilidade civil do Estado", "subtopics": ["Ação e omissão", "Requisitos", "Excludentes e atenuantes"] },
+        { "id": "adm-principles", "name": "Regime jurídico-administrativo", "subtopics": ["Princípios expressos", "Princípios implícitos"] }
+      ]
+    },
+    {
+      "id": "subject-constitutional", "name": "Direito Constitucional", "type": "subject", "block": "block-1", "sourcePage": 76,
+      "topics": [
+        { "id": "const-fundamental-rights", "name": "Direitos e garantias fundamentais", "subtopics": ["Direitos individuais e coletivos", "Direitos sociais", "Nacionalidade e direitos políticos", "Garantias constitucionais"] },
+        { "id": "const-executive", "name": "Poder Executivo", "subtopics": ["Forma e sistema de governo", "Chefia de Estado e de governo"] },
+        { "id": "const-public-security", "name": "Segurança pública", "subtopics": ["Defesa do Estado", "Órgãos de segurança", "Organização da segurança pública"] },
+        { "id": "const-social-order", "name": "Ordem social", "subtopics": ["Seguridade social", "Meio ambiente", "Família e grupos protegidos"] }
+      ]
+    },
+    {
+      "id": "subject-penal-procedure", "name": "Direito Penal e Processual Penal", "type": "subject", "block": "block-1", "sourcePage": 76,
+      "topics": [
+        { "id": "penal-principles", "name": "Princípios básicos", "subtopics": ["Legalidade", "Anterioridade"] },
+        { "id": "penal-law-application", "name": "Aplicação da lei penal", "subtopics": ["Lei no tempo e no espaço", "Tempo e lugar do crime", "Territorialidade e extraterritorialidade"] },
+        { "id": "penal-typical-fact", "name": "Fato típico", "subtopics": ["Consumação e tentativa", "Ilicitude e exclusão", "Excesso punível"] },
+        { "id": "penal-special-part", "name": "Crimes em espécie", "subtopics": ["Pessoa", "Patrimônio", "Fé pública", "Administração Pública"] },
+        { "id": "proc-inquiry", "name": "Inquérito policial", "subtopics": ["Instauração", "Indiciamento", "Garantias do investigado", "Conclusão"] },
+        { "id": "proc-evidence", "name": "Prova", "subtopics": ["Local de crime", "Ônus e nulidade", "Reconhecimento", "Busca e apreensão"] },
+        { "id": "proc-liberty", "name": "Restrição de liberdade", "subtopics": ["Prisão em flagrante"] }
+      ]
+    },
+    {
+      "id": "subject-special-law", "name": "Legislação Especial", "type": "subject", "block": "block-1", "sourcePage": 76,
+      "topics": [
+        { "id": "special-security-private", "name": "Segurança privada", "subtopics": ["Lei nº 14.967/2024"] },
+        { "id": "special-chemical-control", "name": "Controle de produtos químicos", "subtopics": ["Lei nº 10.357/2001"] },
+        { "id": "special-migration", "name": "Migração", "subtopics": ["Lei nº 13.445/2017"] },
+        { "id": "special-drugs", "name": "Drogas", "subtopics": ["Lei nº 11.343/2006"] },
+        { "id": "special-torture", "name": "Tortura", "subtopics": ["Lei nº 9.455/1997"] },
+        { "id": "special-eca", "name": "ECA", "subtopics": ["Aspectos penais e processuais"] },
+        { "id": "special-firearms", "name": "Armas", "subtopics": ["Lei nº 10.826/2003"] },
+        { "id": "special-environment", "name": "Infrações ambientais", "subtopics": ["Lei nº 9.605/1998"] },
+        { "id": "special-federal-repercussion", "name": "Repercussão interestadual ou internacional", "subtopics": ["Lei nº 10.446/2002"] },
+        { "id": "special-identification", "name": "Identificação civil", "subtopics": ["CPF e carteira de identidade", "Serviço de identificação"] },
+        { "id": "special-cybercrime", "name": "Crime cibernético", "subtopics": ["Convenção sobre o Crime Cibernético"] }
+      ]
+    }
+  ]
+}

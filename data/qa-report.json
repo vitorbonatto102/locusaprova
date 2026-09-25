@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-09-22T17:15:54.667Z",
+  "failures": [],
+  "warnings": [
+    "oab-28-penal-piece: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-28-penal-question-1: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-28-penal-question-2: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-28-penal-question-3: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-28-penal-question-4: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-30-penal-piece: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-30-penal-question-1: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-30-penal-question-2: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-30-penal-question-3: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-30-penal-question-4: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-31-penal-piece: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-31-penal-question-1: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-31-penal-question-2: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-31-penal-question-3: padrão oficial sem tabela fracionada; componentes permanecem sem nota",
+    "oab-31-penal-question-4: padrão oficial sem tabela fracionada; componentes permanecem sem nota"
+  ],
+  "counts": {
+    "exams": 20,
+    "pieces": 20,
+    "questions": 80,
+    "units": 100,
+    "officialRubricItems": 398,
+    "machineChecked": 75,
+    "manualVerified": 10,
+    "noFraction": 15,
+    "generatedTheses": 57,
+    "graphEdges": 899
+  }
+}

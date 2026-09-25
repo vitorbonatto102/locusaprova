@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pf25-train-pt-001", "type": "true_false", "statement": "Leia: 'Embora o relatório tenha sido concluído, a equipe decidiu revisar os anexos antes do envio.' A oração iniciada por 'Embora' expressa concessão.", "correctAnswer": true,
+    "explanation": "A conjunção 'embora' introduz uma circunstância concessiva: há um fato que poderia contrariar a conclusão principal, mas não a impede.", "decisionPoint": "Identificar a relação semântica marcada pelo conector.", "misconception": "Confundir concessão com causa ou condição.",
+    "subjectId": "subject-portuguese", "topicIds": ["pt-interpretation", "pt-cohesion"], "skills": ["identify_semantic_relation"], "difficulty": 1,
+    "source": { "kind": "authorial", "basis": "Conteúdo programático de Língua Portuguesa — coesão textual", "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file", "document": "Edital nº 1 — PF — Policial/2025", "page": 75, "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "editorial_verified"
+  },
+  {
+    "id": "pf25-train-pt-002", "type": "true_false", "statement": "Em 'Os agentes analisaram os documentos e os encaminharam à perícia', o segundo 'os' retoma 'os documentos'.", "correctAnswer": true,
+    "explanation": "O pronome oblíquo 'os' funciona como objeto direto e retoma o sintagma 'os documentos'.", "decisionPoint": "Localizar o referente do pronome no encadeamento textual.", "misconception": "Associar automaticamente o pronome ao substantivo mais próximo.",
+    "subjectId": "subject-portuguese", "topicIds": ["pt-cohesion"], "skills": ["resolve_reference"], "difficulty": 1,
+    "source": { "kind": "authorial", "basis": "Conteúdo programático de Língua Portuguesa — referenciação", "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file", "document": "Edital nº 1 — PF — Policial/2025", "page": 75, "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "editorial_verified"
+  },
+  {
+    "id": "pf25-train-pt-003", "type": "true_false", "statement": "Na frase 'Os servidores que concluíram o curso foram convocados', a inserção de vírgulas em torno de 'que concluíram o curso' preservaria necessariamente o mesmo sentido.", "correctAnswer": false,
+    "explanation": "Sem vírgulas, a oração restringe quais servidores foram convocados. Com vírgulas, passa a explicar o conjunto dos servidores, alterando o alcance da afirmação.", "decisionPoint": "Perceber a diferença entre oração restritiva e explicativa.", "misconception": "Tratar pontuação como alteração apenas estilística.",
+    "subjectId": "subject-portuguese", "topicIds": ["pt-morphosyntax", "pt-rewriting"], "skills": ["evaluate_rewrite_equivalence"], "difficulty": 2,
+    "source": { "kind": "authorial", "basis": "Conteúdo programático de Língua Portuguesa — pontuação e reescrita", "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file", "document": "Edital nº 1 — PF — Policial/2025", "page": 75, "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "editorial_verified"
+  },
+  {
+    "id": "pf25-train-pt-004", "type": "true_false", "statement": "A redação oficial deve privilegiar clareza, precisão e impessoalidade, sem impedir que o texto identifique objetivamente a autoridade responsável pelo ato.", "correctAnswer": true,
+    "explanation": "Impessoalidade não significa ocultar autoria institucional; significa evitar marcas subjetivas e formular a comunicação em função do interesse público.", "decisionPoint": "Distinguir impessoalidade de anonimato.", "misconception": "Entender impessoalidade como ausência de responsável pelo documento.",
+    "subjectId": "subject-portuguese", "topicIds": ["pt-official-writing"], "skills": ["apply_official_writing_principles"], "difficulty": 2,
+    "source": { "kind": "authorial", "basis": "Conteúdo programático de correspondência oficial", "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file", "document": "Edital nº 1 — PF — Policial/2025", "page": 75, "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "editorial_verified"
+  },
+  {
+    "id": "pf25-train-const-001", "type": "true_false", "statement": "A segurança pública é dever do Estado, direito e responsabilidade de todos.", "correctAnswer": true,
+    "explanation": "A afirmação reproduz a estrutura normativa do caput do art. 144 da Constituição.", "decisionPoint": "Reconhecer os três sujeitos normativos do art. 144: Estado, titulares do direito e responsáveis.", "misconception": "Atribuir a responsabilidade exclusivamente aos órgãos policiais.",
+    "subjectId": "subject-constitutional", "topicIds": ["const-public-security"], "skills": ["recall_constitutional_rule"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Constituição Federal, art. 144, caput", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm", "document": "Constituição da República Federativa do Brasil", "article": "144", "legalVersion": "compilada consultada em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-const-002", "type": "true_false", "statement": "A Polícia Federal é órgão permanente organizado e mantido pelos estados, embora estruturado em carreira nacional.", "correctAnswer": false,
+    "explanation": "A Polícia Federal é organizada e mantida pela União, conforme o art. 144, § 1º, da Constituição.", "decisionPoint": "Identificar o ente federativo responsável pela instituição.", "misconception": "Confundir a atuação nacional da PF com manutenção compartilhada pelos estados.",
+    "subjectId": "subject-constitutional", "topicIds": ["const-public-security"], "skills": ["differentiate_security_bodies"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Constituição Federal, art. 144, § 1º", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm", "document": "Constituição da República Federativa do Brasil", "article": "144 §1º", "legalVersion": "compilada consultada em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-const-003", "type": "true_false", "statement": "Durante o dia, ordem judicial pode autorizar ingresso em casa sem consentimento do morador; à noite, essa hipótese, isoladamente, não basta.", "correctAnswer": true,
+    "explanation": "O art. 5º, XI, admite ingresso por determinação judicial durante o dia. À noite, permanecem as demais hipóteses constitucionais, como flagrante delito, desastre ou socorro.", "decisionPoint": "Separar a hipótese de ordem judicial das exceções que independem do horário.", "misconception": "Achar que ordem judicial autoriza ingresso domiciliar em qualquer horário.",
+    "subjectId": "subject-constitutional", "topicIds": ["const-fundamental-rights"], "skills": ["apply_fundamental_right"], "difficulty": 2,
+    "source": { "kind": "official_law", "basis": "Constituição Federal, art. 5º, XI", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm", "document": "Constituição da República Federativa do Brasil", "article": "5º XI", "legalVersion": "compilada consultada em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-const-004", "type": "true_false", "statement": "Eficiência integra expressamente os princípios constitucionais aplicáveis à administração pública direta e indireta.", "correctAnswer": true,
+    "explanation": "O caput do art. 37 enumera legalidade, impessoalidade, moralidade, publicidade e eficiência.", "decisionPoint": "Reconhecer princípio expresso do art. 37.", "misconception": "Tratar eficiência apenas como construção doutrinária implícita.",
+    "subjectId": "subject-constitutional", "topicIds": ["const-fundamental-rights", "adm-principles"], "skills": ["recall_administration_principles"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Constituição Federal, art. 37, caput", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm", "document": "Constituição da República Federativa do Brasil", "article": "37", "legalVersion": "compilada consultada em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-adm-001", "type": "true_false", "statement": "A criação de uma autarquia para executar determinada atividade corresponde à desconcentração administrativa.", "correctAnswer": false,
+    "explanation": "A criação de pessoa jurídica distinta caracteriza descentralização. Desconcentração distribui competências dentro da mesma pessoa jurídica.", "decisionPoint": "Verificar se há nova pessoa jurídica.", "misconception": "Confundir distribuição interna de competências com transferência para outra entidade.",
+    "subjectId": "subject-administrative", "topicIds": ["adm-organization"], "skills": ["differentiate_administrative_organization"], "difficulty": 1,
+    "source": { "kind": "authorial", "basis": "Conteúdo programático de organização administrativa", "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file", "document": "Edital nº 1 — PF — Policial/2025", "page": 75, "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "editorial_verified"
+  },
+  {
+    "id": "pf25-train-adm-002", "type": "true_false", "statement": "A presunção de legitimidade permite que o ato administrativo produza efeitos até que seja invalidado, sem tornar impossível sua contestação.", "correctAnswer": true,
+    "explanation": "A presunção é relativa. Ela sustenta a eficácia inicial do ato, mas admite controle administrativo ou judicial e prova em contrário.", "decisionPoint": "Distinguir presunção relativa de validade absoluta.", "misconception": "Entender legitimidade presumida como imunidade a controle.",
+    "subjectId": "subject-administrative", "topicIds": ["adm-acts"], "skills": ["apply_administrative_act_attributes"], "difficulty": 2,
+    "source": { "kind": "authorial", "basis": "Conteúdo programático de atributos do ato administrativo", "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file", "document": "Edital nº 1 — PF — Policial/2025", "page": 75, "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "editorial_verified"
+  },
+  {
+    "id": "pf25-train-adm-003", "type": "true_false", "statement": "O poder de polícia administrativa é exercido exclusivamente pelo Poder Judiciário, pois envolve restrições a direitos individuais.", "correctAnswer": false,
+    "explanation": "O poder de polícia é atividade administrativa que condiciona direitos e atividades em favor do interesse público, sem exclusividade do Judiciário.", "decisionPoint": "Distinguir polícia administrativa de controle jurisdicional.", "misconception": "Associar toda restrição de direito à reserva de jurisdição.",
+    "subjectId": "subject-administrative", "topicIds": ["adm-powers"], "skills": ["differentiate_administrative_powers"], "difficulty": 1,
+    "source": { "kind": "authorial", "basis": "Conteúdo programático de poderes administrativos", "url": "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/edital/carreira-policial-2025/editais/edital-no-1_2025-dgp-pf.pdf/@@download/file", "document": "Edital nº 1 — PF — Policial/2025", "page": 75, "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "editorial_verified"
+  },
+  {
+    "id": "pf25-train-adm-004", "type": "true_false", "statement": "As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado regresso em caso de dolo ou culpa.", "correctAnswer": true,
+    "explanation": "É a regra do art. 37, § 6º, da Constituição: responsabilidade perante o terceiro e ação regressiva contra o agente quando houver dolo ou culpa.", "decisionPoint": "Separar a responsabilidade da entidade da responsabilidade regressiva do agente.", "misconception": "Exigir prova de dolo ou culpa do agente para a vítima demandar a entidade.",
+    "subjectId": "subject-administrative", "topicIds": ["adm-state-liability"], "skills": ["apply_state_liability"], "difficulty": 2,
+    "source": { "kind": "official_law", "basis": "Constituição Federal, art. 37, § 6º", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm", "document": "Constituição da República Federativa do Brasil", "article": "37 §6º", "legalVersion": "compilada consultada em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-pen-001", "type": "true_false", "statement": "Considera-se praticado o crime no momento do resultado, ainda que a ação tenha ocorrido anteriormente.", "correctAnswer": false,
+    "explanation": "O Código Penal adota a teoria da atividade: o tempo do crime é o momento da ação ou omissão, ainda que outro seja o momento do resultado.", "decisionPoint": "Identificar a teoria adotada para o tempo do crime.", "misconception": "Aplicar a teoria do resultado ao tempo do crime.",
+    "subjectId": "subject-penal-procedure", "topicIds": ["penal-law-application"], "skills": ["apply_criminal_law_time"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Código Penal, art. 4º", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm", "document": "Código Penal", "article": "4º", "legalVersion": "compilado consultado em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-pen-002", "type": "true_false", "statement": "A lei penal posterior mais favorável aplica-se a fatos anteriores mesmo quando já existe condenação transitada em julgado.", "correctAnswer": true,
+    "explanation": "A retroatividade da lei penal benéfica alcança fatos anteriores, inclusive os já decididos por sentença condenatória transitada em julgado.", "decisionPoint": "Reconhecer o alcance da novatio legis in mellius.", "misconception": "Achar que o trânsito em julgado impede a aplicação da lei mais benéfica.",
+    "subjectId": "subject-penal-procedure", "topicIds": ["penal-law-application"], "skills": ["apply_criminal_law_time"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Código Penal, art. 2º, parágrafo único", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm", "document": "Código Penal", "article": "2º parágrafo único", "legalVersion": "compilado consultado em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-pen-003", "type": "true_false", "statement": "Há tentativa punível quando o agente pode prosseguir na execução, mas voluntariamente decide interrompê-la antes da consumação.", "correctAnswer": false,
+    "explanation": "Se o agente podia continuar e voluntariamente interrompe a execução, há desistência voluntária, respondendo apenas pelos atos já praticados; não tentativa por circunstância alheia.", "decisionPoint": "Perguntar por que a execução parou e se o agente podia prosseguir.", "misconception": "Classificar toda não consumação após início da execução como tentativa.",
+    "subjectId": "subject-penal-procedure", "topicIds": ["penal-typical-fact"], "skills": ["differentiate_attempt_and_withdrawal"], "difficulty": 2,
+    "source": { "kind": "official_law", "basis": "Código Penal, arts. 14, II, e 15", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm", "document": "Código Penal", "article": "14 II e 15", "legalVersion": "compilado consultado em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-proc-001", "type": "true_false", "statement": "Qualquer pessoa do povo pode prender quem seja encontrado em flagrante delito, enquanto as autoridades policiais e seus agentes devem fazê-lo.", "correctAnswer": true,
+    "explanation": "O art. 301 do CPP diferencia faculdade para qualquer do povo e dever para autoridades policiais e seus agentes.", "decisionPoint": "Distinguir faculdade de dever na prisão em flagrante.", "misconception": "Atribuir obrigação de prender em flagrante a qualquer cidadão.",
+    "subjectId": "subject-penal-procedure", "topicIds": ["proc-liberty"], "skills": ["apply_flagrante_rules"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Código de Processo Penal, art. 301", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm", "document": "Código de Processo Penal", "article": "301", "legalVersion": "compilado consultado em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-special-001", "type": "true_false", "statement": "A Lei de Drogas prevê pena privativa de liberdade para o porte destinado exclusivamente a consumo pessoal.", "correctAnswer": false,
+    "explanation": "O art. 28 prevê advertência, prestação de serviços à comunidade e medida educativa, não pena privativa de liberdade.", "decisionPoint": "Distinguir as medidas do porte para consumo pessoal das penas do tráfico.", "misconception": "Tratar qualquer conduta envolvendo droga como sujeita a reclusão.",
+    "subjectId": "subject-special-law", "topicIds": ["special-drugs"], "skills": ["differentiate_drug_offenses"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Lei nº 11.343/2006, art. 28", "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm", "document": "Lei nº 11.343/2006", "article": "28", "legalVersion": "texto consultado em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-special-002", "type": "true_false", "statement": "A condenação por crime de tortura acarreta perda do cargo, função ou emprego público e interdição para seu exercício pelo dobro do prazo da pena aplicada.", "correctAnswer": true,
+    "explanation": "A consequência está prevista no art. 1º, § 5º, da Lei nº 9.455/1997.", "decisionPoint": "Recordar o efeito específico da condenação previsto na lei especial.", "misconception": "Tratar a perda do cargo como efeito inexistente ou limitado ao tempo da pena.",
+    "subjectId": "subject-special-law", "topicIds": ["special-torture"], "skills": ["recall_special_law_consequence"], "difficulty": 2,
+    "source": { "kind": "official_law", "basis": "Lei nº 9.455/1997, art. 1º, § 5º", "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm", "document": "Lei nº 9.455/1997", "article": "1º §5º", "legalVersion": "texto consultado em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-special-003", "type": "true_false", "statement": "Possuir arma de fogo de uso permitido no interior da própria residência, sem o devido registro e em desacordo com determinação legal, pode configurar posse irregular; isso não se confunde automaticamente com porte em via pública.", "correctAnswer": true,
+    "explanation": "A Lei nº 10.826/2003 tipifica separadamente posse irregular de uso permitido e porte ilegal, com elementos espaciais distintos.", "decisionPoint": "Observar onde a arma estava e qual autorização faltava.", "misconception": "Usar 'porte' como sinônimo de qualquer detenção de arma.",
+    "subjectId": "subject-special-law", "topicIds": ["special-firearms"], "skills": ["differentiate_firearm_offenses"], "difficulty": 2,
+    "source": { "kind": "official_law", "basis": "Lei nº 10.826/2003, arts. 12 e 14", "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm", "document": "Lei nº 10.826/2003", "article": "12 e 14", "legalVersion": "compilada consultada em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  },
+  {
+    "id": "pf25-train-special-004", "type": "true_false", "statement": "Para os efeitos penais do Estatuto da Criança e do Adolescente, considera-se criança a pessoa até doze anos de idade incompletos e adolescente aquela entre doze e dezoito anos.", "correctAnswer": true,
+    "explanation": "A definição etária está no art. 2º do ECA.", "decisionPoint": "Atentar para 'doze anos incompletos' e para a faixa da adolescência.", "misconception": "Incluir quem já completou doze anos no conceito de criança.",
+    "subjectId": "subject-special-law", "topicIds": ["special-eca"], "skills": ["recall_legal_definition"], "difficulty": 1,
+    "source": { "kind": "official_law", "basis": "Lei nº 8.069/1990, art. 2º", "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm", "document": "Estatuto da Criança e do Adolescente", "article": "2º", "legalVersion": "texto consultado em 2026-09-20", "retrievedAt": "2026-09-20" }, "isOfficial": false, "validationStatus": "legal_source_verified"
+  }
+]

@@ -73,6 +73,8 @@ export async function POST(request: Request) {
         id: crypto.randomUUID(), userId: USER_ID, trackId, exerciseId: exercise.id, thesisId: generated?.thesisIds?.[0] ?? null, category, confidence,
         excerpt: payload.answer.trim().slice(0, 280), resolved: false, nextReviewAt: schedule.nextReviewAt, createdAt: now,
       });
+    } else {
+      await db.update(errorLog).set({ resolved: true }).where(and(eq(errorLog.userId, USER_ID), eq(errorLog.trackId, trackId), eq(errorLog.exerciseId, exercise.id), eq(errorLog.resolved, false)));
     }
     const pointsLeft = Math.max(0, Math.round((evaluation.maxScore - evaluation.score) * 100) / 100);
     const correctiveActivity = category === "erro-de-alta-confianca" ? "Não Confunda" : category === "fundamentacao" ? "Complete a Fundamentação" : category === "consequencia-pedido" ? "Fato → tese → pedido" : "Caça à Tese";

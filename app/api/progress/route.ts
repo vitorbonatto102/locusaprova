@@ -13,7 +13,7 @@ export async function GET() {
     const trackId = await getActiveTrackId(db, USER_ID);
     const [skills, errors, recent] = await Promise.all([
       db.select().from(mastery).where(and(eq(mastery.userId, USER_ID), eq(mastery.trackId, trackId))),
-      db.select().from(errorLog).where(and(eq(errorLog.userId, USER_ID), eq(errorLog.trackId, trackId))).orderBy(desc(errorLog.createdAt)).limit(20),
+      db.select().from(errorLog).where(and(eq(errorLog.userId, USER_ID), eq(errorLog.trackId, trackId))).orderBy(desc(errorLog.createdAt)).limit(200),
       db.select().from(attempts).where(and(eq(attempts.userId, USER_ID), eq(attempts.trackId, trackId))).orderBy(desc(attempts.createdAt)).limit(12),
     ]);
     const average = skills.length ? skills.reduce((sum, row) => sum + row.mastery, 0) / skills.length : 0;

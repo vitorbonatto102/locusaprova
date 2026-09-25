@@ -24,14 +24,14 @@ Plataforma adaptativa para provas. O aluno escolhe o objetivo; o sistema organiz
 
 Requer Node.js 22.13 ou superior.
 
-Para usar o aplicativo com dados, configure `DATABASE_URL` em `.env.local` e aplique as migrações Postgres antes de iniciar. Veja [migração para Vercel e Postgres](docs/architecture/vercel-postgres-migration.md). O build não exige um banco conectado.
+Para usar o aplicativo com dados e login, configure `DATABASE_URL`, `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` em `.env.local` e aplique as migrações Postgres antes de iniciar. Veja [login, Supabase e preservação do progresso](docs/architecture/vercel-postgres-migration.md). O build não exige um banco conectado.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abra `http://localhost:5173`. Para validar tudo:
+Abra `http://localhost:5173` para ver a apresentação pública da Locus. Depois do login, a área de estudos fica em `http://localhost:5173/estudar`. Para validar tudo:
 
 ```bash
 npm run validate:data

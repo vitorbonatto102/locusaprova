@@ -3,12 +3,10 @@ import { getDb } from "@/db";
 import { users } from "@/db/schema";
 import { ACTIVE_TRACK_ID, getStudyTrack } from "@/lib/study-track";
 
-export const LOCAL_USER_ID = "local-learner";
-
-export async function ensureLocalUser(db: ReturnType<typeof getDb>, now = new Date()) {
+export async function ensureUser(db: ReturnType<typeof getDb>, user: { id: string; email: string | null }, now = new Date()) {
   await db.insert(users).values({
-    id: LOCAL_USER_ID,
-    name: "Vitor",
+    id: user.id,
+    name: user.email?.split("@")[0] || "Estudante",
     weeklyMinutes: 150,
     dailyMinutes: 30,
     activeTrackId: ACTIVE_TRACK_ID,
@@ -16,8 +14,8 @@ export async function ensureLocalUser(db: ReturnType<typeof getDb>, now = new Da
   }).onConflictDoNothing();
 }
 
-export async function getActiveTrackId(db: ReturnType<typeof getDb>) {
-  const [user] = await db.select({ activeTrackId: users.activeTrackId }).from(users).where(eq(users.id, LOCAL_USER_ID)).limit(1);
+export async function getActiveTrackId(db: ReturnType<typeof getDb>, userId: string) {
+  const [user] = await db.select({ activeTrackId: users.activeTrackId }).from(users).where(eq(users.id, userId)).limit(1);
   const selected = user?.activeTrackId ? getStudyTrack(user.activeTrackId) : null;
   return selected?.contentStatus === "complete" ? selected.id : ACTIVE_TRACK_ID;
 }

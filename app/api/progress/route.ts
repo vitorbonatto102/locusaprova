@@ -1,14 +1,16 @@
 import { and, desc, eq } from "drizzle-orm";
 import { getDb } from "@/db";
 import { attempts, errorLog, mastery } from "@/db/schema";
-import { getActiveTrackId, LOCAL_USER_ID } from "@/lib/user-context";
-
-const USER_ID = LOCAL_USER_ID;
+import { getActiveTrackId } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 export async function GET() {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const db = getDb();
-    const trackId = await getActiveTrackId(db);
+    const trackId = await getActiveTrackId(db, USER_ID);
     const [skills, errors, recent] = await Promise.all([
       db.select().from(mastery).where(and(eq(mastery.userId, USER_ID), eq(mastery.trackId, trackId))),
       db.select().from(errorLog).where(and(eq(errorLog.userId, USER_ID), eq(errorLog.trackId, trackId))).orderBy(desc(errorLog.createdAt)).limit(20),

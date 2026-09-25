@@ -4,7 +4,8 @@ import { studyGoals, userExamTargets, users } from "@/db/schema";
 import { getStudyTrack } from "@/lib/study-track";
 import { ensurePoliceCatalog } from "@/lib/police-context";
 import { getPoliceProgramByTrackId } from "@/lib/police-data";
-import { ensureLocalUser, LOCAL_USER_ID } from "@/lib/user-context";
+import { ensureUser } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 function serializeGoal(goal: typeof studyGoals.$inferSelect | undefined) {
   if (!goal) return null;
@@ -19,14 +20,17 @@ function serializeGoal(goal: typeof studyGoals.$inferSelect | undefined) {
 }
 
 export async function GET() {
+  const userIdentity = await getAuthenticatedUser();
+  if (!userIdentity) return unauthorized();
+  const USER_ID = userIdentity.id;
   try {
     const db = getDb();
     const now = new Date();
-    await ensureLocalUser(db, now);
+    await ensureUser(db, userIdentity, now);
     const [[user], [goal], [target]] = await Promise.all([
-      db.select().from(users).where(eq(users.id, LOCAL_USER_ID)).limit(1),
-      db.select().from(studyGoals).where(and(eq(studyGoals.userId, LOCAL_USER_ID), eq(studyGoals.status, "active"))).orderBy(desc(studyGoals.updatedAt)).limit(1),
-      db.select().from(userExamTargets).where(and(eq(userExamTargets.userId, LOCAL_USER_ID), eq(userExamTargets.isPrimary, true))).orderBy(desc(userExamTargets.updatedAt)).limit(1),
+      db.select().from(users).where(eq(users.id, USER_ID)).limit(1),
+      db.select().from(studyGoals).where(and(eq(studyGoals.userId, USER_ID), eq(studyGoals.status, "active"))).orderBy(desc(studyGoals.updatedAt)).limit(1),
+      db.select().from(userExamTargets).where(and(eq(userExamTargets.userId, USER_ID), eq(userExamTargets.isPrimary, true))).orderBy(desc(userExamTargets.updatedAt)).limit(1),
     ]);
     return Response.json({
       profile: {
@@ -45,6 +49,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const userIdentity = await getAuthenticatedUser();
+  if (!userIdentity) return unauthorized();
+  const USER_ID = userIdentity.id;
   try {
     const payload = await request.json() as { trackId?: string; examDate?: string | null; dailyMinutes?: number; difficulties?: string[]; experienceLevel?: string };
     const track = payload.trackId ? getStudyTrack(payload.trackId) : null;
@@ -57,19 +64,19 @@ export async function POST(request: Request) {
     const difficulties = [...new Set(payload.difficulties ?? [])].filter((item) => allowedDifficulties.has(item)).slice(0, 10);
     const db = getDb();
     const now = new Date();
-    await ensureLocalUser(db, now);
+    await ensureUser(db, userIdentity, now);
     const policeProgram = getPoliceProgramByTrackId(track.id);
     if (policeProgram) {
       await ensurePoliceCatalog(db, now);
-      await db.update(userExamTargets).set({ isPrimary: false, updatedAt: now }).where(eq(userExamTargets.userId, LOCAL_USER_ID));
+      await db.update(userExamTargets).set({ isPrimary: false, updatedAt: now }).where(eq(userExamTargets.userId, USER_ID));
       const experienceLevel = ["starting", "studying", "advanced"].includes(payload.experienceLevel ?? "") ? payload.experienceLevel! : "starting";
-      await db.insert(userExamTargets).values({ id: crypto.randomUUID(), userId: LOCAL_USER_ID, examTargetId: policeProgram.targetId, isPrimary: true, status: "active", experienceLevel, createdAt: now, updatedAt: now }).onConflictDoUpdate({ target: [userExamTargets.userId, userExamTargets.examTargetId], set: { isPrimary: true, status: "active", experienceLevel, updatedAt: now } });
+      await db.insert(userExamTargets).values({ id: crypto.randomUUID(), userId: USER_ID, examTargetId: policeProgram.targetId, isPrimary: true, status: "active", experienceLevel, createdAt: now, updatedAt: now }).onConflictDoUpdate({ target: [userExamTargets.userId, userExamTargets.examTargetId], set: { isPrimary: true, status: "active", experienceLevel, updatedAt: now } });
     }
-    await db.update(studyGoals).set({ status: "inactive", updatedAt: now }).where(and(eq(studyGoals.userId, LOCAL_USER_ID), eq(studyGoals.status, "active")));
+    await db.update(studyGoals).set({ status: "inactive", updatedAt: now }).where(and(eq(studyGoals.userId, USER_ID), eq(studyGoals.status, "active")));
     const goalId = crypto.randomUUID();
     await db.insert(studyGoals).values({
       id: goalId,
-      userId: LOCAL_USER_ID,
+      userId: USER_ID,
       trackId: track.id,
       examDate,
       dailyMinutes,
@@ -84,7 +91,7 @@ export async function POST(request: Request) {
       dailyMinutes,
       weeklyMinutes: dailyMinutes * 5,
       onboardingCompletedAt: now,
-    }).where(eq(users.id, LOCAL_USER_ID));
+    }).where(eq(users.id, USER_ID));
     return Response.json({ profile: { activeTrackId: track.id, goalDate: examDate, dailyMinutes, experienceLevel: payload.experienceLevel ?? "starting", onboardingComplete: true, goal: { id: goalId, trackId: track.id, examDate, dailyMinutes, difficulties } }, track }, { status: 201 });
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : "Não foi possível salvar o objetivo." }, { status: 500 });

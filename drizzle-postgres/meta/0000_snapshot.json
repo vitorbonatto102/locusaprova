@@ -1,12 +1,12 @@
 {
-  "id": "bc93f647-9a3b-4cec-a57d-bdbef1479f74",
+  "id": "4f53cae8-0815-4e39-adf1-217a26a2e58d",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.attempts": {
+    "locus.attempts": {
       "name": "attempts",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -122,6 +122,7 @@
           "name": "attempts_user_id_users_id_fk",
           "tableFrom": "attempts",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -138,9 +139,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.boards": {
+    "locus.boards": {
       "name": "boards",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -176,9 +177,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.careers": {
+    "locus.careers": {
       "name": "careers",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -227,6 +228,7 @@
           "name": "careers_category_id_exam_categories_id_fk",
           "tableFrom": "careers",
           "tableTo": "exam_categories",
+          "schemaTo": "locus",
           "columnsFrom": [
             "category_id"
           ],
@@ -243,9 +245,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.error_log": {
+    "locus.error_log": {
       "name": "error_log",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -356,6 +358,7 @@
           "name": "error_log_user_id_users_id_fk",
           "tableFrom": "error_log",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -372,9 +375,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.exam_categories": {
+    "locus.exam_categories": {
       "name": "exam_categories",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -403,9 +406,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.exam_notice_knowledge": {
+    "locus.exam_notice_knowledge": {
       "name": "exam_notice_knowledge",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -513,6 +516,7 @@
           "name": "exam_notice_knowledge_notice_id_exam_notices_id_fk",
           "tableFrom": "exam_notice_knowledge",
           "tableTo": "exam_notices",
+          "schemaTo": "locus",
           "columnsFrom": [
             "notice_id"
           ],
@@ -526,6 +530,7 @@
           "name": "exam_notice_knowledge_exam_target_id_exam_targets_id_fk",
           "tableFrom": "exam_notice_knowledge",
           "tableTo": "exam_targets",
+          "schemaTo": "locus",
           "columnsFrom": [
             "exam_target_id"
           ],
@@ -539,6 +544,7 @@
           "name": "exam_notice_knowledge_knowledge_node_id_knowledge_nodes_id_fk",
           "tableFrom": "exam_notice_knowledge",
           "tableTo": "knowledge_nodes",
+          "schemaTo": "locus",
           "columnsFrom": [
             "knowledge_node_id"
           ],
@@ -555,9 +561,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.exam_notices": {
+    "locus.exam_notices": {
       "name": "exam_notices",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -662,6 +668,7 @@
           "name": "exam_notices_institution_id_institutions_id_fk",
           "tableFrom": "exam_notices",
           "tableTo": "institutions",
+          "schemaTo": "locus",
           "columnsFrom": [
             "institution_id"
           ],
@@ -675,6 +682,7 @@
           "name": "exam_notices_position_id_positions_id_fk",
           "tableFrom": "exam_notices",
           "tableTo": "positions",
+          "schemaTo": "locus",
           "columnsFrom": [
             "position_id"
           ],
@@ -688,6 +696,7 @@
           "name": "exam_notices_board_id_boards_id_fk",
           "tableFrom": "exam_notices",
           "tableTo": "boards",
+          "schemaTo": "locus",
           "columnsFrom": [
             "board_id"
           ],
@@ -704,9 +713,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.exam_targets": {
+    "locus.exam_targets": {
       "name": "exam_targets",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -804,6 +813,7 @@
           "name": "exam_targets_category_id_exam_categories_id_fk",
           "tableFrom": "exam_targets",
           "tableTo": "exam_categories",
+          "schemaTo": "locus",
           "columnsFrom": [
             "category_id"
           ],
@@ -817,6 +827,7 @@
           "name": "exam_targets_career_id_careers_id_fk",
           "tableFrom": "exam_targets",
           "tableTo": "careers",
+          "schemaTo": "locus",
           "columnsFrom": [
             "career_id"
           ],
@@ -830,6 +841,7 @@
           "name": "exam_targets_institution_id_institutions_id_fk",
           "tableFrom": "exam_targets",
           "tableTo": "institutions",
+          "schemaTo": "locus",
           "columnsFrom": [
             "institution_id"
           ],
@@ -843,6 +855,7 @@
           "name": "exam_targets_position_id_positions_id_fk",
           "tableFrom": "exam_targets",
           "tableTo": "positions",
+          "schemaTo": "locus",
           "columnsFrom": [
             "position_id"
           ],
@@ -856,6 +869,7 @@
           "name": "exam_targets_notice_id_exam_notices_id_fk",
           "tableFrom": "exam_targets",
           "tableTo": "exam_notices",
+          "schemaTo": "locus",
           "columnsFrom": [
             "notice_id"
           ],
@@ -872,9 +886,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.exam_tracks": {
+    "locus.exam_tracks": {
       "name": "exam_tracks",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -969,9 +983,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.exams": {
+    "locus.exams": {
       "name": "exams",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1059,9 +1073,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.institutions": {
+    "locus.institutions": {
       "name": "institutions",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1116,6 +1130,7 @@
           "name": "institutions_career_id_careers_id_fk",
           "tableFrom": "institutions",
           "tableTo": "careers",
+          "schemaTo": "locus",
           "columnsFrom": [
             "career_id"
           ],
@@ -1132,9 +1147,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.knowledge_mastery": {
+    "locus.knowledge_mastery": {
       "name": "knowledge_mastery",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1250,6 +1265,7 @@
           "name": "knowledge_mastery_user_id_users_id_fk",
           "tableFrom": "knowledge_mastery",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -1263,6 +1279,7 @@
           "name": "knowledge_mastery_knowledge_node_id_knowledge_nodes_id_fk",
           "tableFrom": "knowledge_mastery",
           "tableTo": "knowledge_nodes",
+          "schemaTo": "locus",
           "columnsFrom": [
             "knowledge_node_id"
           ],
@@ -1279,9 +1296,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.knowledge_nodes": {
+    "locus.knowledge_nodes": {
       "name": "knowledge_nodes",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1392,9 +1409,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.knowledge_reviews": {
+    "locus.knowledge_reviews": {
       "name": "knowledge_reviews",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1479,6 +1496,7 @@
           "name": "knowledge_reviews_user_id_users_id_fk",
           "tableFrom": "knowledge_reviews",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -1492,6 +1510,7 @@
           "name": "knowledge_reviews_knowledge_node_id_knowledge_nodes_id_fk",
           "tableFrom": "knowledge_reviews",
           "tableTo": "knowledge_nodes",
+          "schemaTo": "locus",
           "columnsFrom": [
             "knowledge_node_id"
           ],
@@ -1505,6 +1524,7 @@
           "name": "knowledge_reviews_question_id_question_bank_id_fk",
           "tableFrom": "knowledge_reviews",
           "tableTo": "question_bank",
+          "schemaTo": "locus",
           "columnsFrom": [
             "question_id"
           ],
@@ -1521,9 +1541,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.learning_errors": {
+    "locus.learning_errors": {
       "name": "learning_errors",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1638,6 +1658,7 @@
           "name": "learning_errors_user_id_users_id_fk",
           "tableFrom": "learning_errors",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -1651,6 +1672,7 @@
           "name": "learning_errors_attempt_id_objective_attempts_id_fk",
           "tableFrom": "learning_errors",
           "tableTo": "objective_attempts",
+          "schemaTo": "locus",
           "columnsFrom": [
             "attempt_id"
           ],
@@ -1664,6 +1686,7 @@
           "name": "learning_errors_question_id_question_bank_id_fk",
           "tableFrom": "learning_errors",
           "tableTo": "question_bank",
+          "schemaTo": "locus",
           "columnsFrom": [
             "question_id"
           ],
@@ -1677,6 +1700,7 @@
           "name": "learning_errors_knowledge_node_id_knowledge_nodes_id_fk",
           "tableFrom": "learning_errors",
           "tableTo": "knowledge_nodes",
+          "schemaTo": "locus",
           "columnsFrom": [
             "knowledge_node_id"
           ],
@@ -1693,9 +1717,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.learning_items": {
+    "locus.learning_items": {
       "name": "learning_items",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1800,6 +1824,7 @@
           "name": "learning_items_subject_id_subjects_id_fk",
           "tableFrom": "learning_items",
           "tableTo": "subjects",
+          "schemaTo": "locus",
           "columnsFrom": [
             "subject_id"
           ],
@@ -1813,6 +1838,7 @@
           "name": "learning_items_topic_id_topics_id_fk",
           "tableFrom": "learning_items",
           "tableTo": "topics",
+          "schemaTo": "locus",
           "columnsFrom": [
             "topic_id"
           ],
@@ -1829,9 +1855,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.mastery": {
+    "locus.mastery": {
       "name": "mastery",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -1926,6 +1952,7 @@
           "name": "mastery_user_id_users_id_fk",
           "tableFrom": "mastery",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -1942,9 +1969,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.objective_attempts": {
+    "locus.objective_attempts": {
       "name": "objective_attempts",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -2074,6 +2101,7 @@
           "name": "objective_attempts_user_id_users_id_fk",
           "tableFrom": "objective_attempts",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -2087,6 +2115,7 @@
           "name": "objective_attempts_exam_target_id_exam_targets_id_fk",
           "tableFrom": "objective_attempts",
           "tableTo": "exam_targets",
+          "schemaTo": "locus",
           "columnsFrom": [
             "exam_target_id"
           ],
@@ -2100,6 +2129,7 @@
           "name": "objective_attempts_question_id_question_bank_id_fk",
           "tableFrom": "objective_attempts",
           "tableTo": "question_bank",
+          "schemaTo": "locus",
           "columnsFrom": [
             "question_id"
           ],
@@ -2116,9 +2146,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.objective_sessions": {
+    "locus.objective_sessions": {
       "name": "objective_sessions",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -2229,6 +2259,7 @@
           "name": "objective_sessions_user_id_users_id_fk",
           "tableFrom": "objective_sessions",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -2242,6 +2273,7 @@
           "name": "objective_sessions_exam_target_id_exam_targets_id_fk",
           "tableFrom": "objective_sessions",
           "tableTo": "exam_targets",
+          "schemaTo": "locus",
           "columnsFrom": [
             "exam_target_id"
           ],
@@ -2258,9 +2290,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.positions": {
+    "locus.positions": {
       "name": "positions",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -2309,6 +2341,7 @@
           "name": "positions_institution_id_institutions_id_fk",
           "tableFrom": "positions",
           "tableTo": "institutions",
+          "schemaTo": "locus",
           "columnsFrom": [
             "institution_id"
           ],
@@ -2325,9 +2358,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.question_bank": {
+    "locus.question_bank": {
       "name": "question_bank",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -2496,6 +2529,7 @@
           "name": "question_bank_board_id_boards_id_fk",
           "tableFrom": "question_bank",
           "tableTo": "boards",
+          "schemaTo": "locus",
           "columnsFrom": [
             "board_id"
           ],
@@ -2509,6 +2543,7 @@
           "name": "question_bank_institution_id_institutions_id_fk",
           "tableFrom": "question_bank",
           "tableTo": "institutions",
+          "schemaTo": "locus",
           "columnsFrom": [
             "institution_id"
           ],
@@ -2522,6 +2557,7 @@
           "name": "question_bank_position_id_positions_id_fk",
           "tableFrom": "question_bank",
           "tableTo": "positions",
+          "schemaTo": "locus",
           "columnsFrom": [
             "position_id"
           ],
@@ -2535,6 +2571,7 @@
           "name": "question_bank_exam_notice_id_exam_notices_id_fk",
           "tableFrom": "question_bank",
           "tableTo": "exam_notices",
+          "schemaTo": "locus",
           "columnsFrom": [
             "exam_notice_id"
           ],
@@ -2551,9 +2588,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.question_knowledge_nodes": {
+    "locus.question_knowledge_nodes": {
       "name": "question_knowledge_nodes",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -2624,6 +2661,7 @@
           "name": "question_knowledge_nodes_question_id_question_bank_id_fk",
           "tableFrom": "question_knowledge_nodes",
           "tableTo": "question_bank",
+          "schemaTo": "locus",
           "columnsFrom": [
             "question_id"
           ],
@@ -2637,6 +2675,7 @@
           "name": "question_knowledge_nodes_knowledge_node_id_knowledge_nodes_id_fk",
           "tableFrom": "question_knowledge_nodes",
           "tableTo": "knowledge_nodes",
+          "schemaTo": "locus",
           "columnsFrom": [
             "knowledge_node_id"
           ],
@@ -2653,9 +2692,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.questions": {
+    "locus.questions": {
       "name": "questions",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -2773,6 +2812,7 @@
           "name": "questions_learning_item_id_learning_items_id_fk",
           "tableFrom": "questions",
           "tableTo": "learning_items",
+          "schemaTo": "locus",
           "columnsFrom": [
             "learning_item_id"
           ],
@@ -2786,6 +2826,7 @@
           "name": "questions_subject_id_subjects_id_fk",
           "tableFrom": "questions",
           "tableTo": "subjects",
+          "schemaTo": "locus",
           "columnsFrom": [
             "subject_id"
           ],
@@ -2799,6 +2840,7 @@
           "name": "questions_topic_id_topics_id_fk",
           "tableFrom": "questions",
           "tableTo": "topics",
+          "schemaTo": "locus",
           "columnsFrom": [
             "topic_id"
           ],
@@ -2815,9 +2857,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.reviews": {
+    "locus.reviews": {
       "name": "reviews",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -2914,6 +2956,7 @@
           "name": "reviews_user_id_users_id_fk",
           "tableFrom": "reviews",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -2927,6 +2970,7 @@
           "name": "reviews_learning_item_id_learning_items_id_fk",
           "tableFrom": "reviews",
           "tableTo": "learning_items",
+          "schemaTo": "locus",
           "columnsFrom": [
             "learning_item_id"
           ],
@@ -2943,9 +2987,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.simulations": {
+    "locus.simulations": {
       "name": "simulations",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3043,6 +3087,7 @@
           "name": "simulations_user_id_users_id_fk",
           "tableFrom": "simulations",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -3059,9 +3104,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.skills": {
+    "locus.skills": {
       "name": "skills",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3125,9 +3170,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.study_goals": {
+    "locus.study_goals": {
       "name": "study_goals",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3220,6 +3265,7 @@
           "name": "study_goals_user_id_users_id_fk",
           "tableFrom": "study_goals",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -3236,9 +3282,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.study_sessions": {
+    "locus.study_sessions": {
       "name": "study_sessions",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3297,6 +3343,7 @@
           "name": "study_sessions_user_id_users_id_fk",
           "tableFrom": "study_sessions",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -3313,9 +3360,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.subjects": {
+    "locus.subjects": {
       "name": "subjects",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3393,9 +3440,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.topic_skills": {
+    "locus.topic_skills": {
       "name": "topic_skills",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3451,6 +3498,7 @@
           "name": "topic_skills_topic_id_topics_id_fk",
           "tableFrom": "topic_skills",
           "tableTo": "topics",
+          "schemaTo": "locus",
           "columnsFrom": [
             "topic_id"
           ],
@@ -3464,6 +3512,7 @@
           "name": "topic_skills_skill_id_skills_id_fk",
           "tableFrom": "topic_skills",
           "tableTo": "skills",
+          "schemaTo": "locus",
           "columnsFrom": [
             "skill_id"
           ],
@@ -3480,9 +3529,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.topics": {
+    "locus.topics": {
       "name": "topics",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3564,6 +3613,7 @@
           "name": "topics_subject_id_subjects_id_fk",
           "tableFrom": "topics",
           "tableTo": "subjects",
+          "schemaTo": "locus",
           "columnsFrom": [
             "subject_id"
           ],
@@ -3580,9 +3630,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.training_sessions": {
+    "locus.training_sessions": {
       "name": "training_sessions",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3728,6 +3778,7 @@
           "name": "training_sessions_user_id_users_id_fk",
           "tableFrom": "training_sessions",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -3744,9 +3795,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.user_exam_targets": {
+    "locus.user_exam_targets": {
       "name": "user_exam_targets",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",
@@ -3855,6 +3906,7 @@
           "name": "user_exam_targets_user_id_users_id_fk",
           "tableFrom": "user_exam_targets",
           "tableTo": "users",
+          "schemaTo": "locus",
           "columnsFrom": [
             "user_id"
           ],
@@ -3868,6 +3920,7 @@
           "name": "user_exam_targets_exam_target_id_exam_targets_id_fk",
           "tableFrom": "user_exam_targets",
           "tableTo": "exam_targets",
+          "schemaTo": "locus",
           "columnsFrom": [
             "exam_target_id"
           ],
@@ -3884,9 +3937,9 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.users": {
+    "locus.users": {
       "name": "users",
-      "schema": "",
+      "schema": "locus",
       "columns": {
         "id": {
           "name": "id",

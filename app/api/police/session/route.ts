@@ -4,7 +4,8 @@ import { knowledgeMastery, knowledgeReviews, objectiveAttempts, objectiveSession
 import { buildAdaptivePlan, buildDiagnosticQuestions } from "@/lib/adaptive-engine.mjs";
 import { ensurePoliceCatalog, getActivePoliceProgram } from "@/lib/police-context";
 import { getPoliceQuestion } from "@/lib/police-data";
-import { ensureLocalUser, LOCAL_USER_ID } from "@/lib/user-context";
+import { ensureUser } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 function serializeSession(session: typeof objectiveSessions.$inferSelect) {
   const questionIds = JSON.parse(session.questionIdsJson) as string[];
@@ -17,15 +18,18 @@ function serializeSession(session: typeof objectiveSessions.$inferSelect) {
 }
 
 export async function GET(request: Request) {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const requested = new URL(request.url).searchParams.get("mode");
     const mode = requested === "diagnostic" ? "diagnostic" : requested === "review" ? "review" : "daily";
     const db = getDb();
-    await ensureLocalUser(db);
+    await ensureUser(db, user);
     await ensurePoliceCatalog(db);
-    const program = await getActivePoliceProgram(db);
+    const program = await getActivePoliceProgram(db, USER_ID);
     const [active] = await db.select().from(objectiveSessions).where(and(
-      eq(objectiveSessions.userId, LOCAL_USER_ID), eq(objectiveSessions.examTargetId, program.targetId),
+      eq(objectiveSessions.userId, USER_ID), eq(objectiveSessions.examTargetId, program.targetId),
       eq(objectiveSessions.sessionType, mode), eq(objectiveSessions.status, "active"),
     )).orderBy(desc(objectiveSessions.updatedAt)).limit(1);
     return Response.json({ session: active ? serializeSession(active) : null }, { headers: { "cache-control": "no-store" } });
@@ -35,25 +39,28 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const payload = await request.json() as { mode?: string; minutes?: number; restart?: boolean; topicId?: string };
     const mode = payload.mode === "diagnostic" ? "diagnostic" : payload.mode === "review" ? `review:${payload.topicId ?? "all"}` : "daily";
     const db = getDb();
     const now = new Date();
-    await ensureLocalUser(db, now);
+    await ensureUser(db, user, now);
     await ensurePoliceCatalog(db, now);
-    const program = await getActivePoliceProgram(db);
+    const program = await getActivePoliceProgram(db, USER_ID);
     if (!payload.restart) {
-      const [active] = await db.select().from(objectiveSessions).where(and(eq(objectiveSessions.userId, LOCAL_USER_ID), eq(objectiveSessions.examTargetId, program.targetId), eq(objectiveSessions.sessionType, mode), eq(objectiveSessions.status, "active"))).orderBy(desc(objectiveSessions.updatedAt)).limit(1);
+      const [active] = await db.select().from(objectiveSessions).where(and(eq(objectiveSessions.userId, USER_ID), eq(objectiveSessions.examTargetId, program.targetId), eq(objectiveSessions.sessionType, mode), eq(objectiveSessions.status, "active"))).orderBy(desc(objectiveSessions.updatedAt)).limit(1);
       if (active) return Response.json({ session: serializeSession(active), resumed: true });
     }
-    if (payload.restart) await db.update(objectiveSessions).set({ status: "abandoned", updatedAt: now }).where(and(eq(objectiveSessions.userId, LOCAL_USER_ID), eq(objectiveSessions.examTargetId, program.targetId), eq(objectiveSessions.sessionType, mode), eq(objectiveSessions.status, "active")));
+    if (payload.restart) await db.update(objectiveSessions).set({ status: "abandoned", updatedAt: now }).where(and(eq(objectiveSessions.userId, USER_ID), eq(objectiveSessions.examTargetId, program.targetId), eq(objectiveSessions.sessionType, mode), eq(objectiveSessions.status, "active")));
     let selected = buildDiagnosticQuestions(program.questions, 20);
     if (mode === "daily") {
       const [mastery, reviews, attempts] = await Promise.all([
-        db.select().from(knowledgeMastery).where(eq(knowledgeMastery.userId, LOCAL_USER_ID)),
-        db.select().from(knowledgeReviews).where(eq(knowledgeReviews.userId, LOCAL_USER_ID)),
-        db.select().from(objectiveAttempts).where(and(eq(objectiveAttempts.userId, LOCAL_USER_ID), eq(objectiveAttempts.examTargetId, program.targetId))).orderBy(desc(objectiveAttempts.createdAt)).limit(80),
+        db.select().from(knowledgeMastery).where(eq(knowledgeMastery.userId, USER_ID)),
+        db.select().from(knowledgeReviews).where(eq(knowledgeReviews.userId, USER_ID)),
+        db.select().from(objectiveAttempts).where(and(eq(objectiveAttempts.userId, USER_ID), eq(objectiveAttempts.examTargetId, program.targetId))).orderBy(desc(objectiveAttempts.createdAt)).limit(80),
       ]);
       selected = buildAdaptivePlan({ questions: program.questions, mastery, reviews, attempts, minutes: Math.max(10, Math.min(120, payload.minutes ?? 30)), now }).map((entry: { question: (typeof program.questions)[number] }) => entry.question);
     }
@@ -63,7 +70,7 @@ export async function POST(request: Request) {
     }
     if (!selected.length) return Response.json({ error: "Ainda não há itens curados para este tópico" }, { status: 422 });
     const id = crypto.randomUUID();
-    const session = { id, userId: LOCAL_USER_ID, examTargetId: program.targetId, sessionType: mode, questionIdsJson: JSON.stringify(selected.map((question) => question.id)), currentIndex: 0, status: "active", createdAt: now, updatedAt: now, completedAt: null };
+    const session = { id, userId: USER_ID, examTargetId: program.targetId, sessionType: mode, questionIdsJson: JSON.stringify(selected.map((question) => question.id)), currentIndex: 0, status: "active", createdAt: now, updatedAt: now, completedAt: null };
     await db.insert(objectiveSessions).values(session);
     return Response.json({ session: serializeSession(session), resumed: false }, { status: 201 });
   } catch (error) {
@@ -72,15 +79,18 @@ export async function POST(request: Request) {
 }
 
 export async function PATCH(request: Request) {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const payload = await request.json() as { sessionId?: string; index?: number };
     if (!payload.sessionId || !Number.isInteger(payload.index) || Number(payload.index) < 0) return Response.json({ error: "Navegação inválida" }, { status: 400 });
     const db = getDb();
-    const [session] = await db.select().from(objectiveSessions).where(and(eq(objectiveSessions.id, payload.sessionId), eq(objectiveSessions.userId, LOCAL_USER_ID))).limit(1);
+    const [session] = await db.select().from(objectiveSessions).where(and(eq(objectiveSessions.id, payload.sessionId), eq(objectiveSessions.userId, USER_ID))).limit(1);
     if (!session) return Response.json({ error: "Sessão não encontrada" }, { status: 404 });
     const ids = JSON.parse(session.questionIdsJson) as string[];
     const index = Math.min(Number(payload.index), Math.max(0, ids.length - 1));
-    await db.update(objectiveSessions).set({ currentIndex: index, updatedAt: new Date() }).where(eq(objectiveSessions.id, session.id));
+    await db.update(objectiveSessions).set({ currentIndex: index, updatedAt: new Date() }).where(and(eq(objectiveSessions.id, session.id), eq(objectiveSessions.userId, USER_ID)));
     return Response.json({ session: serializeSession({ ...session, currentIndex: index }) });
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : "Navegação indisponível" }, { status: 500 });

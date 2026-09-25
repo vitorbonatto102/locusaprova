@@ -1,4 +1,7 @@
-import { boolean, doublePrecision, index, integer, pgTable, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
+import { boolean, doublePrecision, index, integer, pgSchema, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
+
+// Kept separate from the other product's public tables in the shared Supabase project.
+const pgTable = pgSchema("locus").table;
 
 export const users = pgTable("users", {
   id: text("id").primaryKey(),

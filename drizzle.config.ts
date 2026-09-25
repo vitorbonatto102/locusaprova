@@ -7,5 +7,6 @@ export default defineConfig({
   out: "./drizzle-postgres",
   schema: "./db/schema.ts",
   dialect: "postgresql",
+  migrations: { schema: "locus", table: "__drizzle_migrations" },
   ...(process.env.DATABASE_URL ? { dbCredentials: { url: process.env.DATABASE_URL } } : {}),
 });

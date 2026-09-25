@@ -99,7 +99,7 @@ async function main() {
     const sql = postgres(databaseUrl, { max: 1, prepare: false, ssl: /(?:localhost|127\.0\.0\.1)/.test(databaseUrl) ? false : "require" });
     try {
       await sql.begin(async (tx) => {
-        const destination = await tx`SELECT table_name, column_name, data_type, is_nullable, column_default FROM information_schema.columns WHERE table_schema = 'public' ORDER BY ordinal_position`;
+        const destination = await tx`SELECT table_name, column_name, data_type, is_nullable, column_default FROM information_schema.columns WHERE table_schema = 'locus' ORDER BY ordinal_position`;
         const targetColumns = new Map();
         for (const column of destination) {
           if (!targetColumns.has(column.table_name)) targetColumns.set(column.table_name, new Map());
@@ -115,7 +115,7 @@ async function main() {
               throw new Error(`Postgres requires ${table}.${name}, but it is absent from D1.`);
             }
           }
-          const [{ count }] = await tx.unsafe(`SELECT count(*)::integer AS count FROM ${identifier(table)}`);
+          const [{ count }] = await tx.unsafe(`SELECT count(*)::integer AS count FROM "locus".${identifier(table)}`);
           if (count !== 0) throw new Error(`Destination table ${table} already has ${count} rows. Import stopped without modifying it.`);
         }
 
@@ -128,9 +128,9 @@ async function main() {
             const batch = rows.slice(start, start + batchSize);
             const values = batch.flatMap((row) => columns.map((column) => convert(row[column], target.get(column).data_type)));
             const placeholders = batch.map((_, rowIndex) => `(${columns.map((_, columnIndex) => `$${rowIndex * columns.length + columnIndex + 1}`).join(", ")})`).join(", ");
-            await tx.unsafe(`INSERT INTO ${identifier(table)} (${columns.map(identifier).join(", ")}) VALUES ${placeholders}`, values);
+            await tx.unsafe(`INSERT INTO "locus".${identifier(table)} (${columns.map(identifier).join(", ")}) VALUES ${placeholders}`, values);
           }
-          const [{ count }] = await tx.unsafe(`SELECT count(*)::integer AS count FROM ${identifier(table)}`);
+          const [{ count }] = await tx.unsafe(`SELECT count(*)::integer AS count FROM "locus".${identifier(table)}`);
           if (count !== counts.get(table)) throw new Error(`Verification failed for ${table}: D1 has ${counts.get(table)} rows, Postgres has ${count}. Transaction rolled back.`);
           console.log(`${table}: ${count} rows verified`);
         }

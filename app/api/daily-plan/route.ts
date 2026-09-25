@@ -5,11 +5,13 @@ import confusionPairs from "@/data/confusion-pairs.json";
 import adaptiveDrills from "@/data/oab-penal/adaptive-drills.json";
 import { buildDailyPlan } from "@/lib/corpus.mjs";
 import { ACTIVE_TRACK_ID } from "@/lib/study-track";
-import { getActiveTrackId, LOCAL_USER_ID } from "@/lib/user-context";
-
-const USER_ID = LOCAL_USER_ID;
+import { getActiveTrackId } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 export async function GET(request: Request) {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   const url = new URL(request.url);
   const minutes = Math.max(10, Math.min(60, Number(url.searchParams.get("minutes")) || 30));
   const requestedDate = url.searchParams.get("date");
@@ -20,7 +22,7 @@ export async function GET(request: Request) {
   let trackId = ACTIVE_TRACK_ID;
   try {
     const db = getDb();
-    trackId = await getActiveTrackId(db);
+    trackId = await getActiveTrackId(db, USER_ID);
     [masteryRows, errorRows, attemptRows] = await Promise.all([
       db.select().from(mastery).where(and(eq(mastery.userId, USER_ID), eq(mastery.trackId, trackId))),
       db.select().from(errorLog).where(and(eq(errorLog.userId, USER_ID), eq(errorLog.trackId, trackId))).orderBy(desc(errorLog.createdAt)).limit(80),

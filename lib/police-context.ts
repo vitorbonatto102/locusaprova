@@ -3,8 +3,8 @@ import { boards, careers, examCategories, examNoticeKnowledge, examNotices, exam
 import { flattenKnowledgeTrees, getPoliceProgramByTargetId, getPoliceProgramByTrackId, policePrograms, policeTargets } from "@/lib/police-data";
 import { getActiveTrackId } from "@/lib/user-context";
 
-export async function getActivePoliceProgram(db: ReturnType<typeof getDb>) {
-  const program = getPoliceProgramByTrackId(await getActiveTrackId(db));
+export async function getActivePoliceProgram(db: ReturnType<typeof getDb>, userId: string) {
+  const program = getPoliceProgramByTrackId(await getActiveTrackId(db, userId));
   if (!program) throw new Error("Objetivo policial ativo não encontrado");
   return program;
 }

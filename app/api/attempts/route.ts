@@ -7,9 +7,8 @@ import confusionPairs from "@/data/confusion-pairs.json";
 import adaptiveDrills from "@/data/oab-penal/adaptive-drills.json";
 import { resolveTrainingItem } from "@/lib/corpus.mjs";
 import { classifyError, evaluateRubric, scheduleReview } from "@/lib/learning.mjs";
-import { ensureLocalUser, getActiveTrackId, LOCAL_USER_ID } from "@/lib/user-context";
-
-const USER_ID = LOCAL_USER_ID;
+import { ensureUser, getActiveTrackId } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 function message(error: unknown) {
   const text = error instanceof Error ? error.message : "Erro inesperado";
@@ -17,9 +16,12 @@ function message(error: unknown) {
 }
 
 export async function GET() {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const db = getDb();
-    const trackId = await getActiveTrackId(db);
+    const trackId = await getActiveTrackId(db, USER_ID);
     const rows = await db.select().from(attempts).where(and(eq(attempts.userId, USER_ID), eq(attempts.trackId, trackId))).orderBy(desc(attempts.createdAt)).limit(30);
     return Response.json({ attempts: rows });
   } catch (error) {
@@ -28,6 +30,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const payload = await request.json() as { exerciseId?: string; answer?: string; confidence?: number; durationSeconds?: number };
     const legacy = exercises.find((item) => item.id === payload.exerciseId);
@@ -41,8 +46,8 @@ export async function POST(request: Request) {
     const skillIds = generated?.skillIds?.length ? generated.skillIds : [exercise.id];
     const db = getDb();
 
-    await ensureLocalUser(db, now);
-    const trackId = await getActiveTrackId(db);
+    await ensureUser(db, user, now);
+    const trackId = await getActiveTrackId(db, USER_ID);
     const schedules = [];
     for (const skillId of skillIds) {
       const masteryId = `${USER_ID}:${trackId}:${skillId}`;

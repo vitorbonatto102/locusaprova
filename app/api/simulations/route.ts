@@ -5,14 +5,16 @@ import units from "@/data/exam-units.json";
 import { rubricForUnit } from "@/lib/corpus.mjs";
 import { evaluateRubric } from "@/lib/learning.mjs";
 import { evaluateSelfAssessment } from "@/lib/simulation.mjs";
-import { ensureLocalUser, getActiveTrackId, LOCAL_USER_ID } from "@/lib/user-context";
-
-const USER_ID = LOCAL_USER_ID;
+import { ensureUser, getActiveTrackId } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 export async function GET() {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const db = getDb();
-    const trackId = await getActiveTrackId(db);
+    const trackId = await getActiveTrackId(db, USER_ID);
     const rows = await db.select().from(simulations).where(and(eq(simulations.userId, USER_ID), eq(simulations.trackId, trackId))).orderBy(desc(simulations.createdAt)).limit(20);
     return Response.json({ simulations: rows });
   } catch (error) {
@@ -21,6 +23,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const payload = await request.json() as { examNumber?: number; durationSeconds?: number; answers?: Record<string, string>; selfAssessment?: Record<string, number[]> };
     const examUnits = units.filter((unit) => unit.exam_number === Number(payload.examNumber));
@@ -35,8 +40,8 @@ export async function POST(request: Request) {
     const maxScore = corrections.reduce((sum, item) => sum + item.evaluation.maxScore, 0);
     const db = getDb();
     const now = new Date();
-    await ensureLocalUser(db, now);
-    const trackId = await getActiveTrackId(db);
+    await ensureUser(db, user, now);
+    const trackId = await getActiveTrackId(db, USER_ID);
     const id = crypto.randomUUID();
     await db.insert(simulations).values({ id, userId: USER_ID, trackId, examId: examUnits[0].exam_id, durationSeconds: Math.max(0, Number(payload.durationSeconds) || 0), totalScore, maxScore, answersJson: JSON.stringify(answers), correctionJson: JSON.stringify(corrections), createdAt: now });
     return Response.json({ id, totalScore, maxScore }, { status: 201 });

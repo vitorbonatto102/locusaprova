@@ -4,24 +4,28 @@ import { knowledgeMastery, knowledgeReviews, learningErrors, objectiveAttempts, 
 import { aggregateKnowledgeTree, buildAdaptivePlan, buildReviewCards, countKnowledgeTree, overlapExamTargets } from "@/lib/adaptive-engine.mjs";
 import { ensurePoliceCatalog, getActivePoliceProgram } from "@/lib/police-context";
 import { PF_TARGET_ID, policeTargets } from "@/lib/police-data";
-import { ensureLocalUser, LOCAL_USER_ID } from "@/lib/user-context";
+import { ensureUser } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 export async function GET() {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const db = getDb();
     const now = new Date();
-    await ensureLocalUser(db, now);
+    await ensureUser(db, user, now);
     await ensurePoliceCatalog(db, now);
-    const program = await getActivePoliceProgram(db);
+    const program = await getActivePoliceProgram(db, USER_ID);
     const target = policeTargets.targets.find((item) => item.id === program.targetId)!;
     const topicIds = new Set(target.knowledgeNodeIds);
     const questionIds = new Set(program.questions.map((question) => question.id));
     const [mastery, reviews, attempts, errors, [diagnostic]] = await Promise.all([
-      db.select().from(knowledgeMastery).where(eq(knowledgeMastery.userId, LOCAL_USER_ID)),
-      db.select().from(knowledgeReviews).where(and(eq(knowledgeReviews.userId, LOCAL_USER_ID), isNull(knowledgeReviews.completedAt))).orderBy(knowledgeReviews.scheduledFor),
-      db.select().from(objectiveAttempts).where(and(eq(objectiveAttempts.userId, LOCAL_USER_ID), eq(objectiveAttempts.examTargetId, program.targetId))).orderBy(desc(objectiveAttempts.createdAt)).limit(80),
-      db.select().from(learningErrors).where(and(eq(learningErrors.userId, LOCAL_USER_ID), isNull(learningErrors.resolvedAt))).orderBy(learningErrors.nextReviewAt),
-      db.select().from(objectiveSessions).where(and(eq(objectiveSessions.userId, LOCAL_USER_ID), eq(objectiveSessions.examTargetId, program.targetId), eq(objectiveSessions.sessionType, "diagnostic"))).orderBy(desc(objectiveSessions.updatedAt)).limit(1),
+      db.select().from(knowledgeMastery).where(eq(knowledgeMastery.userId, USER_ID)),
+      db.select().from(knowledgeReviews).where(and(eq(knowledgeReviews.userId, USER_ID), isNull(knowledgeReviews.completedAt))).orderBy(knowledgeReviews.scheduledFor),
+      db.select().from(objectiveAttempts).where(and(eq(objectiveAttempts.userId, USER_ID), eq(objectiveAttempts.examTargetId, program.targetId))).orderBy(desc(objectiveAttempts.createdAt)).limit(80),
+      db.select().from(learningErrors).where(and(eq(learningErrors.userId, USER_ID), isNull(learningErrors.resolvedAt))).orderBy(learningErrors.nextReviewAt),
+      db.select().from(objectiveSessions).where(and(eq(objectiveSessions.userId, USER_ID), eq(objectiveSessions.examTargetId, program.targetId), eq(objectiveSessions.sessionType, "diagnostic"))).orderBy(desc(objectiveSessions.updatedAt)).limit(1),
     ]);
     const relevantReviews = reviews.filter((review) => topicIds.has(review.knowledgeNodeId));
     const relevantErrors = errors.filter((error) => questionIds.has(error.questionId));

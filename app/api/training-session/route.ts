@@ -4,9 +4,8 @@ import { trainingSessions } from "@/db/schema";
 import confusionPairs from "@/data/confusion-pairs.json";
 import adaptiveDrills from "@/data/oab-penal/adaptive-drills.json";
 import { resolveAdaptiveTrainingItem } from "@/lib/corpus.mjs";
-import { ensureLocalUser, getActiveTrackId, LOCAL_USER_ID } from "@/lib/user-context";
-
-const USER_ID = LOCAL_USER_ID;
+import { ensureUser, getActiveTrackId } from "@/lib/user-context";
+import { getAuthenticatedUser, unauthorized } from "@/lib/auth";
 
 type SessionRow = typeof trainingSessions.$inferSelect;
 type SavedActivityState = { draftAnswer: string; confidence: number; phase: "answering" | "feedback"; feedback: unknown };
@@ -55,10 +54,10 @@ function serializeSession(row: SessionRow) {
   };
 }
 
-async function activeSession(trackId: string) {
+async function activeSession(trackId: string, userId: string) {
   const db = getDb();
   const [session] = await db.select().from(trainingSessions)
-    .where(and(eq(trainingSessions.userId, USER_ID), eq(trainingSessions.trackId, trackId), eq(trainingSessions.status, "active")))
+    .where(and(eq(trainingSessions.userId, userId), eq(trainingSessions.trackId, trackId), eq(trainingSessions.status, "active")))
     .orderBy(desc(trainingSessions.updatedAt)).limit(1);
   return session ?? null;
 }
@@ -68,10 +67,10 @@ function isCurrentAdaptiveSession(row: SessionRow) {
   return ids.length > 0 && ids.every((id) => resolveAdaptiveTrainingItem(id, confusionPairs, adaptiveDrills));
 }
 
-async function retireLegacySession(row: SessionRow) {
+async function retireLegacySession(row: SessionRow, userId: string) {
   const db = getDb();
   await db.update(trainingSessions).set({ status: "superseded", updatedAt: new Date() })
-    .where(and(eq(trainingSessions.id, row.id), eq(trainingSessions.userId, USER_ID)));
+    .where(and(eq(trainingSessions.id, row.id), eq(trainingSessions.userId, userId)));
 }
 
 function errorMessage(error: unknown) {
@@ -82,12 +81,15 @@ function errorMessage(error: unknown) {
 }
 
 export async function GET() {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const db = getDb();
-    const trackId = await getActiveTrackId(db);
-    const session = await activeSession(trackId);
+    const trackId = await getActiveTrackId(db, USER_ID);
+    const session = await activeSession(trackId, USER_ID);
     if (session && !isCurrentAdaptiveSession(session)) {
-      await retireLegacySession(session);
+      await retireLegacySession(session, USER_ID);
       return Response.json({ session: null, replacedLegacySession: true }, { headers: { "cache-control": "no-store, max-age=0" } });
     }
     return Response.json({ session: session ? serializeSession(session) : null }, { headers: { "cache-control": "no-store, max-age=0" } });
@@ -97,6 +99,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const user = await getAuthenticatedUser();
+  if (!user) return unauthorized();
+  const USER_ID = user.id;
   try {
     const payload = await request.json() as {
       action?: "start" | "progress" | "complete";
@@ -114,13 +119,13 @@ export async function POST(request: Request) {
     const db = getDb();
     const now = new Date();
 
-    await ensureLocalUser(db, now);
-    const trackId = await getActiveTrackId(db);
+    await ensureUser(db, user, now);
+    const trackId = await getActiveTrackId(db, USER_ID);
 
     if (payload.action === "start") {
-      const current = await activeSession(trackId);
+      const current = await activeSession(trackId, USER_ID);
       if (current && isCurrentAdaptiveSession(current)) return Response.json({ session: serializeSession(current), resumed: true });
-      if (current) await retireLegacySession(current);
+      if (current) await retireLegacySession(current, USER_ID);
 
       const activityIds = [...new Set(payload.activityIds ?? [])]
         .filter((id) => typeof id === "string" && resolveAdaptiveTrainingItem(id, confusionPairs, adaptiveDrills));
@@ -144,7 +149,7 @@ export async function POST(request: Request) {
         updatedAt: now,
       };
       await db.insert(trainingSessions).values(session);
-      const [created] = await db.select().from(trainingSessions).where(eq(trainingSessions.id, session.id)).limit(1);
+      const [created] = await db.select().from(trainingSessions).where(and(eq(trainingSessions.id, session.id), eq(trainingSessions.userId, USER_ID))).limit(1);
       return Response.json({ session: serializeSession(created), resumed: false }, { status: 201 });
     }
 
@@ -179,7 +184,7 @@ export async function POST(request: Request) {
         activityStatesJson: JSON.stringify(activityStates),
         updatedAt: now,
       }).where(and(eq(trainingSessions.id, session.id), eq(trainingSessions.userId, USER_ID), eq(trainingSessions.trackId, trackId)));
-      const [updated] = await db.select().from(trainingSessions).where(eq(trainingSessions.id, session.id)).limit(1);
+      const [updated] = await db.select().from(trainingSessions).where(and(eq(trainingSessions.id, session.id), eq(trainingSessions.userId, USER_ID))).limit(1);
       return Response.json({ session: serializeSession(updated) });
     }
 

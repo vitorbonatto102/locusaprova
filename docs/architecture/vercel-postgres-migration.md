@@ -1,48 +1,53 @@
-# Next.js, Postgres e preservação do D1
+# Next.js, Supabase e preservação do progresso
 
-O aplicativo agora usa Next.js padrão (`next dev`, `next build`, `next start`) e Postgres. Não há mais dependência de runtime Cloudflare/Vinext para a aplicação. O diretório `drizzle/` contém o histórico SQLite antigo; `drizzle-postgres/` contém as migrações novas. Não execute as migrações SQLite em Postgres.
+O Locus roda em Next.js padrão na Vercel. Supabase Auth gerencia o cadastro/login; o Postgres do mesmo projeto guarda o progresso. A aplicação usa acesso ao banco **somente pelo servidor**, filtrando cada leitura e gravação pelo ID verificado da conta. As 34 tabelas do Locus ficam no schema `locus`; o schema `public` e as tabelas de licenças de outro produto não são alterados.
 
-## O que já está protegido
+## Configurar o projeto Supabase
 
-- O D1 local original não é alterado pelo transferidor.
-- Antes de qualquer importação, o transferidor faz um snapshot consistente em `.migration-backups/`, ignorado pelo Git.
-- As tabelas de aplicação no Postgres de destino precisam estar vazias. A importação é transacional e compara as contagens de todas as tabelas copiadas.
-- As rotas ainda usam o usuário único `local-learner`. Por segurança, acesso ao banco em qualquer implantação Vercel fica bloqueado até a etapa de autenticação. **Não configure uma publicação pública funcional com dados reais antes de substituir esse usuário fixo por uma identidade verificada.**
+1. No projeto `xbqwmydckectglcnmoya`, confira em **Authentication → Providers** que e-mail/senha está habilitado. Não crie manualmente tabelas em `auth.users`: Supabase Auth faz isso quando alguém se cadastra.
+2. Em **Project Settings → API Keys** (ou **Connect**), copie a **Project URL** e a **publishable key**. A publishable key é própria para o navegador. Nunca use a `service_role` ou secret key nas variáveis `NEXT_PUBLIC_*`.
+3. Em **Connect**, obtenha a URI Postgres. Use a conexão direta ou session pooler para aplicar migrações e importar dados. Para o runtime da Vercel, use o transaction pooler apropriado a funções serverless. A senha fica apenas em `.env.local` e nas variáveis privadas da Vercel, nunca no Git ou em mensagens.
+4. Em **Authentication → URL Configuration**, defina `https://locusaprova.vercel.app` como **Site URL** e permita `http://localhost:5173/auth/callback` e `https://locusaprova.vercel.app/auth/callback` em **Redirect URLs**. A URL de produção deve usar HTTPS.
+5. Para oferecer cadastro por e-mail ao público, configure um **SMTP próprio**. O SMTP padrão do Supabase é restrito e serve apenas para testes com endereços autorizados no projeto.
 
-## Preparar o banco
+Crie `.env.local` na raiz do projeto, a partir de `.env.example`:
 
-Crie um banco Postgres vazio. Para a aplicação em funções serverless da Vercel, use uma conexão com pool transacional; para executar migrações, prefira uma conexão direta ou de sessão. O provedor do banco fornece ambas. Guarde a URL em `.env.local` como `DATABASE_URL`; esse arquivo é ignorado pelo Git. Não cole a senha em issues, mensagens ou commits.
+```dotenv
+NEXT_PUBLIC_SUPABASE_URL=https://xbqwmydckectglcnmoya.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<publishable key>
+DATABASE_URL=<URI Postgres do projeto>
+```
 
-Com `DATABASE_URL` apontando para o banco vazio:
+O projeto de licenças e o Locus **compartilharão o cadastro de usuários do Supabase Auth**. Isso é aceitável aqui porque o outro projeto é só de teste. O progresso de cada app fica em suas próprias tabelas. Não exponha o schema `locus` na Data API do Supabase; o Locus usa acesso server-side e suas próprias rotas autenticadas.
+
+## Criar as tabelas e trazer o D1
+
+O histórico SQLite antigo continua em `drizzle/`; somente `drizzle-postgres/` se aplica ao Postgres. A migração inicial cria o schema `locus` e 34 tabelas. Ela não contém comandos para apagar tabelas existentes.
 
 ```bash
 npm run db:migrate
-```
-
-O comando aplica somente `drizzle-postgres/`.
-
-## Preservar e transferir o progresso
-
-Para criar apenas um snapshot do D1 local e conferir quantas linhas ele contém:
-
-```bash
 npm run db:transfer -- --backup-only
-```
-
-Para transferir esse D1 local ao Postgres vazio:
-
-```bash
 npm run db:transfer
 ```
 
-Se o progresso real estiver em outro arquivo SQLite/D1 exportado, informe o caminho explicitamente:
+O transferidor não altera o D1 original. Primeiro cria snapshot consistente em `.migration-backups/` (ignorado pelo Git); depois verifica estrutura, exige tabelas de destino vazias e importa numa transação. Confere as contagens antes de confirmar. Se o D1 real estiver em outro arquivo, use `npm run db:transfer -- --source caminho/para/exportacao.sqlite`.
 
-```bash
-npm run db:transfer -- --source caminho/para/exportacao.sqlite
+O D1 antigo usa o ID `local-learner`. **Não abra o site para outras pessoas antes de associar esse progresso à sua conta.** Cadastre sua própria conta no Supabase Auth e confirme o e-mail. Em **Authentication → Users**, copie o UUID dessa conta. Configure em `.env.local` (somente local):
+
+```dotenv
+LEGACY_OWNER_USER_ID=<UUID da sua conta>
+LEGACY_OWNER_EMAIL=<e-mail dessa mesma conta>
 ```
 
-O transferidor copia todas as tabelas de aplicação, incluindo usuário, tentativas, domínio, revisões, sessões, simulados e catálogo. Datas em milissegundos do SQLite são convertidas para `timestamp with time zone`; inteiros booleanos são convertidos para booleanos. Se o destino contiver dados ou a estrutura não corresponder, a operação é interrompida sem apagar nem sobrescrever registros. Guarde o arquivo de backup até conferir o app com o Postgres.
+Confira a prévia e depois faça a associação:
+
+```bash
+npm run db:claim
+npm run db:claim -- --apply
+```
+
+O comando verifica UUID e e-mail contra `auth.users`, recusa uma conta que já tenha progresso e transfere os registros numa transação. O backup D1 permanece intacto.
 
 ## Vercel
 
-Conecte o repositório como projeto Next.js padrão. O build é `npm run build`; não há comando de build específico do Sites. Configure variáveis de ambiente no painel Vercel, nunca no código. A interface está pronta para o build, mas as APIs de dados permanecerão bloqueadas na Vercel até a próxima etapa: autenticação e isolamento por usuário. Depois disso, migre o progresso do `local-learner` para a conta real do proprietário antes de abrir a plataforma a outros alunos.
+Conecte o repositório como projeto Next.js padrão. Configure as três variáveis de execução (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `DATABASE_URL`) no painel da Vercel. Não coloque `LEGACY_OWNER_*` na Vercel: servem apenas para a migração local. Execute as migrações e a importação uma vez, fora do build da Vercel, antes de liberar o site. O login e as APIs dependem do banco já criado; o build sozinho não configura o Supabase.
